@@ -1,0 +1,13 @@
+{
+  "loaders": {
+    "API": "com.sie.snest.engine.loaders.ApiLoader",
+    "SDK": "com.sie.snest.sdk.loaders.SdkLoader"
+  },
+  "apps": {
+    "master": {
+      "SDK": {
+        "base": "sie-snest-base-1.0-SNAPSHOT.jar"
+      }
+    }
+  }
+}
