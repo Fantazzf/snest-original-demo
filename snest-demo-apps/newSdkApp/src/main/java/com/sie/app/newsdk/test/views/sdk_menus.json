@@ -1,0 +1,43 @@
+{
+	"menus": {
+		"sdk_root_menu": {
+			"name": "sdk_root_menu",
+			"display_name": "newsdk",
+			"active": true,
+			"sequence": 10
+		},
+		"sdk_user_menu": {
+			"name": "sdk_test_user",
+			"display_name": "测试用户",
+			"model": "TestUser",
+			"view": "grid,search,form",
+			"sequence": 1,
+			"active": true,
+			"parent_ids": {
+				"@ref": "sdk_root_menu"
+			}
+		},
+		"sdk_role_menu": {
+			"name": "sdk_test_role",
+			"display_name": "测试角色",
+			"model": "TestRole",
+			"view": "grid,search,form",
+			"sequence": 2,
+			"active": true,
+			"parent_ids": {
+				"@ref": "sdk_root_menu"
+			}
+		},
+		"sdk_org_menu": {
+			"name": "sdk_test_org",
+			"display_name": "测试组织",
+			"model": "TestOrg",
+			"view": "grid,search,form",
+			"sequence": 3,
+			"active": true,
+			"parent_ids": {
+				"@ref": "sdk_root_menu"
+			}
+		}
+	}
+}

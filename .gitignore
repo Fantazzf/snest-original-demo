@@ -61,7 +61,7 @@ __pycache__/
 *.pyc
 .flattened-pom.xml
 
-/apps/*.jar
+
 umdComps/
 static-resource/
 view-json/

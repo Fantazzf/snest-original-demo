@@ -1,0 +1,10 @@
+{
+	"data": {
+		"rbac_role_admin": {
+			"model": "TestUser",
+			"properties": {
+				"name": "sie"
+			}
+		}
+	}
+}

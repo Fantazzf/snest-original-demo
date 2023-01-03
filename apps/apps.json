@@ -6,7 +6,8 @@
   "apps": {
     "master": {
       "SDK": {
-        "base": "sie-snest-base-1.0-SNAPSHOT.jar"
+        "base": "sie-snest-base-1.0-SNAPSHOT.jar",
+        "newSdkApp": "newSdkApp-1.0-SNAPSHOT.jar"
       }
     }
   }

@@ -14,7 +14,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>app1</module>
+        <module>newSdkApp</module>
     </modules>
 
     <properties>

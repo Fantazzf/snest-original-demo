@@ -1,0 +1,74 @@
+{
+  "views": {
+    "TestOrg_grid": {
+      "mode": "primary",
+      "name": "TestOrg表格",
+      "model": "TestOrg",
+      "type": "grid",
+      "body": {
+        "buttons": [
+          "@defaults"
+        ],
+        "columns": [
+          "name",
+          "parent"
+        ],
+        "tbar": [
+          "@defaults"
+        ],
+        "type": "grid"
+      }
+    },
+    "TestOrg_form": {
+      "mode": "primary",
+      "name": "TestOrg表单",
+      "model": "TestOrg",
+      "type": "form",
+      "body": {
+        "buttons": [
+          "@defaults"
+        ],
+        "tabs": [
+          {
+            "header": "用户",
+            "rowspan": 3,
+            "body": {
+              "type": "grid,form",
+              "field": "userList",
+              "columns": [
+                "name"
+              ]
+            }
+          }
+        ],
+        "columns": [
+          "name",
+          "parent"
+        ],
+        "tbar": [
+          {
+            "name":"添加",
+            "action":"addEr",
+            "icon":"add"
+          },
+          {"name":"删除",
+            "action":"deleteEr"
+          }
+        ],
+        "type": "grid"
+      }
+    },
+    "TestOrg_search": {
+      "mode": "primary",
+      "name": "TestOrg搜索",
+      "model": "TestOrg",
+      "type": "search",
+      "body": {
+        "columns": [
+          "name"
+        ],
+        "type": "search"
+      }
+    }
+  }
+}

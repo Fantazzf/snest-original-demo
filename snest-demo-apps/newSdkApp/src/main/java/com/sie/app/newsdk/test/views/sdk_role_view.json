@@ -1,0 +1,82 @@
+{
+  "views": {
+    "TestRole_form": {
+      "mode": "primary",
+      "name": "TestRole表单",
+      "model": "TestRole",
+      "type": "form",
+      "body": {
+        "buttons": [
+          "@defaults"
+        ],
+        "columns": [
+          "roleName",
+          "remark"
+        ],
+        "tabs": [
+          {
+            "header": "用户",
+            "rowspan": 3,
+            "tbar": [
+              {
+                "name": "添加",
+                "action": "addEr",
+                "icon": "add"
+              },
+              {
+                "name": "删除",
+                "action": "deleteEr"
+              }
+            ],
+            "body": {
+              "type": "grid,search",
+              "field": "userList",
+              "columns": [
+                "email",
+                "phone",
+                "name",
+                "age"
+              ]
+            }
+          }
+        ],
+        "tbar": [
+          "@defaults"
+        ],
+        "type": "grid"
+      }
+    },
+    "TestRole_grid": {
+      "mode": "primary",
+      "name": "TestRole表格",
+      "model": "TestRole",
+      "type": "grid",
+      "body": {
+        "buttons": [
+          "@defaults"
+        ],
+        "columns": [
+          "roleName",
+          "remark"
+        ],
+        "tbar": [
+          "@defaults"
+        ],
+        "type": "grid"
+      }
+    },
+    "TestRole_search": {
+      "mode": "primary",
+      "name": "TestRole搜索",
+      "model": "TestRole",
+      "type": "search",
+      "body": {
+        "columns": [
+          "roleName",
+          "remark"
+        ],
+        "type": "search"
+      }
+    }
+  }
+}

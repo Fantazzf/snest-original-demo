@@ -1,0 +1,103 @@
+{
+  "views": {
+    "TestUser_form": {
+      "mode": "primary",
+      "name": "TestUser表单",
+      "model": "TestUser",
+      "type": "form",
+      "body": {
+        "buttons": [
+          "@defaults"
+        ],
+        "columns": [
+          "name",
+          "email",
+          "status",
+          "phone",
+          "age",
+          "password",
+          "org",
+          "test",
+          "method",
+          "script"
+        ],
+        "tabs": [
+          {
+            "header": "组织",
+            "tbar": [
+              {
+                "name": "添加",
+                "action": "addEr",
+                "auth": "update"
+              },
+              {
+                "name": "删除",
+                "action": "deleteEr",
+                "auth": "delete"
+              }
+            ],
+            "body": {
+              "type": "grid,form,search",
+              "field": "org_id",
+              "columns": [
+                "name"
+              ]
+            }
+          }
+        ],
+        "tbar": [
+          "@defaults"
+        ],
+        "type": "grid"
+      }
+    },
+    "TestUser_grid": {
+      "mode": "primary",
+      "name": "TestUser表格",
+      "model": "TestUser",
+      "type": "grid",
+      "body": {
+        "buttons": [
+          "@defaults"
+        ],
+        "columns": [
+          "name",
+          "email",
+          "status",
+          "phone",
+          "age",
+          "password",
+          "org_id",
+          "test",
+          "method",
+          "script"
+        ],
+        "tbar": [
+          "@defaults"
+        ],
+        "type": "grid"
+      }
+    },
+    "TestUser_search": {
+      "mode": "primary",
+      "name": "TestUser搜索",
+      "model": "TestUser",
+      "type": "search",
+      "body": {
+        "columns": [
+          "name",
+          "email",
+          "status",
+          "phone",
+          "age",
+          "password",
+          "org",
+          "test",
+          "method",
+          "script"
+        ],
+        "type": "search"
+      }
+    }
+  }
+}
