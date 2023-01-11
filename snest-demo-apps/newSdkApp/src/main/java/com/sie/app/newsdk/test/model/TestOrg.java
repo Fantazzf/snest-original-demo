@@ -17,44 +17,12 @@ import java.util.List;
 @Model(name = "TestOrg",description = "测试组织")
 public class TestOrg extends BaseModel {
 
-	@Property(displayName = "名称")
+	@Property(displayName = "名称",displayForModel=true )
 	private String name;
 
 	@ManyToOne
 	@JoinColumn(name = "parent_id")
 	private TestOrg parent;
-
-    /**
-     * mappedBy如果双方不写，表示要建中间表了
-     * orphanRemoval表示每次维护时，需要清空中间表记录，有中间表才起作用，默认为false
-     */
-    @OneToMany
-    private List<TestUser> userList;
-
-    
-	@MethodService(description = "获取部门")
-	public TestOrg getOrg(String id) {
-		TestOrg org=new TestOrg();
-		return org.selectById(id);
-	}
-
-
-    @MethodService(description = "获取指定部门的用户清单")
-    public List<TestUser> listUsers(String orgId) {
-        TestOrg org=new TestOrg();
-        TestOrg testOrg = org.selectById(orgId);
-        return testOrg.getUserList();
-    }
-
-    public String getName() {
-        return (String) this.get("name");
-    }
-
-    public TestOrg setName(String name) {
-        this.set("name", name);
-        return this;
-    }
-
 
 
     public TestOrg getParent() {
@@ -66,13 +34,49 @@ public class TestOrg extends BaseModel {
         return this;
     }
 
+    @OneToMany
+    private List<TestUser> userList;
+
     public List<TestUser> getUserList() {
-        return getList("userList", TestUser.class);
+        return (List<TestUser>) this.get("userList");
     }
 
     public TestOrg setUserList(List<TestUser> userList) {
         this.set("userList", userList);
         return this;
     }
+
+    @MethodService(description = "获取部门")
+	public TestOrg getOrg(String id) {
+		TestOrg org=new TestOrg();
+		return org.selectById(id);
+	}
+
+    @MethodService(description = "测试级联删除")
+    public void testDelete(String id){
+        TestOrg org=new TestOrg();
+        org.setId(id);
+        org.delete();
+    }
+
+
+    @MethodService(description = "获取指定部门的用户清单")
+    public List<TestUser> listUsers(String orgId) {
+        TestOrg org=new TestOrg();
+        TestOrg testOrg = org.selectById(orgId);
+        List<TestUser> userList = testOrg.getUserList();
+        System.out.println(userList);
+        return userList;
+    }
+
+    public String getName() {
+        return (String) this.get("name");
+    }
+
+    public TestOrg setName(String name) {
+        this.set("name", name);
+        return this;
+    }
+
 
 }

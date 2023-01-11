@@ -11,7 +11,8 @@ import com.sie.snest.sdk.annotation.orm.ManyToMany;
 import java.util.List;
 
 /**
- * @author lijun10
+ * 测试角色
+ * @author sie
  * @date 2022/11/28 16:50
  */
 @Model
@@ -23,6 +24,16 @@ public class TestRole extends BaseModel {
     @Property(columnName = "remark", displayName = "备注")
     private String remark;
 
+
+    public String getRoleName(){
+        return (String) get("roleName");
+    }
+
+    public void setRoleName(String roleName){
+        set("roleName",roleName);
+    }
+
+
     @ManyToMany
     @JoinTable(name = "role_user", joinColumns = @JoinColumn(name = "role_id", nullable = false),
             inverseJoinColumns = @JoinColumn(name = "user_id", nullable = false))
@@ -30,11 +41,11 @@ public class TestRole extends BaseModel {
 
 
     public List<TestUser> getUserList() {
-        return getList("userList", TestUser.class);
+        return (List<TestUser>) get("userList");
     }
 
     public TestRole setUserList(List<TestUser> userList) {
-        this.set("userList", userList);
+        this.set("user_id", userList);
         return this;
     }
 
@@ -43,5 +54,26 @@ public class TestRole extends BaseModel {
         TestRole testRole = new TestRole();
         TestRole role = testRole.selectById(roleId);
         return role.getUserList();
+    }
+
+
+    @MethodService(description = "测试级联删除")
+    public void testDelete(String id){
+        TestRole testRole = new TestRole();
+        testRole.setId(id);
+
+
+        testRole.getUserList();
+
+        testRole.delete();
+    }
+
+    public String getRemark() {
+        return (String) this.get("remark");
+    }
+
+    public TestRole setRemark(String remark) {
+        this.set("remark", remark);
+        return this;
     }
 }
