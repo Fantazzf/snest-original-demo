@@ -11,7 +11,7 @@ public class TestDataSource extends BaseModel {
 
     @Property(displayName = "数据源类型", widget = "radio-group")
     @Selection(values = {@Option(label = "DB/SQL", value = "DB", groups = Db.class), @Option(label = "API", value = "API", groups = Api.class),
-            @Option(label = "Excel", value = "Excel"), @Option(label = "IIOT", value = "IIOT")})
+            @Option(label = "Excel", value = "Excel"), @Option(label = "IIOT", value = "IIOT", groups = Iiot.class)})
     private String type;
 
 
@@ -19,5 +19,9 @@ public class TestDataSource extends BaseModel {
     }
 
     interface Api {
+    }
+
+    interface Iiot {
+
     }
 }

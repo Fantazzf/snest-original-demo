@@ -9,11 +9,21 @@ import com.sie.snest.sdk.annotation.validate.Validate;
 public class TestDataSourceApi extends BaseModel {
     @Property(columnName = "header", displayName = "请求头")
     @Validate.NotBlank(groups = TestDataSource.Api.class)
-    @Validate.Null(groups = TestDataSource.Db.class)
+    @Validate.Null.List(
+            value = {
+                    @Validate.Null(groups = TestDataSource.Db.class),
+                    @Validate.Null(groups = TestDataSource.Iiot.class)
+            }
+    )
     private String header;
 
     @Validate.NotBlank(groups = TestDataSource.Api.class)
-    @Validate.Null(groups = TestDataSource.Db.class)
+    @Validate.Null.List(
+            value = {
+                    @Validate.Null(groups = TestDataSource.Db.class),
+                    @Validate.Null(groups = TestDataSource.Iiot.class)
+            }
+    )
     @Property(columnName = "parameters", displayName = "请求参数")
     private String parameters;
 }
