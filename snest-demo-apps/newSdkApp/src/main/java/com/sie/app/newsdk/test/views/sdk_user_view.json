@@ -27,7 +27,7 @@
                 "tbar": [
                     "@defaults"
                 ],
-                "type": "grid"
+                "type": "form"
             }
         },
         "TestUser_grid": {

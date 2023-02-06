@@ -19,7 +19,7 @@
         "tbar": [
           "@defaults"
         ],
-        "type": "grid"
+        "type": "form"
       }
     },
     "TestTest_search": {

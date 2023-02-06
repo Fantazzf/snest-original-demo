@@ -43,7 +43,7 @@
         "tbar": [
           "@defaults"
         ],
-        "type": "grid"
+        "type": "form"
       }
     },
     "TestRole_grid": {

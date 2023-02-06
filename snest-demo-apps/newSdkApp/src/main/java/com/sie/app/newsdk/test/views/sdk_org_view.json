@@ -55,7 +55,7 @@
             "action":"deleteEr"
           }
         ],
-        "type": "grid"
+        "type": "form"
       }
     },
     "TestOrg_search": {
