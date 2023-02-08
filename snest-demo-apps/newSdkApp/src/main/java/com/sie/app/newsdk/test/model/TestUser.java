@@ -77,6 +77,11 @@ public class TestUser extends BaseModel {
 	@Selection(model = "TestOrg", properties = "name", orderBy = "name desc")
 	private String selectModel;
 
+    @ManyToMany
+    @JoinTable(name = "role_user", joinColumns = @JoinColumn(name = "role_id", nullable = false),
+            inverseJoinColumns = @JoinColumn(name = "user_id", nullable = false))
+    private List<TestUser> userList;
+
 
     public Date getCreate() {
         return (Date) this.get("create");
