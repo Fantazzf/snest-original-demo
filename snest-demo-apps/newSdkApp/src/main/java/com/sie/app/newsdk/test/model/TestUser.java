@@ -25,7 +25,7 @@ import java.util.Map;
 @Model
 public class TestUser extends BaseModel {
 
-    @Property(columnName = "name", displayName = "名称",displayForModel = true)
+    @Property(columnName = "name", displayName = "名称", displayForModel = true)
     //@Validate.NotBlank
     private String name;
 
@@ -65,17 +65,17 @@ public class TestUser extends BaseModel {
     private TestOrg org;
 
 
-	@Property(displayName = "selectStatus", defaultValue = "1")
-	@Selection(values = { @Option(label = "启用", value = "1"), @Option(label = "禁用", value = "2"), @Option(label = "已删除", value = "3") })
-	private String selectStatus;
+    @Property(displayName = "selectStatus", defaultValue = "1")
+    @Selection(values = {@Option(label = "启用", value = "1"), @Option(label = "禁用", value = "2"), @Option(label = "已删除", value = "3")})
+    private String selectStatus;
 
-	@Property(displayName = "selectMetod")
-	@Selection(method = "selectMetod")
-	private String selectMetod;
+    @Property(displayName = "selectMetod")
+    @Selection(method = "selectMetod")
+    private String selectMetod;
 
-	@Property(displayName = "selectModel")
-	@Selection(model = "TestOrg", properties = "name", orderBy = "name desc")
-	private String selectModel;
+    @Property(displayName = "selectModel")
+    @Selection(model = "TestOrg", properties = "name", orderBy = "name desc")
+    private String selectModel;
 
     @ManyToMany
     @JoinTable(name = "role_user", joinColumns = @JoinColumn(name = "role_id", nullable = false),
@@ -148,6 +148,13 @@ public class TestUser extends BaseModel {
         return 0;
     }
 
+    @MethodService(description = "创建")
+    public void create(List<TestUser> users) {
+        this.putAll(users.get(0));
+        this.create();
+    }
+
+
     /**
      * 创建用户服务
      *
@@ -169,19 +176,18 @@ public class TestUser extends BaseModel {
     }
 
 
+    /**
+     * 创建用户服务
+     */
+    @MethodService(description = "selectMetod")
+    public List<Options> selectMetod() {
+        List<Options> options = new ArrayList<Options>();
+        options.add(Options.of("001", "北京市"));
+        options.add(Options.of("002", "深圳市"));
+        options.add(Options.of("003", "上海市"));
 
-	/**
-	 * 创建用户服务
-	 */
-	@MethodService(description = "selectMetod")
-	public List<Options> selectMetod() {
-		List<Options> options = new ArrayList<Options>();
-		options.add(Options.of("001", "北京市"));
-		options.add(Options.of("002", "深圳市"));
-		options.add(Options.of("003", "上海市"));
-
-		return options;
-	}
+        return options;
+    }
 
     /**
      * 计算属性指定的方法
