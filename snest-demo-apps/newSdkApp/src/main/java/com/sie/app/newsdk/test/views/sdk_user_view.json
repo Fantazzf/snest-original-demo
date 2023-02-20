@@ -1,88 +1,401 @@
 {
     "views": {
-        "TestUser_form": {
-            "mode": "primary",
-            "name": "TestUser表单",
-            "model": "TestUser",
-            "type": "form",
-            "body": {
-                "buttons": [
-                    "@defaults"
-                ],
-                "columns": [
-                    "name",
-                    "email",
-                    "status",
-                    "phone",
-                    "age",
-                    "password",
-                    "org",
-                    "test",
-                    "method",
-                    "selectStatus",
-                    "selectMetod",
-                    "selectModel",
-                    "script"
-                ],
-                "tbar": [
-                    "@defaults"
-                ],
-                "type": "form"
-            }
-        },
-        "TestUser_grid": {
-            "mode": "primary",
-            "name": "TestUser表格",
-            "model": "TestUser",
-            "type": "grid",
-            "body": {
-                "buttons": [
-                    "@defaults"
-                ],
-                "columns": [
-                    "name",
-                    "email",
-                    "status",
-                    "phone",
-                    "age",
-                    "password",
-                    "org",
-                    "test",
-                    "method",
-                    "script",
-                    "selectStatus",
-                    "selectMetod",
-                    "selectModel"
-                ],
-                "tbar": [
-                    "@defaults"
-                ],
-                "type": "grid"
-            }
-        },
-        "TestUser_search": {
-            "mode": "primary",
-            "name": "TestUser搜索",
-            "model": "TestUser",
-            "type": "search",
+        "testuser_search": {
             "body": {
                 "columns": [
-                    "name",
-                    "email",
-                    "status",
-                    "phone",
-                    "age",
-                    "password",
-                    "org",
-                    "test",
-                    "method",
-                    "script",
-                    "selectStatus",
-                    "selectMetod",
-                    "selectModel"
+                    {
+                        "label": "名称",
+                        "name": "name"
+                    },
+                    {
+                        "label": "邮箱",
+                        "name": "email"
+                    },
+                    {
+                        "label": "电话号码",
+                        "name": "phone"
+                    },
+                    {
+                        "label": "年龄",
+                        "name": "age"
+                    },
+                    {
+                        "label": "年龄Int",
+                        "name": "ageInt"
+                    },
+                    {
+                        "label": "测试",
+                        "name": "test"
+                    },
+                    {
+                        "label": "计算方法",
+                        "name": "method"
+                    },
+                    {
+                        "label": "计算脚本",
+                        "name": "script"
+                    },
+                    {
+                        "label": "status",
+                        "name": "status"
+                    },
+                    {
+                        "label": "statusInt",
+                        "name": "statusInt"
+                    },
+                    {
+                        "label": "组织机构",
+                        "name": "org"
+                    },
+                    {
+                        "label": "selectMetod",
+                        "name": "selectMetod"
+                    },
+                    {
+                        "label": "4单选异步获取模型",
+                        "name": "selectModel"
+                    },
+                    {
+                        "label": "5多选常量",
+                        "name": "selectStatus"
+                    },
+                    {
+                        "label": "6多选异步获取",
+                        "name": "roleList"
+                    },
+                    {
+                        "label": "7多选异步获取方法",
+                        "name": "selectMultipleProvince"
+                    },
+                    {
+                        "label": "8-多选异步获取模型",
+                        "name": "selectMultipleModel"
+                    },
+                    {
+                        "label": "省",
+                        "name": "province",
+                        "widget": "select",
+                        "linkage": {
+                            "params": {},
+                            "children": [
+                                "city",
+                                "area"
+                            ]
+                        }
+                    },
+                    {
+                        "label": "市",
+                        "name": "city",
+                        "linkage": {
+                            "params": {
+                                "provinceId": "${province}"
+                            },
+                            "children": [
+                                "area"
+                            ]
+                        }
+                    },
+                    {
+                        "label": "区",
+                        "name": "area",
+                        "linkage": {
+                            "params": {
+                                "provinceId": "${province}",
+                                "cityId": "${city}"
+                            }
+                        }
+                    }
                 ],
                 "type": "search"
-            }
+            },
+            "mode": "primary",
+            "model": "TestUser",
+            "name": "TestUser-搜索",
+            "type": "search"
+        },
+        "testuser_grid": {
+            "body": {
+                "buttons": [
+                    {
+                        "action": "preview",
+                        "auth": "read",
+                        "name": "详情"
+                    },
+                    {
+                        "action": "edit",
+                        "auth": "update",
+                        "name": "编辑"
+                    }
+                ],
+                "columns": [
+                    {
+                        "label": "名称",
+                        "name": "name"
+                    },
+                    {
+                        "label": "邮箱",
+                        "name": "email",
+                        "sortable": true,
+                        "width": "80px"
+                    },
+                    {
+                        "label": "电话号码",
+                        "name": "phone"
+                    },
+                    {
+                        "label": "年龄",
+                        "name": "age"
+                    },
+                    {
+                        "label": "年龄Int",
+                        "name": "ageInt"
+                    },
+                    {
+                        "label": "测试",
+                        "name": "test"
+                    },
+                    {
+                        "label": "计算方法",
+                        "name": "method"
+                    },
+                    {
+                        "label": "计算脚本",
+                        "name": "script"
+                    },
+                    {
+                        "label": "status",
+                        "name": "status"
+                    },
+                    {
+                        "label": "statusInt",
+                        "name": "statusInt"
+                    },
+                    {
+                        "label": "组织机构",
+                        "name": "org"
+                    },
+                    {
+                        "label": "selectMetod",
+                        "name": "selectMetod"
+                    },
+                    {
+                        "label": "4单选异步获取模型",
+                        "name": "selectModel"
+                    },
+                    {
+                        "label": "5多选常量",
+                        "name": "selectStatus"
+                    },
+                    {
+                        "label": "6多选异步获取",
+                        "name": "roleList"
+                    },
+                    {
+                        "label": "7多选异步获取方法",
+                        "name": "selectMultipleProvince"
+                    },
+                    {
+                        "label": "8-多选异步获取模型",
+                        "name": "selectMultipleModel"
+                    }
+                  
+                ],
+                "tbar": [
+                    {
+                        "action": "create",
+                        "auth": "create",
+                        "name": "新增"
+                    },
+                    {
+                        "action": "delete",
+                        "auth": "delete",
+                        "name": "删除"
+                    }
+                ],
+                "type": "grid"
+            },
+            "mode": "primary",
+            "model": "TestUser",
+            "name": "TestUser-表格",
+            "type": "grid"
+        },
+        "testuser_form": {
+            "body": {
+                "columns": [
+                    {
+                        "label": "名称",
+                        "name": "name"
+                    },
+                    {
+                        "label": "邮箱",
+                        "name": "email"
+                    },
+                    {
+                        "label": "电话号码",
+                        "name": "phone"
+                    },
+                    {
+                        "label": "年龄",
+                        "name": "age"
+                    },
+                    {
+                        "label": "年龄Int",
+                        "name": "ageInt"
+                    },
+                    {
+                        "label": "salaryDouble",
+                        "name": "salaryDouble"
+                    },
+                    {
+                        "label": "密码",
+                        "name": "password"
+                    },
+                    {
+                        "label": "测试",
+                        "name": "test"
+                    },
+                    {
+                        "label": "计算方法",
+                        "name": "method"
+                    },
+                    {
+                        "label": "计算脚本",
+                        "name": "script"
+                    },
+                    {
+                        "label": "status",
+                        "name": "status"
+                    },
+                    {
+                        "label": "statusInt",
+                        "name": "statusInt"
+                    },
+                    {
+                        "label": "组织机构",
+                        "name": "org"
+                    },
+                    {
+                        "label": "selectMetod",
+                        "name": "selectMetod"
+                    },
+                    {
+                        "label": "4单选异步获取模型",
+                        "name": "selectModel"
+                    },
+                    {
+                        "label": "5多选常量",
+                        "name": "selectStatus"
+                    },
+                    {
+                        "label": "6多选异步获取",
+                        "name": "roleList"
+                    },
+                    {
+                        "label": "7多选异步获取方法",
+                        "name": "selectMultipleProvince"
+                    },
+                    {
+                        "label": "8-多选异步获取模型",
+                        "name": "selectMultipleModel"
+                    },
+                    {
+                        "label": "省",
+                        "name": "province",
+                        "widget": "select",
+                        "linkage": {
+                            "params": {},
+                            "children": [
+                                "city",
+                                "area"
+                            ]
+                        }
+                    },
+                    {
+                        "label": "市",
+                        "name": "city",
+                        "linkage": {
+                            "params": {
+                                "provinceId": "${province}"
+                            },
+                            "children": [
+                                "area"
+                            ]
+                        }
+                    },
+                    {
+                        "label": "区",
+                        "name": "area",
+                        "linkage": {
+                            "params": {
+                                "provinceId": "${province}",
+                                "cityId": "${city}"
+                            }
+                        }
+                    }
+                  
+                ],
+                "tabs": [
+                    {
+                        "body": {
+                            "buttons": [
+                                {
+                                    "action": "updateEr",
+                                    "auth": "update",
+                                    "name": "编辑"
+                                }
+                            ],
+                            "columns": [
+                                {
+                                    "label": "角色名称",
+                                    "name": "roleName"
+                                },
+                                {
+                                    "label": "备注",
+                                    "name": "remark"
+                                }
+                            ],
+                            "edit": {
+                                "columns": [
+                                    {
+                                        "label": "角色名称",
+                                        "name": "roleName"
+                                    },
+                                    {
+                                        "label": "备注",
+                                        "name": "remark"
+                                    }
+                                ],
+                                "type": "form"
+                            },
+                            "field": "roleList",
+                            "type": "grid,form,search"
+                        },
+                        "header": "roleList",
+                        "tbar": [
+                            {
+                                "action": "addEr",
+                                "auth": "update",
+                                "name": "添加"
+                            },
+                            {
+                                "action": "createEr",
+                                "auth": "create",
+                                "name": "创建"
+                            },
+                            {
+                                "action": "deleteEr",
+                                "auth": "delete",
+                                "name": "删除"
+                            }
+                        ]
+                    }
+                ],
+                "type": "form"
+            },
+            "mode": "primary",
+            "model": "TestUser",
+            "name": "TestUser-表单",
+            "type": "form"
         }
     }
 }
