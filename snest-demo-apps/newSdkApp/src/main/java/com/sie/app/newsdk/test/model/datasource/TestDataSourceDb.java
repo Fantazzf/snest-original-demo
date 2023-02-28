@@ -6,7 +6,7 @@ import com.sie.snest.sdk.annotation.meta.Property;
 import com.sie.snest.sdk.annotation.validate.Validate;
 
 @Model(name = "TestDataSource", parent = "TestDataSource")
-public class TestDataSourceDb extends BaseModel {
+public class TestDataSourceDb extends BaseModel<TestDataSourceDb> {
 
     @Validate.NotBlank(groups = TestDataSource.Db.class)
     @Property(columnName = "host", displayName = "连接地址")

@@ -8,7 +8,7 @@ import com.sie.snest.sdk.annotation.validate.Validate;
 import java.util.Date;
 
 @Model
-public class TestTest extends BaseModel {
+public class TestTest extends BaseModel<TestTest> {
 
     @Property(columnName = "a", displayName = "整型int")
     @Validate.Max(value = 1000)

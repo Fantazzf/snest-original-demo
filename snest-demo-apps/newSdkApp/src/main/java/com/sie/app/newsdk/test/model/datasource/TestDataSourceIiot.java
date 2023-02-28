@@ -6,7 +6,7 @@ import com.sie.snest.sdk.annotation.meta.Property;
 import com.sie.snest.sdk.annotation.validate.Validate;
 
 @Model(name = "TestDataSource", parent = "TestDataSource")
-public class TestDataSourceIiot extends BaseModel {
+public class TestDataSourceIiot extends BaseModel<TestDataSourceIiot> {
     @Property(columnName = "uri", displayName = "URI")
     @Validate.NotBlank(groups = TestDataSource.Iiot.class)
     private String uri;

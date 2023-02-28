@@ -7,7 +7,7 @@ import com.sie.snest.sdk.annotation.orm.Option;
 import com.sie.snest.sdk.annotation.orm.Selection;
 
 @Model(name = "TestDataSource", description = "数据源")
-public class TestDataSource extends BaseModel {
+public class TestDataSource extends BaseModel<TestDataSourceDb> {
 
     @Property(displayName = "数据源类型", widget = "radio-group")
     @Selection(values = {@Option(label = "DB/SQL", value = "DB", groups = Db.class), @Option(label = "API", value = "API", groups = Api.class),

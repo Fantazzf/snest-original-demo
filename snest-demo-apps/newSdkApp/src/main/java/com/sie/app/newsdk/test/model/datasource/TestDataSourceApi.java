@@ -6,7 +6,7 @@ import com.sie.snest.sdk.annotation.meta.Property;
 import com.sie.snest.sdk.annotation.validate.Validate;
 
 @Model(name = "TestDataSource", parent = "TestDataSource")
-public class TestDataSourceApi extends BaseModel {
+public class TestDataSourceApi extends BaseModel<TestDataSourceApi> {
     @Property(columnName = "header", displayName = "请求头")
     @Validate.NotBlank(groups = TestDataSource.Api.class)
     private String header;

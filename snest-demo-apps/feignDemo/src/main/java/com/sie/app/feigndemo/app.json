@@ -1,0 +1,28 @@
+{
+	"name": "feignDemo",
+	"displayName": "feign客户端",
+	"author": "sie",
+	"company": "sie",
+	"category": "sdk2",
+	"product": "sdk2",
+	"description": "测试集成feignClient",
+	"summary": "测试集成feignClient",
+	"type": "SDK",
+	"tag": "master",
+	"resolved": "com.sie.app.feigndemo",
+	"dependencies": [],
+	"application": true,
+	"icon": "https://www.baidu.com/",
+	"license": "LGPL 3.0",
+	"view": [
+	],
+	"data": [],
+	"events":{
+		"startUp": [
+			"feigndemo_remoteproxy::start"
+		],
+		"unInstall": [
+			"feigndemo_remoteproxy::stop"
+		]
+	}
+}

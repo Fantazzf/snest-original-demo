@@ -11,7 +11,8 @@
       "SDK": {
         "base": "sie-snest-base-1.0-SNAPSHOT.jar",
         "newSdkApp": "newSdkApp-1.0-SNAPSHOT.jar",
-        "others": "newSdkOthers-1.0-SNAPSHOT.jar"
+        "others": "newSdkOthers-1.0-SNAPSHOT.jar",
+        "feignDemo": "feignDemo-1.0-SNAPSHOT.jar"
       }
     }
   }

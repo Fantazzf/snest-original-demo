@@ -18,7 +18,7 @@ import com.sie.snest.sdk.annotation.rule.Rules;
                 resource = "base_developer_center"
         )
 )
-public class TestRule extends BaseModel {
+public class TestRule extends BaseModel<TestRule> {
     @Property
     private String test;
 }

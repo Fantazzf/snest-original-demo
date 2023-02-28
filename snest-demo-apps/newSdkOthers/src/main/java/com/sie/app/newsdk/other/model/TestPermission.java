@@ -14,7 +14,7 @@ import java.util.Map;
  * @date 2023/1/5 17:53
  */
 @Model(name = "test_permission")
-public class TestPermission extends BaseModel {
+public class TestPermission extends BaseModel<TestPermission> {
 
     private String name;
 

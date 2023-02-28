@@ -13,7 +13,7 @@ import java.util.Map;
  * @date 2023/1/10 10:27
  */
 @Model
-public class TestLog extends BaseModel {
+public class TestLog extends BaseModel<TestLog> {
 
 
     private Date createDate;

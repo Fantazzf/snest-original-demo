@@ -16,7 +16,7 @@ import java.util.List;
  * @date 2022/11/28 16:50
  */
 @Model
-public class TestRole extends BaseModel {
+public class TestRole extends BaseModel<TestRole> {
 
     @Property(columnName = "role_name", displayName = "角色名称")
     private String roleName;

@@ -15,7 +15,7 @@ import java.util.List;
  * @author sie
  */
 @Model(name = "TestOrg",description = "测试组织")
-public class TestOrg extends BaseModel {
+public class TestOrg extends BaseModel<TestOrg> {
 
 	@Property(displayName = "名称",displayForModel=true )
 	private String name;
