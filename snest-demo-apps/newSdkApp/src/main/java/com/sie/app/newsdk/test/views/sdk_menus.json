@@ -10,7 +10,7 @@
 			"name": "sdk_test_user",
 			"display_name": "测试用户",
 			"model": "TestUser",
-			"view": "grid,search,form",
+			"view": "testuser_grid,testuser_search,testuser_form",
 			"sequence": 1,
 			"active": true,
 			"parent_ids": {
@@ -21,7 +21,7 @@
 			"name": "sdk_test_role",
 			"display_name": "测试角色",
 			"model": "TestRole",
-			"view": "grid,search,form",
+			"view": "TestRole_grid,TestRole_search,TestRole_form",
 			"sequence": 2,
 			"active": true,
 			"parent_ids": {
@@ -32,7 +32,7 @@
 			"name": "sdk_test_org",
 			"display_name": "测试组织",
 			"model": "TestOrg",
-			"view": "grid,search,form",
+			"view": "TestOrg_grid,TestOrg_search,TestOrg_form",
 			"sequence": 3,
 			"active": true,
 			"parent_ids": {
