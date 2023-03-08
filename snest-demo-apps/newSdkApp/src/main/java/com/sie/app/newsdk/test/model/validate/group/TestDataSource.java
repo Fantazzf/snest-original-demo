@@ -1,4 +1,4 @@
-package com.sie.app.newsdk.test.model.group.validate;
+package com.sie.app.newsdk.test.model.validate.group;
 
 import com.sie.snest.sdk.BaseModel;
 import com.sie.snest.sdk.annotation.meta.Model;

@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 @Model(name = "base_user", parent = "base_excel", displayName = "基本用户")
-public class BaseUser extends BaseModel<BaseUser> {
+public class ExcelTest extends BaseModel<ExcelTest> {
     @Property(displayName = "用户名")
     private String username;
     @Property(displayName = "昵称")
@@ -29,8 +29,8 @@ public class BaseUser extends BaseModel<BaseUser> {
     public void excelExport(RecordSet rs, Filter filter, List<String> properties) {
         Map<String, List<Map<String, Object>>> exportDatas = new LinkedHashMap<>();
         List<Map<String, Object>> result = new ArrayList<>();
-        List<BaseUser> baseUsers = this.search(filter, properties, 0, 0, null);
-        for (BaseUser baseUser : baseUsers) {
+        List<ExcelTest> baseUsers = this.search(filter, properties, 0, 0, null);
+        for (ExcelTest baseUser : baseUsers) {
             result.add(baseUser);
         }
         exportDatas.put("Sheet1", result);
