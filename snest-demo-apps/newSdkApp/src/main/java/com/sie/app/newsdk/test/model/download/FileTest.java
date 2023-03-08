@@ -14,9 +14,9 @@ import org.slf4j.LoggerFactory;
 import java.io.InputStream;
 
 @Model
-public class TestFile extends BaseModel<TestFile> {
+public class FileTest extends BaseModel<FileTest> {
     @Ignore
-    private final static Logger logger = LoggerFactory.getLogger(TestFile.class);
+    private final static Logger logger = LoggerFactory.getLogger(FileTest.class);
 
     @MethodService
     public void download(RecordSet rs, String fileName) {
