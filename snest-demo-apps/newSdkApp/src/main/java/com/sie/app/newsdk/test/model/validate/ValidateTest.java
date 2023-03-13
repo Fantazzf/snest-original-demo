@@ -1,5 +1,6 @@
 package com.sie.app.newsdk.test.model.validate;
 
+import com.sie.snest.sdk.BaseModel;
 import com.sie.snest.sdk.annotation.meta.Model;
 import com.sie.snest.sdk.annotation.validate.Validate;
 
@@ -7,7 +8,7 @@ import com.sie.snest.sdk.annotation.validate.Validate;
  * 校验demo
  */
 @Model
-public class ValidateTest {
+public class ValidateTest extends BaseModel<ValidateTest> {
 
     @Validate.Email(message = "邮箱有误")
     private String email;
