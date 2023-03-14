@@ -1,6 +1,7 @@
 package com.sie.app.newsdk.test.model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
@@ -10,12 +11,14 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.sie.snest.engine.rule.Filter;
 import com.sie.snest.engine.utils.Options;
 import com.sie.snest.sdk.BaseModel;
 import com.sie.snest.sdk.CascadeType;
 import com.sie.snest.sdk.annotation.meta.MethodService;
 import com.sie.snest.sdk.annotation.meta.Model;
 import com.sie.snest.sdk.annotation.meta.Property;
+import com.sie.snest.sdk.annotation.orm.Ignore;
 import com.sie.snest.sdk.annotation.orm.Index;
 import com.sie.snest.sdk.annotation.orm.JoinColumn;
 import com.sie.snest.sdk.annotation.orm.JoinTable;
@@ -34,7 +37,9 @@ import com.sie.snest.sdk.annotation.validate.Validate;
 @Model(indexes = { @Index(name = "name_index", columnList = { "name", "email" }, unique = true),
 		@Index(columnList = { "phone" })})
 public class TestUser extends BaseModel<TestUser> {
-
+	
+	
+	
     @Property(columnName = "name", displayName = "名称",displayForModel = true)
     //@Validate.NotBlank
     private String name;
@@ -57,7 +62,7 @@ public class TestUser extends BaseModel<TestUser> {
 	@Property(columnName = "age_int", displayName = "年龄Int")
 	private int ageInt;
 	
-	
+	@Ignore
 	@Validate.Max(110)
 	@Property(columnName = "salary_double", displayName = "salaryDouble")
 	private double salaryDouble;
@@ -79,6 +84,8 @@ public class TestUser extends BaseModel<TestUser> {
 	@Selection(values = { @Option(label = "状态1", value = "1"), @Option(label = "禁用", value = "2"), @Option(label = "已删除", value = "3") })
 	private String status;
     
+    
+    
     @ManyToOne(displayName = "2单选异步获取Many2one", cascade = {CascadeType.DEL_SET_NULL})
     @JoinColumn(name = "org_id", referencedColumnName = "id")
     private TestOrg org;
@@ -90,7 +97,7 @@ public class TestUser extends BaseModel<TestUser> {
 	private String selectMetod;
 
 	@Property(displayName = "4单选异步获取模型")
-	@Selection(model = "TestOrg", properties = "name", orderBy = "name desc")
+	@Selection(model = "TestOrg", properties = "name", orderBy = "name desc",filter = "[[\"name\",\"like\",\"admin%\"]]")
 	private String selectModel;
 	
 	@Property(displayName = "statusInt", defaultValue = "1", widget = "select")
@@ -119,7 +126,7 @@ public class TestUser extends BaseModel<TestUser> {
 
 	@Property(displayName = "8多选异步获取模型")
 	@Selection(model = "TestOrg", properties = "name", multiple = true)
-	private String[] selectMultipleModel;
+	private List<TestOrg> selectMultipleModel;
 	
 	@Property(displayName = "9-联动-省", toolTips = "请选择")
 	@Selection(method = "selectProvince", linkageFields = {"city", "area" })
@@ -219,7 +226,7 @@ public class TestUser extends BaseModel<TestUser> {
 	 * 创建用户服务
 	 */
 	@MethodService(description = "selectMetod")
-	public List<Options> selectMetod(Object value) {
+	public List<Options> selectMetod(Object value,String orgId) {
 		String json = "[{\"code\":\"110101\",\"value\":\"东城区\"},{\"code\":\"110102\",\"value\":\"西城区\"},{\"code\":\"110105\",\"value\":\"朝阳区\"},{\"code\":\"110106\",\"value\":\"丰台区\"},{\"code\":\"110107\",\"value\":\"石景山区\"},{\"code\":\"110108\",\"value\":\"海淀区\"},{\"code\":\"110109\",\"value\":\"门头沟区\"},{\"code\":\"110111\",\"value\":\"房山区\"},{\"code\":\"110112\",\"value\":\"通州区\"},{\"code\":\"110113\",\"value\":\"顺义区\"},{\"code\":\"110114\",\"value\":\"昌平区\"},{\"code\":\"110115\",\"value\":\"大兴区\"},{\"code\":\"110116\",\"value\":\"怀柔区\"},{\"code\":\"110117\",\"value\":\"平谷区\"},{\"code\":\"110118\",\"value\":\"密云区\"},{\"code\":\"110119\",\"value\":\"延庆区\"}]";
 		List<Options> options = new ArrayList<Options>();
 		List<Options> provinceList = new ArrayList<Options>();
@@ -231,7 +238,7 @@ public class TestUser extends BaseModel<TestUser> {
 		}
 
 		String valueStr=Objects.toString(value, null);
-		// 处理回显,也可以不处理
+		//1.处理回显
 		if (StringUtils.isNotBlank(valueStr)) {
 			Optional<Options> optional = provinceList.stream().filter(p -> p.getValue().equals(valueStr)).findFirst();
 			if (optional.isPresent()) {
@@ -245,9 +252,21 @@ public class TestUser extends BaseModel<TestUser> {
 	}
 	
 	
+	@MethodService(description = "selectOrg")
+	public List<Options> selectOrg(Object value) {
+		TestOrg testOrg=new TestOrg();
+		List<TestOrg> testOrgList = testOrg.search(null, Arrays.asList("name"), null, null, null);
+		List<Options> options = new ArrayList<Options>();
+		for (TestOrg org:testOrgList) {
+			options.add(Options.of(org.getName(), org.getId()));
+		}
+		return options;
+	}
+	
+	
 	
 	@MethodService(description = "selectProvince")
-	public List<Options> selectProvince(Object  value) {
+	public List<Options> selectProvince(Object value) {
 
 		String json = "[{\"code\":\"110000\",\"value\":\"北京市\",\"children\":[{\"code\":\"110100\",\"value\":\"北京市\",\"children\":[{\"code\":\"110101\",\"value\":\"东城区\"},{\"code\":\"110102\",\"value\":\"西城区\"},{\"code\":\"110105\",\"value\":\"朝阳区\"},{\"code\":\"110106\",\"value\":\"丰台区\"},{\"code\":\"110107\",\"value\":\"石景山区\"},{\"code\":\"110108\",\"value\":\"海淀区\"},{\"code\":\"110109\",\"value\":\"门头沟区\"},{\"code\":\"110111\",\"value\":\"房山区\"},{\"code\":\"110112\",\"value\":\"通州区\"},{\"code\":\"110113\",\"value\":\"顺义区\"},{\"code\":\"110114\",\"value\":\"昌平区\"},{\"code\":\"110115\",\"value\":\"大兴区\"},{\"code\":\"110116\",\"value\":\"怀柔区\"},{\"code\":\"110117\",\"value\":\"平谷区\"},{\"code\":\"110118\",\"value\":\"密云区\"},{\"code\":\"110119\",\"value\":\"延庆区\"}]}]},{\"code\":\"120000\",\"value\":\"天津市\",\"children\":[{\"code\":\"120100\",\"value\":\"天津市\",\"children\":[{\"code\":\"120101\",\"value\":\"和平区\"},{\"code\":\"120102\",\"value\":\"河东区\"},{\"code\":\"120103\",\"value\":\"河西区\"},{\"code\":\"120104\",\"value\":\"南开区\"},{\"code\":\"120105\",\"value\":\"河北区\"},{\"code\":\"120106\",\"value\":\"红桥区\"},{\"code\":\"120110\",\"value\":\"东丽区\"},{\"code\":\"120111\",\"value\":\"西青区\"},{\"code\":\"120112\",\"value\":\"津南区\"},{\"code\":\"120113\",\"value\":\"北辰区\"},{\"code\":\"120114\",\"value\":\"武清区\"},{\"code\":\"120115\",\"value\":\"宝坻区\"},{\"code\":\"120116\",\"value\":\"滨海新区\"},{\"code\":\"120117\",\"value\":\"宁河区\"},{\"code\":\"120118\",\"value\":\"静海区\"},{\"code\":\"120119\",\"value\":\"蓟州区\"}]}]}]";
 		List<Options> options = new ArrayList<Options>();
@@ -259,7 +278,7 @@ public class TestUser extends BaseModel<TestUser> {
 			provinceList.add(Options.of(proviceObj.getString("value"), proviceObj.getString("code")));
 		}
 
-		String valueStr=Objects.toString(value, null);
+		String valueStr = Objects.toString(value, null);
 		// 处理回显,也可以不处理
 		if (StringUtils.isNotBlank(valueStr)) {
 			Optional<Options> optional = provinceList.stream().filter(p -> p.getValue().equals(valueStr)).findFirst();
