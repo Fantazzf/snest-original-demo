@@ -38,6 +38,39 @@
 			"parent_ids": {
 				"@ref": "sdk_root_menu"
 			}
+		},
+		"meta_app_vm_menu": {
+			"name": "meta_app_vm_menu",
+			"display_name": "app视图",
+			"model": "MetaAppVm",
+			"view": "grid,search,form",
+			"sequence": 4,
+			"active": true,
+			"parent_ids": {
+				"@ref": "sdk_root_menu"
+			}
+		},
+		"meta_property_vm_menu": {
+			"name": "meta_property_vm_menu",
+			"display_name": "属性视图",
+			"model": "MetaPropertyVm",
+			"view": "grid,search,form",
+			"sequence": 5,
+			"active": true,
+			"parent_ids": {
+				"@ref": "sdk_root_menu"
+			}
+		},
+		"user_vm_menu": {
+			"name": "user_vm_menu",
+			"display_name": "用户视图",
+			"model": "UserVm",
+			"view": "grid,search,form",
+			"sequence": 6,
+			"active": true,
+			"parent_ids": {
+				"@ref": "sdk_root_menu"
+			}
 		}
 	}
 }
