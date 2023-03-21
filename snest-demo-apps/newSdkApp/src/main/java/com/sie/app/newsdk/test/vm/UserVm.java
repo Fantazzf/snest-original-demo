@@ -18,8 +18,6 @@ public class UserVm extends BaseModel<UserVm> {
     @View.MapProperty("name")
     private String userName;
 
-    private String password;
-
     private Object org_id;
 
     private Object role_ids;
