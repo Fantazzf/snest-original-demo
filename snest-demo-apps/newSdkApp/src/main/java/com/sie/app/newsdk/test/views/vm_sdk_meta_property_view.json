@@ -20,33 +20,6 @@
         "type": "grid"
       }
     },
-    "MetaPropertyVm_form": {
-      "mode": "primary",
-      "name": "MetaPropertyVm表单",
-      "model": "MetaPropertyVm",
-      "type": "form",
-      "body": {
-        "buttons": [
-          "@defaults"
-        ],
-        "columns": [
-          "name",
-          "model",
-          "app"
-        ],
-        "tbar": [
-          {
-            "name":"添加",
-            "action":"addEr",
-            "icon":"add"
-          },
-          {"name":"删除",
-            "action":"deleteEr"
-          }
-        ],
-        "type": "grid"
-      }
-    },
     "MetaPropertyVm_search": {
       "mode": "primary",
       "name": "MetaPropertyVm搜索",

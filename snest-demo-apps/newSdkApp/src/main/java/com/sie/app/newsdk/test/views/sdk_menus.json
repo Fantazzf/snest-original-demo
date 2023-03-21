@@ -43,7 +43,7 @@
 			"name": "meta_app_vm_menu",
 			"display_name": "app视图",
 			"model": "MetaAppVm",
-			"view": "grid,search,form",
+			"view": "grid,search",
 			"sequence": 4,
 			"active": true,
 			"parent_ids": {
@@ -54,7 +54,7 @@
 			"name": "meta_property_vm_menu",
 			"display_name": "属性视图",
 			"model": "MetaPropertyVm",
-			"view": "grid,search,form",
+			"view": "grid,search",
 			"sequence": 5,
 			"active": true,
 			"parent_ids": {
@@ -65,7 +65,7 @@
 			"name": "user_vm_menu",
 			"display_name": "用户视图",
 			"model": "UserVm",
-			"view": "grid,search,form",
+			"view": "grid,search",
 			"sequence": 6,
 			"active": true,
 			"parent_ids": {

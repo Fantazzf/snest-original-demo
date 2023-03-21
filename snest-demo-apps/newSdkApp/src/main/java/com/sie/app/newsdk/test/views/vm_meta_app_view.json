@@ -1,44 +1,5 @@
 {
   "views": {
-    "MetaAppVm_form": {
-      "mode": "primary",
-      "name": "MetaAppVm表单",
-      "model": "MetaAppVm",
-      "type": "form",
-      "body": {
-        "buttons": [
-          "@defaults"
-        ],
-        "columns": [
-          "name",
-          "app_source",
-          "product",
-          "dependency",
-          "display_name",
-          "summary",
-          "categoryName",
-          "categoryDescription",
-          "modelNames"
-        ],
-        "tbar": [
-          "@defaults"
-        ],
-        "tabs": [
-          {
-            "header": "应用依赖",
-            "rowspan": 3,
-            "body": {
-              "type": "grid,form",
-              "field": "dependency",
-              "columns": [
-                "name"
-              ]
-            }
-          }
-        ],
-        "type": "grid"
-      }
-    },
     "MetaAppVm_grid": {
       "mode": "primary",
       "name": "MetaAppVm表格",

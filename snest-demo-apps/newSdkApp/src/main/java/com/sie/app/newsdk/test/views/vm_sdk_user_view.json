@@ -15,64 +15,7 @@
           "org_id"
         ],
         "buttons": [
-          {
-            "name": "编辑",
-            "action": "edit",
-            "auth": "update"
-          }
-        ],
-        "tbar": [
-          {
-            "name": "新增",
-            "action": "create",
-            "auth": "create"
-          },
-          {
-            "name": "删除",
-            "action": "delete",
-            "auth": "delete"
-          }
-        ]
-      }
-    },
-    "UserVm_form": {
-      "name": "用户表单",
-      "model": "UserVm",
-      "type": "form",
-      "mode": "primary",
-      "body": {
-        "type": "form",
-        "columns": [
-          "login",
-          "email",
-          "userName",
-          "password",
-          "org_id"
-        ],
-        "tabs": [
-          {
-            "header": "角色",
-            "tbar": [
-              {
-                "name": "添加",
-                "action": "addEr",
-                "auth": "update"
-              },
-              {
-                "name": "删除",
-                "action": "deleteEr",
-                "auth": "delete"
-              }
-            ],
-            "body": {
-              "type": "grid,form,search",
-              "field": "role_ids",
-              "columns": [
-                "name",
-                "is_admin"
-              ]
-            }
-          }
+          "@defaults"
         ],
         "tbar": [
           "@defaults"
