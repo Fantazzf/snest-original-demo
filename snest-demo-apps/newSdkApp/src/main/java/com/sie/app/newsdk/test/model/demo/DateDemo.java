@@ -35,4 +35,19 @@ public class DateDemo extends BaseModel<DateDemo> {
         + "HH:mm:ss")
     private Timestamp datetimeRange;
 
+    public Date getYear() {
+        return getDate("year");
+    }
+
+    public Date getMonth() {
+        return getDate("month");
+    }
+
+    public Date getDate() {
+        return getDate("date");
+    }
+
+    public Timestamp getDatetime() {
+        return getTimestamp("datetime");
+    }
 }

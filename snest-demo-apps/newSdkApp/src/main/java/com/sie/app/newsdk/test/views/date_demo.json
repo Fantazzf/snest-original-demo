@@ -33,18 +33,15 @@
           },
           {
             "label": "月范围",
-            "name": "monthRange",
-            "widget": "monthrange"
+            "name": "monthRange"
           },
           {
             "label": "日范围",
-            "name": "dateRange",
-            "widget": "daterange"
+            "name": "dateRange"
           },
           {
             "label": "时间范围",
-            "name": "datetimeRange",
-            "widget": "datetimerange"
+            "name": "datetimeRange"
           }
         ],
         "tbar": [
@@ -92,17 +89,17 @@
           {
             "label": "月范围",
             "name": "monthRange",
-            "widget": "monthrange"
+            "widget": "month"
           },
           {
             "label": "日范围",
             "name": "dateRange",
-            "widget": "daterange"
+            "widget": "date"
           },
           {
             "label": "时间范围",
             "name": "datetimeRange",
-            "widget": "datetimerange"
+            "widget": "datetime"
           }
         ],
         "tabs": [],
