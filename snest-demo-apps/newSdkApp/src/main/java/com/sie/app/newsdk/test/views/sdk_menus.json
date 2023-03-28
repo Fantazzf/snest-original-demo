@@ -71,6 +71,17 @@
 			"parent_ids": {
 				"@ref": "sdk_root_menu"
 			}
+		},
+		"date_demo_menu": {
+			"name": "date_demo_menu",
+			"display_name": "日期示例",
+			"model": "DateDemo",
+			"view": "datedemo_grid,datedemo_search,datedemo_form",
+			"sequence": 7,
+			"active": true,
+			"parent_ids": {
+				"@ref": "sdk_root_menu"
+			}
 		}
 	}
 }

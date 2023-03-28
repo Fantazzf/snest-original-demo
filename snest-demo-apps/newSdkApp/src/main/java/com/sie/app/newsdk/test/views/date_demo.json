@@ -1,0 +1,163 @@
+{
+  "views": {
+    "datedemo_grid": {
+      "body": {
+        "buttons": [
+          {
+            "action": "preview",
+            "auth": "read",
+            "name": "详情"
+          },
+          {
+            "action": "edit",
+            "auth": "update",
+            "name": "编辑"
+          }
+        ],
+        "columns": [
+          {
+            "label": "年",
+            "name": "year"
+          },
+          {
+            "label": "月",
+            "name": "month"
+          },
+          {
+            "label": "日",
+            "name": "date"
+          },
+          {
+            "label": "时间",
+            "name": "datetime"
+          },
+          {
+            "label": "月范围",
+            "name": "monthRange",
+            "widget": "monthrange"
+          },
+          {
+            "label": "日范围",
+            "name": "dateRange",
+            "widget": "daterange"
+          },
+          {
+            "label": "时间范围",
+            "name": "datetimeRange",
+            "widget": "datetimerange"
+          }
+        ],
+        "tbar": [
+          {
+            "action": "create",
+            "auth": "create",
+            "name": "新增"
+          },
+          {
+            "action": "delete",
+            "auth": "delete",
+            "name": "删除"
+          }
+        ],
+        "type": "grid"
+      },
+      "mode": "primary",
+      "model": "DateDemo",
+      "name": "日期Demo-表格",
+      "type": "grid"
+    },
+    "datedemo_form": {
+      "body": {
+        "columns": [
+          {
+            "label": "年",
+            "name": "year",
+            "widget": "year"
+          },
+          {
+            "label": "月",
+            "name": "month",
+            "widget": "month"
+          },
+          {
+            "label": "日",
+            "name": "date",
+            "widget": "date"
+          },
+          {
+            "label": "时间",
+            "name": "datetime",
+            "widget": "datetime"
+          },
+          {
+            "label": "月范围",
+            "name": "monthRange",
+            "widget": "monthrange"
+          },
+          {
+            "label": "日范围",
+            "name": "dateRange",
+            "widget": "daterange"
+          },
+          {
+            "label": "时间范围",
+            "name": "datetimeRange",
+            "widget": "datetimerange"
+          }
+        ],
+        "tabs": [],
+        "type": "form"
+      },
+      "mode": "primary",
+      "model": "DateDemo",
+      "name": "日期Demo-表单",
+      "type": "form"
+    },
+    "datedemo_search": {
+      "body": {
+        "columns": [
+          {
+            "label": "年",
+            "name": "year",
+            "widget": "year"
+          },
+          {
+            "label": "月",
+            "name": "month",
+            "widget": "month"
+          },
+          {
+            "label": "月范围",
+            "name": "monthRange",
+            "widget": "monthrange"
+          },
+          {
+            "label": "日",
+            "name": "date",
+            "widget": "date"
+          },
+          {
+            "label": "日范围",
+            "name": "dateRange",
+            "widget": "daterange"
+          },
+          {
+            "label": "时间",
+            "name": "datetime",
+            "widget": "datetime"
+          },
+          {
+            "label": "时间范围",
+            "name": "datetimeRange",
+            "widget": "datetimerange"
+          }
+        ],
+        "type": "search"
+      },
+      "mode": "primary",
+      "model": "DateDemo",
+      "name": "日期Demo-搜索",
+      "type": "search"
+    }
+  }
+}
