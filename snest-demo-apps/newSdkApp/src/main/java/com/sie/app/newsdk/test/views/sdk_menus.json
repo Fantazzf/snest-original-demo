@@ -82,6 +82,17 @@
 			"parent_ids": {
 				"@ref": "sdk_root_menu"
 			}
+		},
+		"export_demo_menu": {
+			"name": "export_demo_menu",
+			"display_name": "导出示例",
+			"model": "ExportDemo",
+			"view": "exportdemo_grid,exportdemo_search,exportdemo_form",
+			"sequence": 8,
+			"active": true,
+			"parent_ids": {
+				"@ref": "sdk_root_menu"
+			}
 		}
 	}
 }
