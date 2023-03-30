@@ -93,6 +93,17 @@
 			"parent_ids": {
 				"@ref": "sdk_root_menu"
 			}
+		},
+		"compute_property_demo_menu": {
+			"name": "compute_property_demo_menu",
+			"display_name": "计算属性示例",
+			"model": "ComputePropertyDemo",
+			"view": "grid,search,form",
+			"sequence": 9,
+			"active": true,
+			"parent_ids": {
+				"@ref": "sdk_root_menu"
+			}
 		}
 	}
 }
