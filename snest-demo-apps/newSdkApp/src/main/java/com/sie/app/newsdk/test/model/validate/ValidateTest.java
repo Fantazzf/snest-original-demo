@@ -7,7 +7,6 @@ import com.sie.snest.sdk.annotation.validate.Validate;
 /**
  * 校验demo
  */
-@Model
 public class ValidateTest extends BaseModel<ValidateTest> {
 
     @Validate.Email(message = "邮箱有误")
