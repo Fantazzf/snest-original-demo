@@ -14,7 +14,6 @@ import com.sie.snest.sdk.annotation.validate.Validate;
  * @date 2023/2/8 15:49
  */
 @Model
-@Service(name="testM1")
 public class Student extends BaseModel {
 
     @Property(displayName = "名字",length = 100)
