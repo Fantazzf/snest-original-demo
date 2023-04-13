@@ -104,6 +104,17 @@
 			"parent_ids": {
 				"@ref": "sdk_root_menu"
 			}
+		},
+		"dict_demo_menu": {
+			"name": "dict_demo_menu",
+			"display_name": "字典示例",
+			"model": "DictDemo",
+			"view": "grid,search,form",
+			"sequence": 10,
+			"active": true,
+			"parent_ids": {
+				"@ref": "sdk_root_menu"
+			}
 		}
 	}
 }
