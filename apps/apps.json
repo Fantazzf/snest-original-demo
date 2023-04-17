@@ -9,9 +9,9 @@
   "apps": {
     "master": {
       "SDK": {
-        "base": "sie-snest-base-1.0-SNAPSHOT.jar",
-        "dict": "sie-snest-dict-1.0-SNAPSHOT.jar",
-        "file": "sie-snest-file-1.0-SNAPSHOT.jar",
+        "base": "sie-snest-base-v1.1.3.RELEASE.jar",
+        "file": "sie-snest-file-v1.1.3.RELEASE.jar",
+        "dict": "sie-snest-dict-v1.1.3.RELEASE.jar",
         "newSdkApp": "newSdkApp-1.0-SNAPSHOT.jar",
         "others": "newSdkOthers-1.0-SNAPSHOT.jar",
         "feignDemo": "feignDemo-1.0-SNAPSHOT.jar"
