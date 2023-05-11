@@ -25,7 +25,8 @@
     "view/vm_sdk_meta_property_view.json",
     "views/vm_sdk_user_view.json",
     "views/date_demo.json",
-    "views/sdk_export_demo.json"
+    "views/sdk_export_demo.json",
+    "views/auto_log_demo.json"
   ],
   "data": [
     "data/test_user.json"
