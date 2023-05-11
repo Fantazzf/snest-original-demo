@@ -1,0 +1,92 @@
+{
+  "views": {
+    "demo_order_vm_search": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "日期",
+            "name": "date",
+            "custom": true
+          },
+          {
+            "displayName": "客户1",
+            "name": "customer",
+            "custom": true
+          },
+          {
+            "displayName": "客户2",
+            "name": "customer2",
+            "custom": true
+          },
+          {
+            "displayName": "价格",
+            "name": "price",
+            "custom": true
+          }
+        ],
+        "type": "search"
+      },
+      "mode": "primary",
+      "model": "demo_order_vm",
+      "name": "订单-搜索",
+      "type": "search"
+    },
+    "demo_order_vm_grid": {
+      "body": {
+        "buttons": [],
+        "columns": [
+          {
+            "label": "日期",
+            "name": "date"
+          },
+          {
+            "label": "客户1",
+            "name": "customer"
+          },
+          {
+            "label": "客户2",
+            "name": "customer2"
+          },
+          {
+            "label": "价格",
+            "name": "price"
+          }
+        ],
+        "tbar": [],
+        "type": "grid"
+      },
+      "mode": "primary",
+      "model": "demo_order_vm",
+      "name": "订单-表格",
+      "type": "grid"
+    },
+    "demo_order_vm_form": {
+      "body": {
+        "columns": [
+          {
+            "label": "日期",
+            "name": "date"
+          },
+          {
+            "label": "客户1",
+            "name": "customer"
+          },
+          {
+            "label": "客户2",
+            "name": "customer2"
+          },
+          {
+            "label": "价格",
+            "name": "price"
+          }
+        ],
+        "tabs": [],
+        "type": "form"
+      },
+      "mode": "primary",
+      "model": "demo_order_vm",
+      "name": "订单-表单",
+      "type": "form"
+    }
+  }
+}
