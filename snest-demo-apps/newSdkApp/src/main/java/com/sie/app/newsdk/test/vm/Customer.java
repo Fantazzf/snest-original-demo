@@ -3,6 +3,7 @@ package com.sie.app.newsdk.test.vm;
 import com.sie.snest.sdk.BaseModel;
 import com.sie.snest.sdk.annotation.meta.Model;
 import com.sie.snest.sdk.annotation.meta.Property;
+import com.sie.snest.sdk.annotation.orm.JoinColumn;
 import com.sie.snest.sdk.annotation.orm.OneToMany;
 
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Map;
 public class Customer extends BaseModel<Customer> {
 
 
-    @Property
+    @Property(displayForModel = true)
     private String name;
     @Property
     private String streetAddress;
@@ -26,8 +27,12 @@ public class Customer extends BaseModel<Customer> {
     private String province;
     @Property
     private String phone;
-    @OneToMany
+    @OneToMany(targetModel = "demo_order", targetProperty = "customer")
+    @JoinColumn
     private List<Order> orders;
+
+    @OneToMany(targetModel = "demo_order", targetProperty = "customer2")
+    private List<Order> orders2;
 
     @Property(computeMethod = "computeDesc")
     private String desc;

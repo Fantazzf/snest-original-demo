@@ -1,10 +1,16 @@
 package com.sie.app.newsdk.test.vm;
 
+import com.sie.snest.engine.rule.Filter;
 import com.sie.snest.sdk.BaseModel;
+import com.sie.snest.sdk.annotation.meta.MethodService;
 import com.sie.snest.sdk.annotation.meta.Model;
 import com.sie.snest.sdk.annotation.meta.Property;
 import com.sie.snest.sdk.annotation.vm.SQLFunction;
 import com.sie.snest.sdk.annotation.vm.View;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 /**
  * @Author chun
@@ -26,6 +32,40 @@ public class CustomerVm extends BaseModel<CustomerVm> {
     @View.MapFunction(value = SQLFunction.SUM)
     private String allPrice;
 
+    public String getTime() {
+        return (String) this.get("time");
+    }
+
+    public void setTime(String time) {
+        this.set("time", time);
+    }
+
+    /**
+     * 只添加@Property属性，代表不映射
+     * 可重写search方法，自由赋值
+     */
     @Property
     private String time;
+
+    //    @Cache(name = "c1",key = "s{1} {2} {3} {4} {5}")
+    @Override
+    public List<CustomerVm> search(Filter filter, List<String> properties, Integer limit, Integer offset, String order) {
+        long l = System.nanoTime();
+        List<CustomerVm> result = super.search(filter, properties, limit, offset, order);
+        String timeStr = LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
+        for (CustomerVm customerVm : result) {
+            customerVm.set("time", timeStr);
+        }
+        long l1 = System.nanoTime();
+        System.out.println("demo_customer search:" + (l1 - l) / 1000);
+        return result;
+    }
+
+
+
+    @MethodService
+//    @CacheInvalidate(name = "c1", prefix = "s")
+    public Object test1() {
+        return "demo_customer test1";
+    }
 }

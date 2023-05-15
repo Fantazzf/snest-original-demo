@@ -36,6 +36,10 @@
         "buttons": [],
         "columns": [
           {
+            "label": "名称",
+            "name": "name"
+          },
+          {
             "label": "日期",
             "name": "date"
           },

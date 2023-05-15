@@ -25,7 +25,6 @@ public class Order extends BaseModel<Order> {
     @JoinColumn(name = "customer_id", referencedColumnName = "id")
     private Customer customer;
 
-    @Selection(filter = "", properties = {"name", "type"})
     @ManyToOne
     @JoinColumn(name = "customer2_id", referencedColumnName = "id")
     private Customer customer2;
