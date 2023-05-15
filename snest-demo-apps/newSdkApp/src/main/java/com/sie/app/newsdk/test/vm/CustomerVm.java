@@ -47,24 +47,19 @@ public class CustomerVm extends BaseModel<CustomerVm> {
     @Property
     private String time;
 
-    //    @Cache(name = "c1",key = "s{1} {2} {3} {4} {5}")
     @Override
     public List<CustomerVm> search(Filter filter, List<String> properties, Integer limit, Integer offset, String order) {
-        long l = System.nanoTime();
         List<CustomerVm> result = super.search(filter, properties, limit, offset, order);
         String timeStr = LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
         for (CustomerVm customerVm : result) {
             customerVm.set("time", timeStr);
         }
-        long l1 = System.nanoTime();
-        System.out.println("demo_customer search:" + (l1 - l) / 1000);
         return result;
     }
 
 
 
     @MethodService
-//    @CacheInvalidate(name = "c1", prefix = "s")
     public Object test1() {
         return "demo_customer test1";
     }

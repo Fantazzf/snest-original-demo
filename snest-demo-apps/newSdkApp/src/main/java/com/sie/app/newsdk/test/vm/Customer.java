@@ -89,23 +89,4 @@ public class Customer extends BaseModel<Customer> {
         this.set("orders", orders);
     }
 
-//    @Cache(name = "C1", key = "s{1}.value {1} {2} {3} {4} {5}")
-//    @Override
-//    public List<Customer> search(Filter filter, List<String> properties, Integer limit, Integer offset, String order) {
-//        return super.search(filter, properties, limit, offset, order);
-//    }
-//
-//    @Cache(name = "C1")
-//    public String[] create(List<Map<String, Object>> valuesList) {
-//
-//    }
-//
-//    public String update(Map<String, Object> values) {
-//
-//    }
-//
-//    public boolean delete(String id) {
-//
-//    }
-
 }
