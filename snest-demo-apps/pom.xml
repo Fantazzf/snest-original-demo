@@ -24,7 +24,7 @@
         <dependency>
             <groupId>com.sie.meta</groupId>
             <artifactId>sie-snest-sdk</artifactId>
-            <version>v1.1.2.RELEASE</version>
+            <version>v1.1.8.RELEASE</version>
             <scope>compile</scope>
         </dependency>
 
