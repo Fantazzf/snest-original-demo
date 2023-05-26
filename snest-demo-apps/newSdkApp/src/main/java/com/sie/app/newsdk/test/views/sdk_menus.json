@@ -126,6 +126,36 @@
 			"parent_ids": {
 				"@ref": "sdk_root_menu"
 			}
+		},
+		"demo_customer_vm_menu": {
+			"sequence": "6",
+			"view": "grid,search,form",
+			"name": "demo_customer_vm_menu",
+			"model": "demo_customer_vm",
+			"display_name": "客户视图",
+			"parent_ids": {
+				"@ref": "sdk_root_menu"
+			}
+		},
+		"demo_order_vm_menu": {
+			"sequence": "7",
+			"view": "grid,search,form",
+			"name": "demo_order_vm_menu",
+			"model": "demo_order_vm",
+			"display_name": "订单视图",
+			"parent_ids": {
+				"@ref": "sdk_root_menu"
+			}
+		},
+		"demo_order_menu": {
+			"sequence": "8",
+			"view": "grid,search,form",
+			"name": "demo_order_menu",
+			"model": "demo_order",
+			"display_name": "订单",
+			"parent_ids": {
+				"@ref": "sdk_root_menu"
+			}
 		}
 	}
 }
