@@ -28,7 +28,8 @@
     "views/sdk_export_demo.json",
     "views/auto_log_demo.json",
     "views/customervm_view.json",
-    "views/ordervm_view.json"
+    "views/ordervm_view.json",
+    "views/sdk_order_view.json"
   ],
   "data": [
     "data/test_user.json",

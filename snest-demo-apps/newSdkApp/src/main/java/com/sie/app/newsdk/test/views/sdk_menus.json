@@ -146,6 +146,16 @@
 			"parent_ids": {
 				"@ref": "sdk_root_menu"
 			}
+		},
+		"demo_order_menu": {
+			"sequence": "8",
+			"view": "grid,search,form",
+			"name": "demo_order_menu",
+			"model": "demo_order",
+			"display_name": "订单",
+			"parent_ids": {
+				"@ref": "sdk_root_menu"
+			}
 		}
 	}
 }
