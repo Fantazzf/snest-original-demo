@@ -26,6 +26,12 @@
             <artifactId>sie-snest-sdk</artifactId>
             <version>v1.1.2.RELEASE</version>
             <scope>compile</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.sie.meta</groupId>
+                    <artifactId>sie-snest-engine</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
