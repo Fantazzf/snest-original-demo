@@ -8,7 +8,9 @@
   },
   "apps": {
       "SDK": [
-        "sie-snest-base-v1.2.0.RELEASE.jar"
+        "sie-snest-base-v1.2.0.RELEASE.jar",
+        "sie-snest-file-v1.2.0.RELEASE.jar",
+        "sie-snest-dict-v1.2.0.RELEASE.jar",
       ]
   }
 }
