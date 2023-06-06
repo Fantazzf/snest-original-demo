@@ -104,6 +104,17 @@
 			"parent_ids": {
 				"@ref": "sdk_root_menu"
 			}
+		},
+		"test_111111111_menu": {
+			"name": "test_111111111_menu",
+			"display_name": "测试11111111111",
+			"model": "TestTest",
+			"view": "grid,search,form",
+			"sequence": 9,
+			"active": true,
+			"parent_ids": {
+				"@ref": "sdk_root_menu"
+			}
 		}
 	}
 }

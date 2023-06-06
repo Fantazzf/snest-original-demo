@@ -3,19 +3,13 @@
     "API": "com.sie.snest.engine.loaders.ApiLoader",
     "SDK": "com.sie.snest.sdk.loaders.SdkLoader"
   },
-  "apiToken": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhZG1pbiIsImlhdCI6MTY1NzYxMjkxMywiZXhwIjoxNjczMTY0OTEzfQ.t3aVGT6YszNdxgPq0mbrcudAat7vzyLdhfLw1J8X7jbEbdhQ_RvuHqb3MOUTn2CRE2uWCq4RCvqLo8f50vv9Tz6G0BMNZEP6rfVKAHF1NPR8GO4zAzk5Hqf5qKK8qmZbjxeVBKqyFTHW5ynFGXEa1wiYLc4-ukZxhItd3AbV2Zw",
-  "apps1": {
-  },
+  "apiToken": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9",
   "apps": {
-    "master": {
-      "SDK": {
-        "base": "sie-snest-base-1.0-SNAPSHOT.jar",
-        "dict": "sie-snest-dict-1.0-SNAPSHOT.jar",
-        "file": "sie-snest-file-1.0-SNAPSHOT.jar",
-        "newSdkApp": "newSdkApp-1.0-SNAPSHOT.jar",
-        "others": "newSdkOthers-1.0-SNAPSHOT.jar",
-        "feignDemo": "feignDemo-1.0-SNAPSHOT.jar"
-      }
-    }
+    "SDK": [
+      "sie-snest-base-1.0-SNAPSHOT.jar",
+      "sie-snest-file-1.0-SNAPSHOT.jar",
+      "sie-snest-dict-1.0-SNAPSHOT.jar",
+      "newSdkApp-1.0-SNAPSHOT.jar"
+    ]
   }
 }

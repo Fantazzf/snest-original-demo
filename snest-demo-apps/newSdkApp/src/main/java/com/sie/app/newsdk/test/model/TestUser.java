@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
+import com.sie.snest.engine.model.Bool;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import com.alibaba.fastjson.JSONArray;
@@ -35,11 +37,11 @@ import com.sie.snest.sdk.annotation.validate.Validate;
  * @author sie
  */
 @Model(indexes = { @Index(name = "name_index", columnList = { "name", "email" }, unique = true),
-		@Index(columnList = { "phone" })})
+		@Index(columnList = { "phone" })}, isAutoLog = Bool.True)
 public class TestUser extends BaseModel<TestUser> {
-	
-	
-	
+
+
+
     @Property(columnName = "name", displayName = "名称",displayForModel = true)
     //@Validate.NotBlank
     private String name;
@@ -56,12 +58,12 @@ public class TestUser extends BaseModel<TestUser> {
     @Validate.Max(110)
     @Property(columnName = "age", displayName = "年龄")
     private Integer age;
-    
-    
+
+
 	@Validate.Max(110)
 	@Property(columnName = "age_int", displayName = "年龄Int")
 	private int ageInt;
-	
+
 	@Ignore
 	@Validate.Max(110)
 	@Property(columnName = "salary_double", displayName = "salaryDouble")
@@ -83,14 +85,14 @@ public class TestUser extends BaseModel<TestUser> {
     @Property(displayName = "1单选常量", defaultValue = "1", widget = "select",length = 256)
 	@Selection(values = { @Option(label = "状态1", value = "1"), @Option(label = "禁用", value = "2"), @Option(label = "已删除", value = "3") })
 	private String status;
-    
-    
-    
+
+
+
     @ManyToOne(displayName = "2单选异步获取Many2one", cascade = {CascadeType.DEL_SET_NULL})
     @JoinColumn(name = "org_id", referencedColumnName = "id")
     private TestOrg org;
 
-    
+
 
 	@Property(displayName = "3单选异步获取方法",length = 256)
 	@Selection(method = "selectMetod")
@@ -99,35 +101,35 @@ public class TestUser extends BaseModel<TestUser> {
 	@Property(displayName = "4单选异步获取模型")
 	@Selection(model = "TestOrg", properties = "name", orderBy = "name desc",filter = "[[\"name\",\"like\",\"admin%\"]]")
 	private String selectModel;
-	
+
 	@Property(displayName = "statusInt", defaultValue = "1", widget = "select")
 	@Selection(values = { @Option(label = "状态2", value = "1"), @Option(label = "禁用", value = "2"), @Option(label = "已删除", value = "3") })
 	private int statusInt;
-    
-    
+
+
 
 	@Property(displayName = "5多选常量", defaultValue = "1", multiple = true, widget = "select")
 	@Selection(values = { @Option(label = "启用", value = "1"), @Option(label = "禁用", value = "2"),
 			@Option(label = "已删除", value = "3") }, multiple = true)
 	private String selectStatus;
-	
-	
+
+
 
 	@ManyToMany
 	@JoinTable(name = "role_user", joinColumns = @JoinColumn(name = "user_id", nullable = false), inverseJoinColumns = @JoinColumn(name = "role_id", nullable = false))
 	@Selection(multiple = true,properties = "roleName")
 	private List<TestRole> roleList;
-	
-	
+
+
 	@Property(displayName = "7多选异步获取方法")
 	@Selection(method = "selectMultipleProvince", multiple = true)
 	private String[] selectMultipleProvince;
-	
+
 
 	@Property(displayName = "8多选异步获取模型")
 	@Selection(model = "TestOrg", properties = "name", multiple = true)
 	private List<TestOrg> selectMultipleModel;
-	
+
 	@Property(displayName = "9-联动-省", toolTips = "请选择")
 	@Selection(method = "selectProvince", linkageFields = {"city", "area" })
 	private String province;
@@ -139,7 +141,7 @@ public class TestUser extends BaseModel<TestUser> {
 	@Property(displayName = "9-联动-区", toolTips = "请选择")
 	@Selection(method = "selectArea")
 	private String area;
-	
+
     public Date getCreate() {
         return (Date) this.get("create");
     }
@@ -198,7 +200,7 @@ public class TestUser extends BaseModel<TestUser> {
         return this;
     }
 
-   
+
 
     /**
      * 创建用户服务
@@ -250,8 +252,8 @@ public class TestUser extends BaseModel<TestUser> {
 		options.addAll(provinceList);
 		return options;
 	}
-	
-	
+
+
 	@MethodService(description = "selectOrg")
 	public List<Options> selectOrg(Object value) {
 		TestOrg testOrg=new TestOrg();
@@ -262,9 +264,9 @@ public class TestUser extends BaseModel<TestUser> {
 		}
 		return options;
 	}
-	
-	
-	
+
+
+
 	@MethodService(description = "selectProvince")
 	public List<Options> selectProvince(Object value) {
 
@@ -291,10 +293,10 @@ public class TestUser extends BaseModel<TestUser> {
 		options.addAll(provinceList);
 		return options;
 	}
-	
 
-	
-	
+
+
+
 	/**
 	 * 多选选择省
 	 */
@@ -319,8 +321,8 @@ public class TestUser extends BaseModel<TestUser> {
 		options.addAll(provinceList);
 		return options;
 	}
-	
-	
+
+
 	/**
 	 * 选择省
 	 */
@@ -330,7 +332,7 @@ public class TestUser extends BaseModel<TestUser> {
 		String json = "[{\"code\":\"110000\",\"value\":\"北京市\",\"children\":[{\"code\":\"110100\",\"value\":\"北京市\",\"children\":[{\"code\":\"110101\",\"value\":\"东城区\"},{\"code\":\"110102\",\"value\":\"西城区\"},{\"code\":\"110105\",\"value\":\"朝阳区\"},{\"code\":\"110106\",\"value\":\"丰台区\"},{\"code\":\"110107\",\"value\":\"石景山区\"},{\"code\":\"110108\",\"value\":\"海淀区\"},{\"code\":\"110109\",\"value\":\"门头沟区\"},{\"code\":\"110111\",\"value\":\"房山区\"},{\"code\":\"110112\",\"value\":\"通州区\"},{\"code\":\"110113\",\"value\":\"顺义区\"},{\"code\":\"110114\",\"value\":\"昌平区\"},{\"code\":\"110115\",\"value\":\"大兴区\"},{\"code\":\"110116\",\"value\":\"怀柔区\"},{\"code\":\"110117\",\"value\":\"平谷区\"},{\"code\":\"110118\",\"value\":\"密云区\"},{\"code\":\"110119\",\"value\":\"延庆区\"}]}]},{\"code\":\"120000\",\"value\":\"天津市\",\"children\":[{\"code\":\"120100\",\"value\":\"天津市\",\"children\":[{\"code\":\"120101\",\"value\":\"和平区\"},{\"code\":\"120102\",\"value\":\"河东区\"},{\"code\":\"120103\",\"value\":\"河西区\"},{\"code\":\"120104\",\"value\":\"南开区\"},{\"code\":\"120105\",\"value\":\"河北区\"},{\"code\":\"120106\",\"value\":\"红桥区\"},{\"code\":\"120110\",\"value\":\"东丽区\"},{\"code\":\"120111\",\"value\":\"西青区\"},{\"code\":\"120112\",\"value\":\"津南区\"},{\"code\":\"120113\",\"value\":\"北辰区\"},{\"code\":\"120114\",\"value\":\"武清区\"},{\"code\":\"120115\",\"value\":\"宝坻区\"},{\"code\":\"120116\",\"value\":\"滨海新区\"},{\"code\":\"120117\",\"value\":\"宁河区\"},{\"code\":\"120118\",\"value\":\"静海区\"},{\"code\":\"120119\",\"value\":\"蓟州区\"}]}]}]";
 		List<Options> options = new ArrayList<Options>();
 		List<Options> cityList = new ArrayList<Options>();
-		
+
 		//1.出来回显
 		if (StringUtils.isNotBlank(value)) {
 			JSONArray proviceArray = JSONObject.parseArray(json);
@@ -383,8 +385,8 @@ public class TestUser extends BaseModel<TestUser> {
 		return options;
 
 	}
-	
-	
+
+
 	/**
 	 * 选择省
 	 */
@@ -395,7 +397,7 @@ public class TestUser extends BaseModel<TestUser> {
 		List<Options> options = new ArrayList<Options>();
 		List<Options> areaList = new ArrayList<Options>();
 		JSONArray proviceArray = JSONObject.parseArray(json);
-		
+
 		// 1.出来回显
 		if (StringUtils.isNotBlank(value)) {
 			for (int i = 0; i < proviceArray.size(); i++) {

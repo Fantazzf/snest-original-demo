@@ -2,9 +2,15 @@ package com.sie.demo.server;
 
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
+import com.sie.snest.engine.container.AppLifecycleProcess;
 import com.sie.snest.engine.container.Engine;
-import com.sie.snest.engine.loader.BaseLoader;
+import com.sie.snest.engine.container.load.WebMode;
+import com.sie.snest.engine.container.load.factory.LoaderFactory;
+import com.sie.snest.engine.container.manger.IMetaManager;
+import com.sie.snest.engine.container.manger.IMetaType;
+import com.sie.snest.engine.container.manger.factory.IMetaFactory;
 import com.sie.snest.engine.model.Loader;
+import com.sie.snest.engine.utils.ConfigUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -22,8 +28,17 @@ import java.util.Map;
 @ComponentScan(basePackages = "com.sie.snest")
 public class Server {
     public static void main(String[] args) {
+        ConfigUtils.loadAllConfig();
+
+        String metaStoreType = ConfigUtils.get("engine.store.meta.mode");
+        String runMode = ConfigUtils.get("engine.run.mode");
+
+        AppLifecycleProcess loader = LoaderFactory.getAppLoader(WebMode.of(runMode));
+        IMetaManager metaManager = IMetaFactory.getMetaStoreManager(IMetaType.fromString(metaStoreType));
+        loader.setMetaManager(metaManager);
         // 启动引擎
-        Loader.setLoader(new BaseLoader());
+        Loader.setLoader(loader);
+
         Engine.start();
 
         // 启动SpringBoot

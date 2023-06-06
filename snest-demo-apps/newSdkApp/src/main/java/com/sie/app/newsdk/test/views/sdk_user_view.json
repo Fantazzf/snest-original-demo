@@ -151,6 +151,10 @@
             "name": "name"
           },
           {
+            "label": "创建人",
+            "name": "create_user"
+          },
+          {
             "label": "邮箱",
             "name": "email",
             "sortable": true,
@@ -183,7 +187,7 @@
           {
             "label": "status",
             "name": "status"
-  
+
           },
           {
             "label": "组织机构",

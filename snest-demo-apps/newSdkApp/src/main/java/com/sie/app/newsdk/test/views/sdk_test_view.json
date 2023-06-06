@@ -14,7 +14,8 @@
           "b",
           "c",
           "d",
-          "e"
+          "e",
+          "testUser"
         ],
         "tbar": [
           "@defaults"
@@ -33,7 +34,8 @@
           "b",
           "c",
           "d",
-          "e"
+          "e",
+          "testUser"
         ],
         "type": "search"
       }

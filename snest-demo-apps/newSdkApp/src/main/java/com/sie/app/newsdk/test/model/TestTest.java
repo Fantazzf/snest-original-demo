@@ -1,8 +1,11 @@
 package com.sie.app.newsdk.test.model;
 
 import com.sie.snest.sdk.BaseModel;
+import com.sie.snest.sdk.CascadeType;
 import com.sie.snest.sdk.annotation.meta.Model;
 import com.sie.snest.sdk.annotation.meta.Property;
+import com.sie.snest.sdk.annotation.orm.JoinColumn;
+import com.sie.snest.sdk.annotation.orm.ManyToOne;
 import com.sie.snest.sdk.annotation.validate.Validate;
 
 import java.util.Date;
@@ -33,4 +36,9 @@ public class TestTest extends BaseModel<TestTest> {
 
     @Property(columnName = "g", displayName = "整形Integer")
     private Integer g;
+
+    @ManyToOne(displayName = "测试用户", cascade = CascadeType.DELETE)
+    @JoinColumn(name = "fid", referencedColumnName = "id")
+    private TestUser testUser;
+
 }
