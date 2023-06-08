@@ -11,8 +11,6 @@ import com.sie.snest.engine.container.manger.IMetaType;
 import com.sie.snest.engine.container.manger.factory.IMetaFactory;
 import com.sie.snest.engine.model.Loader;
 import com.sie.snest.engine.utils.ConfigUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -29,10 +27,6 @@ import java.util.Map;
 @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
 @ComponentScan(basePackages = "com.sie.snest")
 public class Server {
-
-    private final static Logger logger = LoggerFactory.getLogger(Server.class);
-
-
     public static void main(String[] args) {
         ConfigUtils.loadAllConfig();
 
@@ -44,7 +38,6 @@ public class Server {
         loader.setMetaManager(metaManager);
         // 启动引擎
         Loader.setLoader(loader);
-        logger.info("Loader: {}, IMetaManager: {}", loader.getClass().getName(), metaManager.getClass().getName());
 
         Engine.start();
 
