@@ -22,5 +22,11 @@ public class OrderVm extends BaseModel<OrderVm> {
     @View.MapProperty("customer2")
     private String customer2;
 
+    private String customer3;
+
+    private String customer4;
+
+    private String customer5;
+
     private int price;
 }

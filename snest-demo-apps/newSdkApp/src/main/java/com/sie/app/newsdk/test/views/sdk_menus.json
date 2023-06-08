@@ -156,6 +156,16 @@
 			"parent_ids": {
 				"@ref": "sdk_root_menu"
 			}
+		},
+		"demo_order_detail_vm_menu": {
+			"sequence": "8",
+			"view": "grid,search,form",
+			"name": "demo_order_detail_vm_menu",
+			"model": "demo_order_detail_vm",
+			"display_name": "订单详细-视图",
+			"parent_ids": {
+				"@ref": "sdk_root_menu"
+			}
 		}
 	}
 }

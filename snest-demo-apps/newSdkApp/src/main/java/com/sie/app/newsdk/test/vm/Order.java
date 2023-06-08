@@ -22,12 +22,24 @@ public class Order extends BaseModel<Order> {
     private Date date;
 
     @ManyToOne
-    @JoinColumn(name = "customer_id", referencedColumnName = "id")
+    @JoinColumn(name = "customer_id")
     private Customer customer;
 
     @ManyToOne
-    @JoinColumn(name = "customer2_id", referencedColumnName = "id")
+    @JoinColumn(name = "customer2_id")
     private Customer customer2;
+
+    @Property(columnName = "customer3_id")
+    @Selection(model = "demo_customer", properties = "name")
+    private String customer3;
+
+    @ManyToOne
+    @JoinColumn(name = "customer4_id", referencedProperty = "name")
+    private Customer customer4;
+
+    @ManyToOne
+    @JoinColumn(name = "customer5_id", referencedProperty = "name", length = 40)
+    private Customer customer5;
 
     @Property
     private int price;
