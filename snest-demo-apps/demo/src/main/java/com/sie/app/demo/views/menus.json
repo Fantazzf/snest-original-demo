@@ -1,0 +1,21 @@
+{
+	"menus": {
+		"demo_root_menu": {
+			"name": "demo_root_menu",
+			"display_name": "物料管理系统",
+			"active": true,
+			"sequence": 1
+		},
+		"material_menu": {
+			"name": "material_menu",
+			"display_name": "物料",
+			"model": "material",
+			"view": "material_grid,material_search,material_form",
+			"sequence": 1,
+			"active": true,
+			"parent_ids": {
+				"@ref": "demo_root_menu"
+			}
+		}
+	}
+}
