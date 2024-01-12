@@ -1,0 +1,23 @@
+{
+  "name": "mes",
+  "displayName": "MES",
+  "author": "mes",
+  "company": "sie",
+  "category": "mes",
+  "product": "mes",
+  "description": "MES系统",
+  "summary": "示例",
+  "type": "SDK",
+  "tag": "master",
+  "version": "0.0.1",
+  "resolved": "com.sie.app.mes",
+  "dependencies": [],
+  "application": true,
+  "icon": null,
+  "license": "LGPL 3.0",
+  "view": [
+    "views/menus.json"
+  ],
+  "data": [
+  ]
+}
