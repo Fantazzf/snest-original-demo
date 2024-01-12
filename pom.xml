@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sie.demo</groupId>
+    <artifactId>snest-demo</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>snest-demo-server</module>
+        <module>snest-demo-apps</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <dependencies>
+        <!--   引擎     -->
+        <dependency>
+            <groupId>com.sie.meta</groupId>
+            <artifactId>sie-snest-engine</artifactId>
+            <version>v1.2.0.RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+        <!--   脚本引擎（可选）     -->
+        <dependency>
+            <groupId>com.sie.meta</groupId>
+            <artifactId>sie-snest-script-engine</artifactId>
+            <version>v1.2.0.RELEASE</version>
+        </dependency>
+    </dependencies>
+
+</project>

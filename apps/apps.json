@@ -1,0 +1,15 @@
+{
+  "loaders": {
+    "API": "com.sie.snest.engine.loaders.ApiLoader",
+    "SDK": "com.sie.snest.sdk.loaders.SdkLoader"
+  },
+  "apiToken": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9",
+  "apps": {
+    "SDK": [
+      "sie-snest-base-1.0-SNAPSHOT.jar",
+      "sie-snest-file-1.0-SNAPSHOT.jar",
+      "sie-snest-dict-1.0-SNAPSHOT.jar",
+      "demo-1.0-SNAPSHOT.jar"
+    ]
+  }
+}
