@@ -1,0 +1,11 @@
+{
+	"menus": {
+		"mes_root_menu": {
+			"name": "mes_root_menu",
+			"display_name": "MES系统",
+			"active": true,
+			"sequence": 1
+		}
+
+	}
+}

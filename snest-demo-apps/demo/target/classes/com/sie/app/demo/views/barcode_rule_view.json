@@ -1,0 +1,98 @@
+{
+  "views": {
+    "barcode_rule_grid": {
+      "body": {
+        "buttons": [
+          {
+            "action": "preview",
+            "auth": "read",
+            "name": "详情"
+          },
+          {
+            "action": "edit",
+            "auth": "update",
+            "name": "编辑"
+          }
+        ],
+        "columns": [
+          {
+            "displayName": "编码",
+            "name": "code"
+          },
+          {
+            "displayName": "前缀",
+            "name": "prefix"
+          },
+          {
+            "displayName": "流水号长度",
+            "name": "seqlength"
+          }
+        ],
+        "tbar": [
+          {
+            "action": "create",
+            "auth": "create",
+            "name": "新增"
+          },
+          {
+            "action": "delete",
+            "auth": "delete",
+            "name": "删除"
+          }
+        ],
+        "type": "grid"
+      },
+      "mode": "primary",
+      "model": "barcode_rule",
+      "name": "barcode_rule-表格",
+      "type": "grid"
+    },
+    "barcode_rule_search": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "编码",
+            "name": "code"
+          },
+          {
+            "displayName": "前缀",
+            "name": "prefix"
+          },
+          {
+            "displayName": "流水号长度",
+            "name": "seqlength"
+          }
+        ],
+        "type": "search"
+      },
+      "mode": "primary",
+      "model": "barcode_rule",
+      "name": "barcode_rule-搜索",
+      "type": "search"
+    },
+    "barcode_rule_form": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "编码",
+            "name": "code"
+          },
+          {
+            "displayName": "前缀",
+            "name": "prefix"
+          },
+          {
+            "displayName": "流水号长度",
+            "name": "seqlength"
+          }
+        ],
+        "tabs": [],
+        "type": "form"
+      },
+      "mode": "primary",
+      "model": "barcode_rule",
+      "name": "barcode_rule-表单",
+      "type": "form"
+    }
+  }
+}
