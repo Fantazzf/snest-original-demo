@@ -2,6 +2,7 @@ package com.sie.app.school.model;
 
 import com.sie.snest.engine.model.Bool;
 import com.sie.snest.sdk.BaseModel;
+import com.sie.snest.sdk.annotation.Dict;
 import com.sie.snest.sdk.annotation.meta.Model;
 import com.sie.snest.sdk.annotation.meta.Property;
 import com.sie.snest.sdk.annotation.orm.Option;
@@ -19,6 +20,7 @@ public class Book extends BaseModel<Book> {
     private String bookName;
 
     @Property(displayName = "图书类型")
+    @Dict(typeCode = "bookType")
     private String bookType;
 
     @Property(displayName = "作者")
