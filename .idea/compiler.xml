@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mes" />
+        <module name="snest-demo-server" />
+        <module name="demo" />
+        <module name="zzf" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo" options="-parameters" />
+      <module name="mes" options="-parameters" />
+      <module name="snest-demo-apps" options="-parameters" />
+      <module name="snest-demo-server" options="-parameters" />
+      <module name="zzf" options="-parameters" />
+    </option>
+  </component>
+</project>
