@@ -15,8 +15,7 @@
 
     <modules>
         <module>demo</module>
-        <module>mes</module>
-        <module>zzf</module>
+        <module>University</module>
     </modules>
 
     <dependencies>

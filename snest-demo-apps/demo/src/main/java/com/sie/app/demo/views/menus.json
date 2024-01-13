@@ -15,8 +15,8 @@
 			"active": true,
 			"parent_ids": {
 				"@ref": "demo_root_menu"
-			}
-		},
+				}
+			},
 		"product_menu": {
 			"name": "product_menu",
 			"display_name": "产品",

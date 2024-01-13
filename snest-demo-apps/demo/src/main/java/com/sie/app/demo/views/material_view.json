@@ -35,6 +35,18 @@
           {
             "displayName": "单位",
             "name": "unit"
+          },
+          {
+            "displayName": "产品",
+            "name": "product"
+          },
+          {
+            "displayName": "产品编码",
+            "name": "productCode"
+          },
+          {
+            "displayName": "计算天数",
+            "name": "days"
           }
         ],
         "tbar": [
@@ -84,6 +96,10 @@
           {
             "displayName": "单位",
             "name": "unit"
+          },
+          {
+            "displayName": "产品",
+            "name": "product"
           }
         ],
         "tabs": [],

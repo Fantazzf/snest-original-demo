@@ -10,6 +10,8 @@ import com.sie.snest.sdk.annotation.Dict;
 import com.sie.snest.sdk.annotation.meta.MethodService;
 import com.sie.snest.sdk.annotation.meta.Model;
 import com.sie.snest.sdk.annotation.meta.Property;
+import com.sie.snest.sdk.annotation.orm.JoinColumn;
+import com.sie.snest.sdk.annotation.orm.ManyToOne;
 import com.sie.snest.sdk.annotation.orm.Option;
 import com.sie.snest.sdk.annotation.orm.Selection;
 import com.sie.snest.sdk.annotation.validate.Validate;
@@ -39,6 +41,20 @@ public class Material extends BaseModel<Material> {
 
     @Property(displayName = "日期")
     private Date date;
+
+    @ManyToOne(displayName = "产品")
+    @JoinColumn
+    private  Product product;
+
+    @Property(displayName = "产品编码",related = "product.code",store=false)
+    private  String productCode;
+
+    @Property(displayName = "天数",computeMethod = "calDays")
+    private  Integer days;
+
+//    public  Integer calDays(){
+//        return 1;
+//    }
 
     @Property(displayName = "单位")
     @Dict(typeCode = "unit")
