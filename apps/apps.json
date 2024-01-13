@@ -9,7 +9,9 @@
       "sie-snest-base-1.0-SNAPSHOT.jar",
       "sie-snest-file-1.0-SNAPSHOT.jar",
       "sie-snest-dict-1.0-SNAPSHOT.jar",
-      "demo-1.0-SNAPSHOT.jar"
+      "demo-1.0-SNAPSHOT.jar",
+      "mes-1.0-SNAPSHOT.jar",
+      "zzf-1.0-SNAPSHOT.jar"
     ]
   }
 }

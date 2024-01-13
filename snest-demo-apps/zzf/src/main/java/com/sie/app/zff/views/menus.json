@@ -1,0 +1,10 @@
+{
+	"menus": {
+		"zzf_root_menu": {
+			"name": "zzf_root_menu",
+			"display_name": "zzf系统",
+			"active": true,
+			"sequence": 1
+		}
+	}
+}
