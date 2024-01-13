@@ -1,0 +1,23 @@
+{
+  "name": "school",
+  "displayName": "school",
+  "author": "school",
+  "company": "sie",
+  "category": "school",
+  "product": "学校管理系统",
+  "description": "school",
+  "summary": "school",
+  "type": "SDK",
+  "tag": "master",
+  "version": "0.0.1",
+  "resolved": "com.sie.app.school",
+  "dependencies": [],
+  "application": true,
+  "icon": null,
+  "license": "LGPL 3.0",
+  "view": [
+    "views/menus.json"
+  ],
+  "data": [
+  ]
+}
