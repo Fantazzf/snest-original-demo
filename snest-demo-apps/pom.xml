@@ -15,7 +15,7 @@
 
     <modules>
         <module>demo</module>
-        <module>University</module>
+        <module>school</module>
     </modules>
 
     <dependencies>
