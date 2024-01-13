@@ -1,0 +1,23 @@
+{
+  "name": "University",
+  "displayName": "University",
+  "author": "University",
+  "company": "sie",
+  "category": "学校管理系统",
+  "product": "学校管理系统",
+  "description": "学校管理系统",
+  "summary": "学校管理系统",
+  "type": "SDK",
+  "tag": "master",
+  "version": "0.0.1",
+  "resolved": "com.sie.app.University",
+  "dependencies": [],
+  "application": true,
+  "icon": null,
+  "license": "LGPL 3.0",
+  "view": [
+    "views/menus.json"
+  ],
+  "data": [
+  ]
+}
