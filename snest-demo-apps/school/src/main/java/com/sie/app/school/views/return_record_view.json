@@ -1,0 +1,111 @@
+{
+  "views": {
+    "return_record_search": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "读者",
+            "name": "reader"
+          },
+          {
+            "displayName": "还书日期",
+            "name": "date",
+            "widget": "daterange"
+          },
+          {
+            "displayName": "所借图书信息",
+            "name": "date"
+          },
+          {
+            "displayName": "关联借书记录",
+            "name": "borrowRecord"
+          }
+        ],
+        "type": "search"
+      },
+      "mode": "primary",
+      "model": "return_record",
+      "name": "return_record-搜索",
+      "type": "search"
+    },
+    "return_record_form": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "读者",
+            "name": "reader"
+          },
+          {
+            "displayName": "还书日期",
+            "name": "date"
+          },
+          {
+            "displayName": "所借图书信息",
+            "name": "date"
+          },
+          {
+            "displayName": "关联借书记录",
+            "name": "borrowRecord"
+          }
+        ],
+        "tabs": [],
+        "type": "form"
+      },
+      "mode": "primary",
+      "model": "return_record",
+      "name": "return_record-表单",
+      "type": "form"
+    },
+    "return_record_grid": {
+      "body": {
+        "buttons": [
+          {
+            "action": "preview",
+            "auth": "read",
+            "name": "详情"
+          },
+          {
+            "action": "edit",
+            "auth": "update",
+            "name": "编辑"
+          }
+        ],
+        "columns": [
+          {
+            "displayName": "读者",
+            "name": "reader"
+          },
+          {
+            "displayName": "还书日期",
+            "name": "date"
+          },
+          {
+            "displayName": "所借图书信息",
+            "name": "date"
+          },
+          {
+            "displayName": "关联借书记录",
+            "name": "borrowRecord"
+          }
+        ],
+        "tbar": [
+          {
+            "action": "create",
+            "auth": "create",
+            "name": "新增"
+          },
+          {
+            "action": "delete",
+            "auth": "delete",
+            "name": "删除"
+          }
+        ],
+        "type": "grid"
+      },
+      "mode": "primary",
+      "model": "return_record",
+      "name": "return_record-表格",
+      "type": "grid"
+    }
+  }
+}
