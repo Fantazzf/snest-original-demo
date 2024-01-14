@@ -1,0 +1,101 @@
+{
+  "views": {
+    "borrow_record_form": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "读者",
+            "name": "reader"
+          },
+          {
+            "displayName": "借书日期",
+            "name": "borrowDate"
+          },
+          {
+            "displayName": "所借图书信息",
+            "name": "borrowBook"
+          }
+        ],
+        "tabs": [],
+        "type": "form"
+      },
+      "mode": "primary",
+      "model": "borrow_record",
+      "name": "借书记录-表单",
+      "type": "form"
+    },
+    "borrow_record_search": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "读者",
+            "name": "reader"
+          },
+          {
+            "displayName": "借书日期",
+            "name": "borrowDate",
+            "widget": "daterange"
+          },
+          {
+            "displayName": "所借图书信息",
+            "name": "borrowBook"
+          }
+        ],
+        "type": "search"
+      },
+      "mode": "primary",
+      "model": "borrow_record",
+      "name": "借书记录-搜索",
+      "type": "search"
+    },
+    "borrow_record_grid": {
+      "body": {
+        "buttons": [
+          {
+            "action": "preview",
+            "auth": "read",
+            "name": "详情"
+          },
+          {
+            "action": "edit",
+            "auth": "update",
+            "name": "编辑"
+          }
+        ],
+        "columns": [
+          {
+            "displayName": "读者",
+            "name": "reader"
+          },
+          {
+            "displayName": "借书日期",
+            "name": "borrowDate",
+            "sortable": true,
+            "width": "80px"
+          },
+          {
+            "displayName": "所借图书信息",
+            "name": "borrowBook"
+          }
+        ],
+        "tbar": [
+          {
+            "action": "create",
+            "auth": "create",
+            "name": "新增"
+          },
+          {
+            "action": "delete",
+            "auth": "delete",
+            "name": "删除"
+          }
+        ],
+        "type": "grid"
+      },
+      "mode": "primary",
+      "model": "borrow_record",
+      "name": "借书记录-表格",
+      "type": "grid"
+    }
+  }
+}

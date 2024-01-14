@@ -42,6 +42,8 @@ public class Material extends BaseModel<Material> {
     @Property(displayName = "日期")
     private Date date;
 
+
+
     @ManyToOne(displayName = "产品")
     @JoinColumn
     private  Product product;

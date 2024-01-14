@@ -1,10 +1,32 @@
 {
   "menus": {
-    "school_root_menu": {
+    "information_root_menu": {
       "name": "information_root_menu",
       "display_name": "师生信息管理",
       "active": true,
       "sequence": 1
+    },
+    "student_menu": {
+      "name": "student_menu",
+      "display_name": "学生基本信息",
+      "model": "student",
+      "view": "student_grid,student_search,student_form",
+      "active": true,
+      "sequence": 1,
+      "parent_ids": {
+        "@ref": "information_root_menu"
+      }
+    },
+    "teacher_menu": {
+      "name": "teacher_menu",
+      "display_name": "教师基本信息",
+      "model": "teacher",
+      "view": "teacher_grid,teacher_search,teacher_form",
+      "active": true,
+      "sequence": 1,
+      "parent_ids": {
+        "@ref": "information_root_menu"
+      }
     },
     "dormitory_root_menu": {
       "name": "dormitory_root_menu",
@@ -12,11 +34,66 @@
       "active": true,
       "sequence": 2
     },
+    "dormitory_menu":{
+      "name": "dormitory_menu",
+      "display_name": "宿舍基本信息",
+      "model": "dormitory",
+      "view": "dormitory_grid,dormitory_search,dormitory_form",
+      "active": true,
+      "sequence": 2,
+      "parent_ids": {
+        "@ref": "dormitory_root_menu"
+      }
+    },
     "lib_root_menu": {
       "name": "lib_root_menu",
       "display_name": "图书馆管理",
       "active": true,
       "sequence": 3
+    },
+    "book_menu": {
+      "name": "book_menu",
+      "display_name": "图书",
+      "model": "book",
+      "view": "book_form,book_search,book_grid",
+      "active": true,
+      "sequence": 1,
+      "parent_ids": {
+        "@ref": "lib_root_menu"
+      }
+    },
+    "reader_menu": {
+      "name": "reader_menu",
+      "display_name": "读者",
+      "model": "reader",
+      "view": "reader_form, reader_search, reader_grid",
+      "sequence": 2,
+      "active": true,
+      "parent_ids": {
+        "@ref": "lib_root_menu"
+      }
+    },
+    "borrow_record_menu": {
+      "name": "borrow_record_menu",
+      "display_name": "借书记录",
+      "model": "borrow_record",
+      "view": "borrow_record_form,borrow_record_search,borrow_record_grid",
+      "active": true,
+      "sequence": 3,
+      "parent_ids": {
+        "@ref": "lib_root_menu"
+      }
+    },
+    "return_record_menu": {
+      "name": "return_record_menu",
+      "display_name": "还书记录",
+      "model": "return_record",
+      "view": "return_record_form,return_record_search,return_record_grid",
+      "active": true,
+      "sequence": 4,
+      "parent_ids": {
+        "@ref": "lib_root_menu"
+      }
     },
     "course_root_menu": {
       "name": "course_root_menu",
