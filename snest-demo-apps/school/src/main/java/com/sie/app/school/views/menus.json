@@ -23,6 +23,28 @@
       "display_name": "课程管理",
       "active": true,
       "sequence": 4
+    },
+    "book_menu": {
+      "name": "book_menu",
+      "display_name": "图书",
+      "model": "book",
+      "view": "book",
+      "sequence": 1,
+      "active": true,
+      "parent_ids": {
+        "@ref": "lib_root_menu"
+      }
+    },
+    "reader_menu": {
+      "name": "reader_menu",
+      "display_name": "读者",
+      "model": "reader",
+      "view": "reader",
+      "sequence": 1,
+      "active": true,
+      "parent_ids": {
+        "@ref": "lib_root_menu"
+      }
     }
   }
 }

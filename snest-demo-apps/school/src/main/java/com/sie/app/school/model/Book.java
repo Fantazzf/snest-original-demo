@@ -91,9 +91,5 @@ public class Book extends BaseModel<Book> {
         return getStr("bookStatus");
     }
 
-    @MethodService(name = "BookService", auth = "admin", description = "图书信息管理服务")
-    public String BookService(String service){
-        return "hello";
-    }
 }
 
