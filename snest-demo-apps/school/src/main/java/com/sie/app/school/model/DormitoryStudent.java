@@ -13,8 +13,10 @@ public class DormitoryStudent extends BaseModel<DormitoryStudent> {
     @JoinColumn
     private  Dormitory dormitory;
 
-    @ManyToOne(displayName = "学生")
+    @ManyToOne(displayName = "学号")
     @JoinColumn
     private  Student student;
+
+
 
 }

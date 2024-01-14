@@ -100,6 +100,17 @@
       "display_name": "课程管理",
       "active": true,
       "sequence": 4
+    },
+    "course_menu": {
+      "name": "course_menu",
+      "display_name": "课程信息",
+      "model": "course",
+      "view": "course_grid,course_form,course_search",
+      "sequence": 1,
+      "active": true,
+      "parent_ids": {
+        "@ref": "course_root_menu"
+      }
     }
   }
 }

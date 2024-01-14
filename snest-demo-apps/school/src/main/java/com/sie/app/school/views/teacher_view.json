@@ -25,7 +25,7 @@
             "name": "native_place"
           },
           {
-            "displayName": "所在学院",
+            "displayName": "学院",
             "name": "college"
           },
           {
@@ -81,7 +81,7 @@
             "name": "native_place"
           },
           {
-            "displayName": "所在学院",
+            "displayName": "学院",
             "name": "college"
           },
           {
@@ -136,7 +136,7 @@
             "name": "native_place"
           },
           {
-            "displayName": "所在学院",
+            "displayName": "学院",
             "name": "college"
           },
           {
