@@ -65,9 +65,7 @@
           },
           {
             "displayName": "上课地点",
-            "name": "ClassLocation",
-            "sortable": true,
-            "width": "80px"
+            "name": "ClassLocation"
           },
           {
             "displayName": "上课日期",

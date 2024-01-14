@@ -21,9 +21,7 @@
           },
           {
             "displayName": "学生姓名",
-            "name": "StuedentName",
-            "sortable": true,
-            "width": "80px"
+            "name": "StuedentName"
           },
           {
             "displayName": "性别",

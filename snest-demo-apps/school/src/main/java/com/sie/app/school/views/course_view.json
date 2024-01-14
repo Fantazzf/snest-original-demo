@@ -50,9 +50,7 @@
           },
           {
             "displayName": "课程编号",
-            "name": "CourseCode",
-            "sortable": true,
-            "width": "80px"
+            "name": "CourseCode"
           },
           {
             "displayName": "课程开始日期",

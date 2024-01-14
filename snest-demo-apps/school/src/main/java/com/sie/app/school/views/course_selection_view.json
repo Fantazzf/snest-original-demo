@@ -52,9 +52,7 @@
           },
           {
             "displayName": "成绩",
-            "name": "mark",
-            "sortable": true,
-            "width": "80px"
+            "name": "mark"
           },
           {
             "displayName": "课程信息",

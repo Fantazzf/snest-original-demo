@@ -66,9 +66,7 @@
           },
           {
             "displayName": "性别",
-            "name": "sex",
-            "sortable": true,
-            "width": "80px"
+            "name": "sex"
           },
           {
             "displayName": "出生日期",

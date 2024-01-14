@@ -41,9 +41,7 @@
           },
           {
             "displayName": "学号",
-            "name": "student",
-            "sortable": true,
-            "width": "80px"
+            "name": "student"
           }
         ],
         "tbar": [
