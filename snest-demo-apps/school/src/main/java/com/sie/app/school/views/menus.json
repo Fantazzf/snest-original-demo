@@ -17,7 +17,7 @@
       "display_name": "图书馆管理",
       "active": true,
       "sequence": 3
-    },,
+    },
     "book_menu": {
       "name": "book_menu",
       "display_name": "图书",
