@@ -4,7 +4,7 @@
       "body": {
         "columns": [
           {
-            "displayName": "宿舍楼",
+            "displayName": "宿舍楼栋",
             "name": "DormitoryBulid"
           },
           {
@@ -12,8 +12,12 @@
             "name": "DormitoryNo"
           },
           {
-            "displayName": "宿舍人数",
-            "name": "DormitoryMan"
+            "displayName": "宿舍类型",
+            "name": "DormitoryType"
+          },
+          {
+            "displayName": "宿舍性质",
+            "name": "DormitorySex"
           }
         ],
         "tabs": [
@@ -28,14 +32,30 @@
               ],
               "columns": [
                 {
-                  "displayName": "学生",
+                  "displayName": "姓名",
+                  "name": "StudentName"
+                },
+                {
+                  "displayName": "籍贯",
+                  "name": "NativePlace"
+                },
+                {
+                  "displayName": "学号",
                   "name": "student"
                 }
               ],
               "edit": {
                 "columns": [
                   {
-                    "displayName": "学生",
+                    "displayName": "姓名",
+                    "name": "StudentName"
+                  },
+                  {
+                    "displayName": "籍贯",
+                    "name": "NativePlace"
+                  },
+                  {
+                    "displayName": "学号",
                     "name": "student"
                   }
                 ],
@@ -44,7 +64,7 @@
               "field": "dormitoryStudentList",
               "type": "grid,form"
             },
-            "header": "dormitoryStudent",
+            "header": "入住学生信息",
             "tbar": [
               {
                 "action": "createEr",
@@ -70,7 +90,7 @@
       "body": {
         "columns": [
           {
-            "displayName": "宿舍楼",
+            "displayName": "宿舍楼栋",
             "name": "DormitoryBulid"
           },
           {
@@ -78,8 +98,12 @@
             "name": "DormitoryNo"
           },
           {
-            "displayName": "宿舍人数",
-            "name": "DormitoryMan"
+            "displayName": "宿舍类型",
+            "name": "DormitoryType"
+          },
+          {
+            "displayName": "宿舍性质",
+            "name": "DormitorySex"
           }
         ],
         "type": "search"
@@ -105,7 +129,7 @@
         ],
         "columns": [
           {
-            "displayName": "宿舍楼",
+            "displayName": "宿舍楼栋",
             "name": "DormitoryBulid"
           },
           {
@@ -113,8 +137,12 @@
             "name": "DormitoryNo"
           },
           {
-            "displayName": "宿舍人数",
-            "name": "DormitoryMan"
+            "displayName": "宿舍类型",
+            "name": "DormitoryType"
+          },
+          {
+            "displayName": "宿舍性质",
+            "name": "DormitorySex"
           }
         ],
         "tbar": [

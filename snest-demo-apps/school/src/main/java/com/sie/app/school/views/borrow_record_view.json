@@ -82,7 +82,7 @@
           {
             "action": "create",
             "auth": "create",
-            "name": "新增"
+            "name": "借阅"
           },
           {
             "action": "delete",

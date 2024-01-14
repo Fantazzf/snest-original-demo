@@ -15,6 +15,14 @@ import java.util.List;
 
 @Model(name = "borrow_record",displayName = "借书记录",isAutoLog = Bool.True)
 public class BorrowRecord extends BaseModel<BorrowRecord> {
+    public BorrowRecord(Reader reader, Book borrowBook, Date borrowDate) {
+        if(borrowBook.queryInLibrary()!=null){
+            this.reader = reader;
+            this.borrowDate = borrowDate;
+            this.borrowBook = borrowBook;
+            borrowBook.setBookStatus("出借中");
+        }
+    }
     @ManyToOne(displayName = "读者")
     @JoinColumn
     private Reader reader;
@@ -22,7 +30,8 @@ public class BorrowRecord extends BaseModel<BorrowRecord> {
     @Property(displayName = "借书日期")
     private Date borrowDate;
 
-    @Property(displayName = "所借图书信息")
+    @ManyToOne(displayName = "所借图书信息")
+    @JoinColumn
     private Book borrowBook;
 
     public BorrowRecord setReader(Reader reader) {
@@ -52,14 +61,4 @@ public class BorrowRecord extends BaseModel<BorrowRecord> {
         return (Book) this.get("borrowBook");
     }
 
-    @MethodService(name = "queryBorrowRecord",auth = "cyh",description = "查询借书记录")
-    public BorrowRecord queryBorrowRecord(String bookName,Reader reader){
-        List<BorrowRecord> borrowRecords=search(Filter.AND(Filter.equal("bookName",bookName),Filter.equal("reader",reader)),getAllProperties(),1,0,null);
-        if(CollectionUtils.isEmpty(borrowRecords)){
-            return null;
-        }else{
-            BorrowRecord borrowRecord=borrowRecords.get(0);
-            return borrowRecord;
-        }
-    }
 }

@@ -4,38 +4,38 @@
       "body": {
         "columns": [
           {
+            "displayName": "所属学院",
+            "name": "College"
+          },
+          {
             "displayName": "教师姓名",
             "name": "TeacherName"
           },
           {
             "displayName": "性别",
-            "name": "sex"
+            "name": "Sex"
           },
           {
             "displayName": "出生日期",
-            "name": "birth_date",
+            "name": "BirthDate",
             "widget": "daterange"
           },
           {
             "displayName": "年龄",
-            "name": "age"
+            "name": "Age"
           },
           {
             "displayName": "籍贯",
-            "name": "native_place"
-          },
-          {
-            "displayName": "学院",
-            "name": "college"
+            "name": "NativePlace"
           },
           {
             "displayName": "入职日期",
-            "name": "joined_date",
+            "name": "JoinedDate",
             "widget": "daterange"
           },
           {
             "displayName": "工龄",
-            "name": "JoinAge"
+            "name": "JoinedAge"
           }
         ],
         "type": "search"
@@ -61,36 +61,36 @@
         ],
         "columns": [
           {
+            "displayName": "所属学院",
+            "name": "College"
+          },
+          {
             "displayName": "教师姓名",
             "name": "TeacherName"
           },
           {
             "displayName": "性别",
-            "name": "sex"
+            "name": "Sex"
           },
           {
             "displayName": "出生日期",
-            "name": "birth_date"
+            "name": "BirthDate"
           },
           {
             "displayName": "年龄",
-            "name": "age"
+            "name": "Age"
           },
           {
             "displayName": "籍贯",
-            "name": "native_place"
-          },
-          {
-            "displayName": "学院",
-            "name": "college"
+            "name": "NativePlace"
           },
           {
             "displayName": "入职日期",
-            "name": "joined_date"
+            "name": "JoinedDate"
           },
           {
             "displayName": "工龄",
-            "name": "JoinAge"
+            "name": "JoinedAge"
           }
         ],
         "tbar": [
@@ -116,36 +116,36 @@
       "body": {
         "columns": [
           {
+            "displayName": "所属学院",
+            "name": "College"
+          },
+          {
             "displayName": "教师姓名",
             "name": "TeacherName"
           },
           {
             "displayName": "性别",
-            "name": "sex"
+            "name": "Sex"
           },
           {
             "displayName": "出生日期",
-            "name": "birth_date"
+            "name": "BirthDate"
           },
           {
             "displayName": "年龄",
-            "name": "age"
+            "name": "Age"
           },
           {
             "displayName": "籍贯",
-            "name": "native_place"
-          },
-          {
-            "displayName": "学院",
-            "name": "college"
+            "name": "NativePlace"
           },
           {
             "displayName": "入职日期",
-            "name": "joined_date"
+            "name": "JoinedDate"
           },
           {
             "displayName": "工龄",
-            "name": "JoinAge"
+            "name": "JoinedAge"
           }
         ],
         "tabs": [],

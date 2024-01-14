@@ -92,7 +92,7 @@
           {
             "action": "create",
             "auth": "create",
-            "name": "新增"
+            "name": "归还"
           },
           {
             "action": "delete",

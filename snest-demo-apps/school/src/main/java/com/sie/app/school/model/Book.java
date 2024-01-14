@@ -9,6 +9,7 @@ import com.sie.snest.sdk.annotation.meta.Model;
 import com.sie.snest.sdk.annotation.meta.Property;
 import com.sie.snest.sdk.annotation.orm.Option;
 import com.sie.snest.sdk.annotation.orm.Selection;
+import com.sie.snest.sdk.annotation.validate.Validate;
 import org.apache.commons.collections.CollectionUtils;
 import org.checkerframework.checker.units.qual.A;
 
@@ -20,7 +21,8 @@ public class Book extends BaseModel<Book> {
 
     @Property(displayName = "图书编码")
     private Integer bookID;
-    @Property(displayName = "图书名称")
+    @Property(displayName = "图书名称",displayForModel = true)
+    @Validate.NotBlank
     private String bookName;
 
     @Property(displayName = "图书类型")
@@ -100,9 +102,9 @@ public class Book extends BaseModel<Book> {
         return getStr("bookStatus");
     }
 
-    @MethodService(name = "queryInLibrary",description = "查询书籍",auth = "cyh")
-    public Book queryInLibrary(String bookName){
-        List<Book> books=search(Filter.equal("bookName",bookName),getAllProperties(),1,0,null);
+    @MethodService(name = "queryInLibrary",description = "查询书籍",auth = "queryInLibrary")
+    public Book queryInLibrary(){
+        List<Book> books=search(Filter.equal("bookName",this.bookName),getAllProperties(),1,0,null);
         if(CollectionUtils.isEmpty(books)){
             return null;
         }else{

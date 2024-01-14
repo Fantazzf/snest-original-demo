@@ -4,6 +4,14 @@
       "body": {
         "columns": [
           {
+            "displayName": "姓名",
+            "name": "StudentName"
+          },
+          {
+            "displayName": "籍贯",
+            "name": "NativePlace"
+          },
+          {
             "displayName": "宿舍",
             "name": "dormitory"
           },
@@ -17,7 +25,7 @@
       },
       "mode": "primary",
       "model": "dormitoryStudent",
-      "name": "dormitoryStudent-表单",
+      "name": "入住学生信息-表单",
       "type": "form"
     },
     "dormitorystudent_grid": {
@@ -35,6 +43,14 @@
           }
         ],
         "columns": [
+          {
+            "displayName": "姓名",
+            "name": "StudentName"
+          },
+          {
+            "displayName": "籍贯",
+            "name": "NativePlace"
+          },
           {
             "displayName": "宿舍",
             "name": "dormitory"
@@ -60,12 +76,20 @@
       },
       "mode": "primary",
       "model": "dormitoryStudent",
-      "name": "dormitoryStudent-表格",
+      "name": "入住学生信息-表格",
       "type": "grid"
     },
     "dormitorystudent_search": {
       "body": {
         "columns": [
+          {
+            "displayName": "姓名",
+            "name": "StudentName"
+          },
+          {
+            "displayName": "籍贯",
+            "name": "NativePlace"
+          },
           {
             "displayName": "宿舍",
             "name": "dormitory"
@@ -79,7 +103,7 @@
       },
       "mode": "primary",
       "model": "dormitoryStudent",
-      "name": "dormitoryStudent-搜索",
+      "name": "入住学生信息-搜索",
       "type": "search"
     }
   }

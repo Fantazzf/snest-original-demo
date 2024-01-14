@@ -16,36 +16,36 @@
         ],
         "columns": [
           {
+            "displayName": "所在学院",
+            "name": "College"
+          },
+          {
+            "displayName": "学生姓名",
+            "name": "StudentName"
+          },
+          {
             "displayName": "学号",
             "name": "StudentNo"
           },
           {
-            "displayName": "学生姓名",
-            "name": "StuedentName"
-          },
-          {
             "displayName": "性别",
-            "name": "sex"
+            "name": "Sex"
           },
           {
             "displayName": "出生日期",
-            "name": "birth_date"
+            "name": "BirthDate"
           },
           {
             "displayName": "年龄",
-            "name": "age"
+            "name": "Age"
           },
           {
             "displayName": "籍贯",
-            "name": "native_place"
+            "name": "NativePlace"
           },
           {
             "displayName": "入学日期",
-            "name": "come_date"
-          },
-          {
-            "displayName": "学院",
-            "name": "college"
+            "name": "ComeDate"
           }
         ],
         "tbar": [
@@ -71,36 +71,36 @@
       "body": {
         "columns": [
           {
+            "displayName": "所在学院",
+            "name": "College"
+          },
+          {
+            "displayName": "学生姓名",
+            "name": "StudentName"
+          },
+          {
             "displayName": "学号",
             "name": "StudentNo"
           },
           {
-            "displayName": "学生姓名",
-            "name": "StuedentName"
-          },
-          {
             "displayName": "性别",
-            "name": "sex"
+            "name": "Sex"
           },
           {
             "displayName": "出生日期",
-            "name": "birth_date"
+            "name": "BirthDate"
           },
           {
             "displayName": "年龄",
-            "name": "age"
+            "name": "Age"
           },
           {
             "displayName": "籍贯",
-            "name": "native_place"
+            "name": "NativePlace"
           },
           {
             "displayName": "入学日期",
-            "name": "come_date"
-          },
-          {
-            "displayName": "学院",
-            "name": "college"
+            "name": "ComeDate"
           }
         ],
         "tabs": [],
@@ -115,38 +115,38 @@
       "body": {
         "columns": [
           {
+            "displayName": "所在学院",
+            "name": "College"
+          },
+          {
+            "displayName": "学生姓名",
+            "name": "StudentName"
+          },
+          {
             "displayName": "学号",
             "name": "StudentNo"
           },
           {
-            "displayName": "学生姓名",
-            "name": "StuedentName"
-          },
-          {
             "displayName": "性别",
-            "name": "sex"
+            "name": "Sex"
           },
           {
             "displayName": "出生日期",
-            "name": "birth_date",
+            "name": "BirthDate",
             "widget": "daterange"
           },
           {
             "displayName": "年龄",
-            "name": "age"
+            "name": "Age"
           },
           {
             "displayName": "籍贯",
-            "name": "native_place"
+            "name": "NativePlace"
           },
           {
             "displayName": "入学日期",
-            "name": "come_date",
+            "name": "ComeDate",
             "widget": "daterange"
-          },
-          {
-            "displayName": "学院",
-            "name": "college"
           }
         ],
         "type": "search"

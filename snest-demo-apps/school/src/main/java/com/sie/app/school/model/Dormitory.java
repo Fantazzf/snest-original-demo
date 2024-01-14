@@ -8,12 +8,10 @@ import com.sie.snest.sdk.annotation.orm.OneToMany;
 import com.sie.snest.sdk.annotation.orm.Option;
 import com.sie.snest.sdk.annotation.orm.Selection;
 import com.sie.snest.sdk.annotation.validate.Validate;
-
 import java.util.List;
 
 @Model(name = "dormitory",displayName = "宿舍基本信息",isAutoLog = Bool.True)
 public class Dormitory extends BaseModel<Dormitory> {
-
     @Selection(values = {
             @Option(label = "A栋", value = "1"),
             @Option(label = "B栋", value = "2"),
@@ -23,7 +21,7 @@ public class Dormitory extends BaseModel<Dormitory> {
             @Option(label = "F栋", value = "5"),
             @Option(label = "D栋", value = "6"),
     })
-    @Property(displayName = "宿舍楼栋",displayForModel = true)
+    @Property(displayName = "宿舍楼栋")
     @Validate.NotBlank
     private String DormitoryBulid;
 
@@ -37,14 +35,27 @@ public class Dormitory extends BaseModel<Dormitory> {
             @Option(label = "302", value = "6"),
     })
     @Property(displayName = "宿舍号")
-    @Validate.Unique
+    @Validate.NotBlank
     private String DormitoryNo;
 
-    @Property(displayName = "宿舍人数")
-    private  Integer DormitoryMan;
+    @Selection(values = {
+            @Option(label = "四人寝", value = "1"),
+            @Option(label = "五人寝", value = "2"),
+            @Option(label = "六人寝", value = "3")
+    })
+    @Property(displayName = "宿舍类型")
+    @Validate.NotBlank
+    private String DormitoryType;
+
+    @Selection(values = {
+            @Option(label = "男寝", value = "1"),
+            @Option(label = "女寝", value = "2")
+    })
+    @Property(displayName = "宿舍性质")
+    @Validate.NotBlank
+    private String DormitorySex;
 
     @OneToMany
     private List<DormitoryStudent> dormitoryStudentList;
-
 
 }
