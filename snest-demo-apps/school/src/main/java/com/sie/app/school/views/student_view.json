@@ -87,8 +87,8 @@
             "name": "birth_date"
           },
           {
-            "displayName": "出生天数",
-            "name": "days"
+            "displayName": "年龄",
+            "name": "age"
           },
           {
             "displayName": "籍贯",
@@ -132,8 +132,8 @@
             "widget": "daterange"
           },
           {
-            "displayName": "出生天数",
-            "name": "days"
+            "displayName": "年龄",
+            "name": "age"
           },
           {
             "displayName": "籍贯",

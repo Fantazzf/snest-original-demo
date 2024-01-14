@@ -20,7 +20,7 @@
             "name": "dormitory"
           },
           {
-            "displayName": "学生",
+            "displayName": "学号",
             "name": "student"
           }
         ],
@@ -64,7 +64,7 @@
             "name": "dormitory"
           },
           {
-            "displayName": "学生",
+            "displayName": "学号",
             "name": "student"
           }
         ],
@@ -107,7 +107,7 @@
             "name": "dormitory"
           },
           {
-            "displayName": "学生",
+            "displayName": "学号",
             "name": "student"
           }
         ],

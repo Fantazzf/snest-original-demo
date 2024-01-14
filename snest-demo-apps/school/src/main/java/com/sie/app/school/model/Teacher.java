@@ -16,7 +16,7 @@ import java.util.Map;
 
 @Model(name = "teacher",displayName = "教师基本信息",isAutoLog = Bool.True)
 public class Teacher extends BaseModel<Teacher> {
-    @Property(displayName = "教师姓名")
+    @Property(displayName = "教师姓名",displayForModel = true)
     @Validate.NotBlank
     private String  TeacherName;
 
