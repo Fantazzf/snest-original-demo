@@ -4,12 +4,16 @@ import com.sie.snest.engine.model.Bool;
 import com.sie.snest.sdk.BaseModel;
 import com.sie.snest.sdk.annotation.meta.Model;
 import com.sie.snest.sdk.annotation.meta.Property;
+import com.sie.snest.sdk.annotation.orm.JoinColumn;
+import com.sie.snest.sdk.annotation.orm.ManyToOne;
+import com.sie.snest.sdk.annotation.validate.Validate;
 
 import java.util.Date;
 
 @Model(name = "return_record",description = "还书记录",isAutoLog = Bool.True)
 public class ReturnRecord extends BaseModel<ReturnRecord> {
-    @Property(displayName = "读者")
+    @ManyToOne(displayName = "读者")
+    @JoinColumn
     private Reader reader;
 
     @Property(displayName = "还书日期")
@@ -19,6 +23,7 @@ public class ReturnRecord extends BaseModel<ReturnRecord> {
     private Book book;
 
     @Property(displayName = "关联借书记录")
+    @Validate.NotBlank
     private BorrowRecord borrowRecord;
 
     public ReturnRecord setReader(Reader reader) {
