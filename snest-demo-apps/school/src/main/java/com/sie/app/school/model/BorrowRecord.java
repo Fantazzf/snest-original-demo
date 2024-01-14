@@ -30,7 +30,8 @@ public class BorrowRecord extends BaseModel<BorrowRecord> {
     @Property(displayName = "借书日期")
     private Date borrowDate;
 
-    @Property(displayName = "所借图书信息")
+    @ManyToOne(displayName = "所借图书信息")
+    @JoinColumn
     private Book borrowBook;
 
     public BorrowRecord setReader(Reader reader) {

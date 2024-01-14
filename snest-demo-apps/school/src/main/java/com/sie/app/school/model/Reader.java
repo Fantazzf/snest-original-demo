@@ -8,13 +8,15 @@ import com.sie.snest.sdk.annotation.meta.Model;
 import com.sie.snest.sdk.annotation.meta.Property;
 import com.sie.snest.sdk.annotation.orm.Option;
 import com.sie.snest.sdk.annotation.orm.Selection;
+import com.sie.snest.sdk.annotation.validate.Validate;
 
 import java.util.Date;
 import java.util.List;
 
 @Model(name = "reader", description = "读者", isAutoLog = Bool.True)
 public class Reader extends BaseModel<Reader> {
-    @Property(displayName = "读者名称")
+    @Property(displayName = "读者名称",displayForModel = true)
+    @Validate.NotBlank
     private String readerName;
 
     @Property(displayName = "读者类型")
