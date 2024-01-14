@@ -100,9 +100,9 @@ public class Book extends BaseModel<Book> {
         return getStr("bookStatus");
     }
 
-    @MethodService(name = "queryInLibrary",description = "查询书籍",auth = "cyh")
-    public Book queryInLibrary(String bookName){
-        List<Book> books=search(Filter.equal("bookName",bookName),getAllProperties(),1,0,null);
+    @MethodService(name = "queryInLibrary",description = "查询书籍",auth = "queryInLibrary")
+    public Book queryInLibrary(){
+        List<Book> books=search(Filter.equal("bookName",this.bookName),getAllProperties(),1,0,null);
         if(CollectionUtils.isEmpty(books)){
             return null;
         }else{

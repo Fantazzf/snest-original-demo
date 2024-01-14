@@ -8,10 +8,21 @@ import com.sie.snest.sdk.annotation.orm.JoinColumn;
 import com.sie.snest.sdk.annotation.orm.ManyToOne;
 import com.sie.snest.sdk.annotation.validate.Validate;
 
+import java.io.IOException;
 import java.util.Date;
 
 @Model(name = "return_record",description = "还书记录",isAutoLog = Bool.True)
 public class ReturnRecord extends BaseModel<ReturnRecord> {
+    public ReturnRecord(Reader reader, Date returndate, Book book, BorrowRecord borrowRecord) {
+        if(returndate.compareTo(borrowRecord.getBorrowDate())==1){
+            this.reader = reader;
+            this.returndate = returndate;
+            this.book = book;
+            this.borrowRecord = borrowRecord;
+            book.setBookStatus("在馆");
+        }
+    }
+
     @ManyToOne(displayName = "读者")
     @JoinColumn
     private Reader reader;

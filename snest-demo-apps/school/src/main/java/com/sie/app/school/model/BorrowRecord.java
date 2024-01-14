@@ -15,6 +15,14 @@ import java.util.List;
 
 @Model(name = "borrow_record",displayName = "借书记录",isAutoLog = Bool.True)
 public class BorrowRecord extends BaseModel<BorrowRecord> {
+    public BorrowRecord(Reader reader, Book borrowBook, Date borrowDate) {
+        if(borrowBook.queryInLibrary()!=null){
+            this.reader = reader;
+            this.borrowDate = borrowDate;
+            this.borrowBook = borrowBook;
+            borrowBook.setBookStatus("出借中");
+        }
+    }
     @ManyToOne(displayName = "读者")
     @JoinColumn
     private Reader reader;
