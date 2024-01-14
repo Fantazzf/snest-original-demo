@@ -16,7 +16,7 @@ import java.util.Map;
 
 @Model(name = "teacher",displayName = "教师基本信息",isAutoLog = Bool.True)
 public class Teacher extends BaseModel<Teacher> {
-    @Property(displayName = "教师姓名")
+    @Property(displayName = "教师姓名",displayForModel = true)
     @Validate.NotBlank
     private String  TeacherName;
 
@@ -79,5 +79,77 @@ public class Teacher extends BaseModel<Teacher> {
         Date date= TypeKit.toDate(value.get("joined_date"));
         //计算出生日期到当前日期的年份
         return DateUtil.betweenYear(date,new Date(),true);
+    }
+
+    public Teacher setTeacherName(String teacherName) {
+        set("TeacherName", teacherName);
+        return this;
+    }
+
+    public String getTeacherName() {
+        return getStr("TeacherName");
+    }
+
+    public Teacher setSex(String sex) {
+        this.set("sex", sex);
+        return this;
+    }
+
+    public String getSex() {
+        return getStr("sex");
+    }
+
+    public Teacher setBirth_date(Date birth_date) {
+        this.set("birth_date", birth_date);
+        return this;
+    }
+
+    public Date getBirth_date() {
+        return getDate("birth_date");
+    }
+
+    public Teacher setAge(Long age) {
+        this.set("age", age);
+        return this;
+    }
+
+    public Long getAge() {
+        return getLong("age");
+    }
+
+    public Teacher setNative_place(String native_place) {
+        this.set("native_place", native_place);
+        return this;
+    }
+
+    public String getNative_place() {
+        return getStr("native_place");
+    }
+
+    public Teacher setCollege(String college) {
+        this.set("college", college);
+        return this;
+    }
+
+    public String getCollege() {
+        return getStr("college");
+    }
+
+    public Teacher setJoined_date(Date joined_date) {
+        this.set("joined_date", joined_date);
+        return this;
+    }
+
+    public Date getJoined_date() {
+        return getDate("joined_date");
+    }
+
+    public Teacher setJoinAge(Long joinAge) {
+        set("JoinAge", joinAge);
+        return this;
+    }
+
+    public Long getJoinAge() {
+        return getLong("JoinAge");
     }
 }

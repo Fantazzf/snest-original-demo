@@ -1,38 +1,37 @@
 {
   "views": {
-    "dormitorystudent_form": {
+    "course_selection_search": {
       "body": {
         "columns": [
           {
-            "displayName": "学号",
-            "name": "StudentNo"
+            "displayName": "学生姓名",
+            "name": "StudentName"
           },
           {
-            "displayName": "学院",
-            "name": "college"
+            "displayName": "成绩",
+            "name": "mark"
           },
           {
-            "displayName": "学号",
-            "name": "age"
+            "displayName": "课程信息",
+            "name": "course"
           },
           {
-            "displayName": "宿舍",
-            "name": "dormitory"
+            "displayName": "上课编号",
+            "name": "classInf"
           },
           {
             "displayName": "学号",
             "name": "student"
           }
         ],
-        "tabs": [],
-        "type": "form"
+        "type": "search"
       },
       "mode": "primary",
-      "model": "dormitoryStudent",
-      "name": "入住学生-表单",
-      "type": "form"
+      "model": "course_selection",
+      "name": "选课明细-搜索",
+      "type": "search"
     },
-    "dormitorystudent_grid": {
+    "course_selection_grid": {
       "body": {
         "buttons": [
           {
@@ -48,20 +47,20 @@
         ],
         "columns": [
           {
-            "displayName": "学号",
-            "name": "StudentNo"
+            "displayName": "学生姓名",
+            "name": "StudentName"
           },
           {
-            "displayName": "学院",
-            "name": "college"
+            "displayName": "成绩",
+            "name": "mark"
           },
           {
-            "displayName": "学号",
-            "name": "age"
+            "displayName": "课程信息",
+            "name": "course"
           },
           {
-            "displayName": "宿舍",
-            "name": "dormitory"
+            "displayName": "上课编号",
+            "name": "classInf"
           },
           {
             "displayName": "学号",
@@ -83,40 +82,41 @@
         "type": "grid"
       },
       "mode": "primary",
-      "model": "dormitoryStudent",
-      "name": "入住学生-表格",
+      "model": "course_selection",
+      "name": "选课明细-表格",
       "type": "grid"
     },
-    "dormitorystudent_search": {
+    "course_selection_form": {
       "body": {
         "columns": [
           {
-            "displayName": "学号",
-            "name": "StudentNo"
+            "displayName": "学生姓名",
+            "name": "StudentName"
           },
           {
-            "displayName": "学院",
-            "name": "college"
+            "displayName": "成绩",
+            "name": "mark"
           },
           {
-            "displayName": "学号",
-            "name": "age"
+            "displayName": "课程信息",
+            "name": "course"
           },
           {
-            "displayName": "宿舍",
-            "name": "dormitory"
+            "displayName": "上课编号",
+            "name": "classInf"
           },
           {
             "displayName": "学号",
             "name": "student"
           }
         ],
-        "type": "search"
+        "tabs": [],
+        "type": "form"
       },
       "mode": "primary",
-      "model": "dormitoryStudent",
-      "name": "入住学生-搜索",
-      "type": "search"
+      "model": "course_selection",
+      "name": "选课明细-表单",
+      "type": "form"
     }
   }
 }
