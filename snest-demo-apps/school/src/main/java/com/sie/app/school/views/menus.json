@@ -67,7 +67,7 @@
       "display_name": "读者",
       "model": "reader",
       "view": "reader_form, reader_search, reader_grid",
-      "sequence": 1,
+      "sequence": 2,
       "active": true,
       "parent_ids": {
         "@ref": "lib_root_menu"
@@ -79,7 +79,7 @@
       "model": "borrow_record",
       "view": "borrow_record_form,borrow_record_search,borrow_record_grid",
       "active": true,
-      "sequence": 1,
+      "sequence": 3,
       "parent_ids": {
         "@ref": "lib_root_menu"
       }
@@ -90,7 +90,7 @@
       "model": "return_record",
       "view": "return_record_form,return_record_search,return_record_grid",
       "active": true,
-      "sequence": 1,
+      "sequence": 4,
       "parent_ids": {
         "@ref": "lib_root_menu"
       }
