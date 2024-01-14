@@ -1,0 +1,86 @@
+{
+  "views": {
+    "dormitorystudent_form": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "宿舍",
+            "name": "dormitory"
+          },
+          {
+            "displayName": "学生",
+            "name": "student"
+          }
+        ],
+        "tabs": [],
+        "type": "form"
+      },
+      "mode": "primary",
+      "model": "dormitoryStudent",
+      "name": "dormitoryStudent-表单",
+      "type": "form"
+    },
+    "dormitorystudent_grid": {
+      "body": {
+        "buttons": [
+          {
+            "action": "preview",
+            "auth": "read",
+            "name": "详情"
+          },
+          {
+            "action": "edit",
+            "auth": "update",
+            "name": "编辑"
+          }
+        ],
+        "columns": [
+          {
+            "displayName": "宿舍",
+            "name": "dormitory"
+          },
+          {
+            "displayName": "学生",
+            "name": "student"
+          }
+        ],
+        "tbar": [
+          {
+            "action": "create",
+            "auth": "create",
+            "name": "新增"
+          },
+          {
+            "action": "delete",
+            "auth": "delete",
+            "name": "删除"
+          }
+        ],
+        "type": "grid"
+      },
+      "mode": "primary",
+      "model": "dormitoryStudent",
+      "name": "dormitoryStudent-表格",
+      "type": "grid"
+    },
+    "dormitorystudent_search": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "宿舍",
+            "name": "dormitory"
+          },
+          {
+            "displayName": "学生",
+            "name": "student"
+          }
+        ],
+        "type": "search"
+      },
+      "mode": "primary",
+      "model": "dormitoryStudent",
+      "name": "dormitoryStudent-搜索",
+      "type": "search"
+    }
+  }
+}

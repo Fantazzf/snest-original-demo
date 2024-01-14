@@ -1,0 +1,160 @@
+{
+  "views": {
+    "teacher_search": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "教师姓名",
+            "name": "TeacherName"
+          },
+          {
+            "displayName": "性别",
+            "name": "sex"
+          },
+          {
+            "displayName": "出生日期",
+            "name": "birth_date",
+            "widget": "daterange"
+          },
+          {
+            "displayName": "年龄",
+            "name": "age"
+          },
+          {
+            "displayName": "籍贯",
+            "name": "native_place"
+          },
+          {
+            "displayName": "所在学院",
+            "name": "college"
+          },
+          {
+            "displayName": "入职日期",
+            "name": "joined_date",
+            "widget": "daterange"
+          },
+          {
+            "displayName": "工龄",
+            "name": "JoinAge"
+          }
+        ],
+        "type": "search"
+      },
+      "mode": "primary",
+      "model": "teacher",
+      "name": "教师基本信息-搜索",
+      "type": "search"
+    },
+    "teacher_grid": {
+      "body": {
+        "buttons": [
+          {
+            "action": "preview",
+            "auth": "read",
+            "name": "详情"
+          },
+          {
+            "action": "edit",
+            "auth": "update",
+            "name": "编辑"
+          }
+        ],
+        "columns": [
+          {
+            "displayName": "教师姓名",
+            "name": "TeacherName"
+          },
+          {
+            "displayName": "性别",
+            "name": "sex"
+          },
+          {
+            "displayName": "出生日期",
+            "name": "birth_date"
+          },
+          {
+            "displayName": "年龄",
+            "name": "age"
+          },
+          {
+            "displayName": "籍贯",
+            "name": "native_place"
+          },
+          {
+            "displayName": "所在学院",
+            "name": "college"
+          },
+          {
+            "displayName": "入职日期",
+            "name": "joined_date"
+          },
+          {
+            "displayName": "工龄",
+            "name": "JoinAge"
+          }
+        ],
+        "tbar": [
+          {
+            "action": "create",
+            "auth": "create",
+            "name": "新增"
+          },
+          {
+            "action": "delete",
+            "auth": "delete",
+            "name": "删除"
+          }
+        ],
+        "type": "grid"
+      },
+      "mode": "primary",
+      "model": "teacher",
+      "name": "教师基本信息-表格",
+      "type": "grid"
+    },
+    "teacher_form": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "教师姓名",
+            "name": "TeacherName"
+          },
+          {
+            "displayName": "性别",
+            "name": "sex"
+          },
+          {
+            "displayName": "出生日期",
+            "name": "birth_date"
+          },
+          {
+            "displayName": "年龄",
+            "name": "age"
+          },
+          {
+            "displayName": "籍贯",
+            "name": "native_place"
+          },
+          {
+            "displayName": "所在学院",
+            "name": "college"
+          },
+          {
+            "displayName": "入职日期",
+            "name": "joined_date"
+          },
+          {
+            "displayName": "工龄",
+            "name": "JoinAge"
+          }
+        ],
+        "tabs": [],
+        "type": "form"
+      },
+      "mode": "primary",
+      "model": "teacher",
+      "name": "教师基本信息-表单",
+      "type": "form"
+    }
+  }
+}

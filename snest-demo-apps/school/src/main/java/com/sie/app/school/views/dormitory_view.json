@@ -1,0 +1,140 @@
+{
+  "views": {
+    "dormitory_form": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "宿舍楼",
+            "name": "DormitoryBulid"
+          },
+          {
+            "displayName": "宿舍号",
+            "name": "DormitoryNo"
+          },
+          {
+            "displayName": "宿舍人数",
+            "name": "DormitoryMan"
+          }
+        ],
+        "tabs": [
+          {
+            "body": {
+              "buttons": [
+                {
+                  "action": "updateEr",
+                  "auth": "update",
+                  "name": "编辑"
+                }
+              ],
+              "columns": [
+                {
+                  "displayName": "学生",
+                  "name": "student"
+                }
+              ],
+              "edit": {
+                "columns": [
+                  {
+                    "displayName": "学生",
+                    "name": "student"
+                  }
+                ],
+                "type": "form"
+              },
+              "field": "dormitoryStudentList",
+              "type": "grid,form"
+            },
+            "header": "dormitoryStudent",
+            "tbar": [
+              {
+                "action": "createEr",
+                "auth": "create",
+                "name": "创建"
+              },
+              {
+                "action": "deleteEr",
+                "auth": "delete",
+                "name": "删除"
+              }
+            ]
+          }
+        ],
+        "type": "form"
+      },
+      "mode": "primary",
+      "model": "dormitory",
+      "name": "宿舍基本信息-表单",
+      "type": "form"
+    },
+    "dormitory_search": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "宿舍楼",
+            "name": "DormitoryBulid"
+          },
+          {
+            "displayName": "宿舍号",
+            "name": "DormitoryNo"
+          },
+          {
+            "displayName": "宿舍人数",
+            "name": "DormitoryMan"
+          }
+        ],
+        "type": "search"
+      },
+      "mode": "primary",
+      "model": "dormitory",
+      "name": "宿舍基本信息-搜索",
+      "type": "search"
+    },
+    "dormitory_grid": {
+      "body": {
+        "buttons": [
+          {
+            "action": "preview",
+            "auth": "read",
+            "name": "详情"
+          },
+          {
+            "action": "edit",
+            "auth": "update",
+            "name": "编辑"
+          }
+        ],
+        "columns": [
+          {
+            "displayName": "宿舍楼",
+            "name": "DormitoryBulid"
+          },
+          {
+            "displayName": "宿舍号",
+            "name": "DormitoryNo"
+          },
+          {
+            "displayName": "宿舍人数",
+            "name": "DormitoryMan"
+          }
+        ],
+        "tbar": [
+          {
+            "action": "create",
+            "auth": "create",
+            "name": "新增"
+          },
+          {
+            "action": "delete",
+            "auth": "delete",
+            "name": "删除"
+          }
+        ],
+        "type": "grid"
+      },
+      "mode": "primary",
+      "model": "dormitory",
+      "name": "宿舍基本信息-表格",
+      "type": "grid"
+    }
+  }
+}

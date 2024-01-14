@@ -1,16 +1,49 @@
 {
   "menus": {
-    "school_root_menu": {
+    "information_root_menu": {
       "name": "information_root_menu",
       "display_name": "师生信息管理",
       "active": true,
       "sequence": 1
+    },
+    "student_menu": {
+      "name": "student_menu",
+      "display_name": "学生基本信息",
+      "model": "student",
+      "view": "student_grid,student_search,student_form",
+      "active": true,
+      "sequence": 1,
+      "parent_ids": {
+        "@ref": "information_root_menu"
+      }
+    },
+    "teacher_menu": {
+      "name": "teacher_menu",
+      "display_name": "教师基本信息",
+      "model": "teacher",
+      "view": "teacher_grid,teacher_search,teacher_form",
+      "active": true,
+      "sequence": 1,
+      "parent_ids": {
+        "@ref": "information_root_menu"
+      }
     },
     "dormitory_root_menu": {
       "name": "dormitory_root_menu",
       "display_name": "宿舍管理",
       "active": true,
       "sequence": 2
+    },
+    "dormitory_menu":{
+      "name": "dormitory_menu",
+      "display_name": "宿舍基本信息",
+      "model": "dormitory",
+      "view": "dormitory_grid,dormitory_search,dormitory_form",
+      "active": true,
+      "sequence": 2,
+      "parent_ids": {
+        "@ref": "dormitory_root_menu"
+      }
     },
     "lib_root_menu": {
       "name": "lib_root_menu",
