@@ -1,0 +1,135 @@
+{
+  "views": {
+    "book_form": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "图书编码",
+            "name": "bookID"
+          },
+          {
+            "displayName": "图书名称",
+            "name": "bookName"
+          },
+          {
+            "displayName": "图书类型",
+            "name": "bookType"
+          },
+          {
+            "displayName": "作者",
+            "name": "author"
+          },
+          {
+            "displayName": "出版日期",
+            "name": "publishDate"
+          },
+          {
+            "displayName": "图书状态",
+            "name": "bookStatus"
+          }
+        ],
+        "tabs": [],
+        "type": "form"
+      },
+      "mode": "primary",
+      "model": "book",
+      "name": "book-表单",
+      "type": "form"
+    },
+    "book_grid": {
+      "body": {
+        "buttons": [
+          {
+            "action": "preview",
+            "auth": "read",
+            "name": "详情"
+          },
+          {
+            "action": "edit",
+            "auth": "update",
+            "name": "编辑"
+          }
+        ],
+        "columns": [
+          {
+            "displayName": "图书编码",
+            "name": "bookID"
+          },
+          {
+            "displayName": "图书名称",
+            "name": "bookName"
+          },
+          {
+            "displayName": "图书类型",
+            "name": "bookType"
+          },
+          {
+            "displayName": "作者",
+            "name": "author"
+          },
+          {
+            "displayName": "出版日期",
+            "name": "publishDate"
+          },
+          {
+            "displayName": "图书状态",
+            "name": "bookStatus"
+          }
+        ],
+        "tbar": [
+          {
+            "action": "create",
+            "auth": "create",
+            "name": "新增"
+          },
+          {
+            "action": "delete",
+            "auth": "delete",
+            "name": "删除"
+          }
+        ],
+        "type": "grid"
+      },
+      "mode": "primary",
+      "model": "book",
+      "name": "book-表格",
+      "type": "grid"
+    },
+    "book_search": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "图书编码",
+            "name": "bookID"
+          },
+          {
+            "displayName": "图书名称",
+            "name": "bookName"
+          },
+          {
+            "displayName": "图书类型",
+            "name": "bookType"
+          },
+          {
+            "displayName": "作者",
+            "name": "author"
+          },
+          {
+            "displayName": "出版日期",
+            "name": "publishDate",
+            "widget": "daterange"
+          },
+          {
+            "displayName": "图书状态",
+            "name": "bookStatus"
+          }
+        ],
+        "type": "search"
+      },
+      "mode": "primary",
+      "model": "book",
+      "name": "book-搜索",
+      "type": "search"
+    }
+  }
+}

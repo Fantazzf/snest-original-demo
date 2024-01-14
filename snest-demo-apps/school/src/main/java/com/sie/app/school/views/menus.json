@@ -51,6 +51,50 @@
       "active": true,
       "sequence": 3
     },
+    "book_menu": {
+      "name": "book_menu",
+      "display_name": "图书",
+      "model": "book",
+      "view": "book_form,book_search,book_grid",
+      "active": true,
+      "sequence": 1,
+      "parent_ids": {
+        "@ref": "lib_root_menu"
+      }
+    },
+    "reader_menu": {
+      "name": "reader_menu",
+      "display_name": "读者",
+      "model": "reader",
+      "view": "reader_form, reader_search, reader_grid",
+      "sequence": 1,
+      "active": true,
+      "parent_ids": {
+        "@ref": "lib_root_menu"
+      }
+    },
+    "borrow_record_menu": {
+      "name": "borrow_record_menu",
+      "display_name": "借书记录",
+      "model": "borrow_record",
+      "view": "borrow_record_form,borrow_record_search,borrow_record_grid",
+      "active": true,
+      "sequence": 1,
+      "parent_ids": {
+        "@ref": "lib_root_menu"
+      }
+    },
+    "return_record_menu": {
+      "name": "return_record_menu",
+      "display_name": "还书记录",
+      "model": "return_record",
+      "view": "return_record_form,return_record_search,return_record_grid",
+      "active": true,
+      "sequence": 1,
+      "parent_ids": {
+        "@ref": "lib_root_menu"
+      }
+    },
     "course_root_menu": {
       "name": "course_root_menu",
       "display_name": "课程管理",
