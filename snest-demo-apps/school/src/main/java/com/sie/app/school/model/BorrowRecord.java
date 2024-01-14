@@ -60,14 +60,4 @@ public class BorrowRecord extends BaseModel<BorrowRecord> {
         return (Book) this.get("borrowBook");
     }
 
-    @MethodService(name = "queryBorrowRecord",auth = "cyh",description = "查询借书记录")
-    public BorrowRecord queryBorrowRecord(String bookName,Reader reader){
-        List<BorrowRecord> borrowRecords=search(Filter.AND(Filter.equal("bookName",bookName),Filter.equal("reader",reader)),getAllProperties(),1,0,null);
-        if(CollectionUtils.isEmpty(borrowRecords)){
-            return null;
-        }else{
-            BorrowRecord borrowRecord=borrowRecords.get(0);
-            return borrowRecord;
-        }
-    }
 }
