@@ -1,0 +1,160 @@
+{
+  "views": {
+    "student_grid": {
+      "body": {
+        "buttons": [
+          {
+            "action": "preview",
+            "auth": "read",
+            "name": "详情"
+          },
+          {
+            "action": "edit",
+            "auth": "update",
+            "name": "编辑"
+          }
+        ],
+        "columns": [
+          {
+            "displayName": "学号",
+            "name": "StudentNo"
+          },
+          {
+            "displayName": "学生姓名",
+            "name": "StuedentName"
+          },
+          {
+            "displayName": "性别",
+            "name": "sex"
+          },
+          {
+            "displayName": "出生日期",
+            "name": "birth_date"
+          },
+          {
+            "displayName": "年龄",
+            "name": "age"
+          },
+          {
+            "displayName": "籍贯",
+            "name": "native_place"
+          },
+          {
+            "displayName": "入学日期",
+            "name": "come_date"
+          },
+          {
+            "displayName": "学院",
+            "name": "college"
+          }
+        ],
+        "tbar": [
+          {
+            "action": "create",
+            "auth": "create",
+            "name": "新增"
+          },
+          {
+            "action": "delete",
+            "auth": "delete",
+            "name": "删除"
+          }
+        ],
+        "type": "grid"
+      },
+      "mode": "primary",
+      "model": "student",
+      "name": "学生基本信息-表格",
+      "type": "grid"
+    },
+    "student_form": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "学号",
+            "name": "StudentNo"
+          },
+          {
+            "displayName": "学生姓名",
+            "name": "StuedentName"
+          },
+          {
+            "displayName": "性别",
+            "name": "sex"
+          },
+          {
+            "displayName": "出生日期",
+            "name": "birth_date"
+          },
+          {
+            "displayName": "出生天数",
+            "name": "days"
+          },
+          {
+            "displayName": "籍贯",
+            "name": "native_place"
+          },
+          {
+            "displayName": "入学日期",
+            "name": "come_date"
+          },
+          {
+            "displayName": "学院",
+            "name": "college"
+          }
+        ],
+        "tabs": [],
+        "type": "form"
+      },
+      "mode": "primary",
+      "model": "student",
+      "name": "学生基本信息-表单",
+      "type": "form"
+    },
+    "student_search": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "学号",
+            "name": "StudentNo"
+          },
+          {
+            "displayName": "学生姓名",
+            "name": "StuedentName"
+          },
+          {
+            "displayName": "性别",
+            "name": "sex"
+          },
+          {
+            "displayName": "出生日期",
+            "name": "birth_date",
+            "widget": "daterange"
+          },
+          {
+            "displayName": "出生天数",
+            "name": "days"
+          },
+          {
+            "displayName": "籍贯",
+            "name": "native_place"
+          },
+          {
+            "displayName": "入学日期",
+            "name": "come_date",
+            "widget": "daterange"
+          },
+          {
+            "displayName": "学院",
+            "name": "college"
+          }
+        ],
+        "type": "search"
+      },
+      "mode": "primary",
+      "model": "student",
+      "name": "学生基本信息-搜索",
+      "type": "search"
+    }
+  }
+}
