@@ -56,19 +56,4 @@ public class BorrowRecord extends BaseModel<BorrowRecord> {
         return (Book) this.get("borrowBook");
     }
 
-    @MethodService(name = "borrowBook",auth = "borrowBook",description = "借书")
-    public void borrowBook(String bookName){
-        Book curBook=(new Book()).queryInLibrary(bookName);
-        if(curBook!=null){
-            if(Objects.equals(curBook.getBookStatus(),"在馆")){
-                curBook.setBookStatus("出借中");
-                System.out.println(curBook.getBookStatus());
-            }else{
-                System.out.println("书籍已被借走！");
-            }
-        }else{
-            System.out.println("图书馆尚未典藏该书籍！");
-        }
-    }
-
 }

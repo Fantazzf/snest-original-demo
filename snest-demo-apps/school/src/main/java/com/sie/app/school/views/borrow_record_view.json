@@ -80,7 +80,10 @@
           {
             "action": "create",
             "auth": "create",
-            "service": "borrowBook",
+            "args": {
+              "borrowBook": "${borrowBook}"
+            },
+            "service":"borrowBook",
             "name": "借阅"
           },
           {

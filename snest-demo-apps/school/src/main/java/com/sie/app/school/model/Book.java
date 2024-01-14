@@ -6,6 +6,7 @@ import com.sie.snest.sdk.BaseModel;
 import com.sie.snest.sdk.annotation.meta.MethodService;
 import com.sie.snest.sdk.annotation.meta.Model;
 import com.sie.snest.sdk.annotation.meta.Property;
+import com.sie.snest.sdk.annotation.orm.ManyToOne;
 import com.sie.snest.sdk.annotation.orm.Option;
 import com.sie.snest.sdk.annotation.orm.Selection;
 import com.sie.snest.sdk.annotation.validate.Validate;
@@ -13,6 +14,7 @@ import org.apache.commons.collections.CollectionUtils;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 @Model(name = "book", description = "图书", isAutoLog = Bool.True)
 public class Book extends BaseModel<Book> {
@@ -107,6 +109,30 @@ public class Book extends BaseModel<Book> {
         }
     }
 
+    @MethodService(name = "borrowBook",auth = "borrowBook",description = "借书")
+    public void borrowBook(String bookName){
+        Book curBook=queryInLibrary(bookName);
+        if(curBook!=null){
+            if(Objects.equals(curBook.getBookStatus(),"在馆")){
+                curBook.setBookStatus("出借中");
+                System.out.println(curBook.getBookStatus());
+            }else{
+                System.out.println("书籍已被借走！");
+            }
+        }else{
+            System.out.println("图书馆尚未典藏该书籍！");
+        }
+    }
 
+    @MethodService(name = "returnBook",auth = "returnBook",description = "还书")
+    public void ReturnBook(Date returnDate,Date borrowDate,String bookName) {
+        Book returnBook=queryInLibrary(bookName);
+        if(returnDate.compareTo(borrowDate)>0){
+            returnBook.setBookStatus("在馆");
+            System.out.println(returnBook.getBookStatus());
+        }else{
+            System.out.println("归还记录不能早于借出的日期");
+        }
+    }
 
 }

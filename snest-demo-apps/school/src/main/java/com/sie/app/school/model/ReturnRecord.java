@@ -15,17 +15,6 @@ import java.util.Date;
 
 @Model(name = "return_record",description = "还书记录",isAutoLog = Bool.True)
 public class ReturnRecord extends BaseModel<ReturnRecord> {
-    public ReturnRecord(Reader reader, Date returndate, Book book, BorrowRecord borrowRecord) {
-        if(returndate.compareTo(borrowRecord.getBorrowDate())==1){
-            this.reader = reader;
-            this.returnDate = returndate;
-            this.returnBook = book;
-            this.borrowRecord = borrowRecord;
-            book.setBookStatus("在馆");
-        }else{
-            throw new RuntimeException("归还记录不能早于借出的日期");
-        }
-    }
 
     @ManyToOne(displayName = "读者")
     @JoinColumn
