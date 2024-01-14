@@ -1,5 +1,6 @@
 package com.sie.app.school.model;
 
+import com.sie.snest.engine.api.jsonrpc.JsonRpcServiceResponse;
 import com.sie.snest.engine.model.Bool;
 import com.sie.snest.engine.rule.Filter;
 import com.sie.snest.sdk.BaseModel;
@@ -12,22 +13,16 @@ import org.apache.commons.collections.CollectionUtils;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 @Model(name = "borrow_record",displayName = "借书记录",isAutoLog = Bool.True)
 public class BorrowRecord extends BaseModel<BorrowRecord> {
-    public BorrowRecord(Reader reader, Book borrowBook, Date borrowDate) {
-        if(borrowBook.queryInLibrary()!=null){
-            this.reader = reader;
-            this.borrowDate = borrowDate;
-            this.borrowBook = borrowBook;
-            borrowBook.setBookStatus("出借中");
-        }
-    }
+
     @ManyToOne(displayName = "读者")
     @JoinColumn
     private Reader reader;
 
-    @Property(displayName = "借书日期")
+    @Property(displayName = "借书日期",displayForModel = true)
     private Date borrowDate;
 
     @ManyToOne(displayName = "所借图书信息")
