@@ -6,6 +6,8 @@ import com.sie.snest.sdk.BaseModel;
 import com.sie.snest.sdk.annotation.meta.MethodService;
 import com.sie.snest.sdk.annotation.meta.Model;
 import com.sie.snest.sdk.annotation.meta.Property;
+import com.sie.snest.sdk.annotation.orm.Option;
+import com.sie.snest.sdk.annotation.orm.Selection;
 
 import java.util.Date;
 import java.util.List;
@@ -16,6 +18,10 @@ public class Reader extends BaseModel<Reader> {
     private String readerName;
 
     @Property(displayName = "读者类型")
+    @Selection(values = {
+            @Option(label = "教师", value = "1"),
+            @Option(label = "学生", value = "2")
+    })
     private String readerType;
 
     public Reader setReaderName(String readerName) {
