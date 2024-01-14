@@ -25,11 +25,11 @@ public class Book extends BaseModel<Book> {
 
     @Property(displayName = "图书类型")
     @Selection(values = {
-            @Option(label = "马邓毛列", value = "1"),
-            @Option(label = "社会科学", value = "2"),
-            @Option(label = "自然科学", value = "3"),
-            @Option(label = "综合性图书", value = "4"),
-            @Option(label = "哲学", value = "5")
+            @Option(label = "马邓毛列",value = "1"),
+            @Option(label = "社会科学",value = "2"),
+            @Option(label = "自然科学",value = "3"),
+            @Option(label = "综合性图书",value = "4"),
+            @Option(label = "哲学",value = "5")
     })
     private String bookType;
 
@@ -110,5 +110,4 @@ public class Book extends BaseModel<Book> {
             return book;
         }
     }
-
 }
