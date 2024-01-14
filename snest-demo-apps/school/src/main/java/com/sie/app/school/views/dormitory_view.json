@@ -77,6 +77,71 @@
                 "name": "删除"
               }
             ]
+          },
+          {
+            "body": {
+              "buttons": [
+                {
+                  "action": "updateEr",
+                  "auth": "update",
+                  "name": "编辑"
+                }
+              ],
+              "columns": [
+                {
+                  "displayName": "年-月",
+                  "name": "yearmonth"
+                },
+                {
+                  "displayName": "类型",
+                  "name": "type"
+                },
+                {
+                  "displayName": "数额",
+                  "name": "money"
+                },
+                {
+                  "displayName": "单位",
+                  "name": "unit"
+                }
+              ],
+              "edit": {
+                "columns": [
+                  {
+                    "displayName": "年-月",
+                    "name": "yearmonth"
+                  },
+                  {
+                    "displayName": "类型",
+                    "name": "type"
+                  },
+                  {
+                    "displayName": "数额",
+                    "name": "money"
+                  },
+                  {
+                    "displayName": "单位",
+                    "name": "unit"
+                  }
+                ],
+                "type": "form"
+              },
+              "field": "utilitiesBillList",
+              "type": "grid,form"
+            },
+            "header": "水电费",
+            "tbar": [
+              {
+                "action": "createEr",
+                "auth": "create",
+                "name": "创建"
+              },
+              {
+                "action": "deleteEr",
+                "auth": "delete",
+                "name": "删除"
+              }
+            ]
           }
         ],
         "type": "form"
@@ -134,7 +199,9 @@
           },
           {
             "displayName": "宿舍号",
-            "name": "DormitoryNo"
+            "name": "DormitoryNo",
+            "sortable": true,
+            "width": "80px"
           },
           {
             "displayName": "宿舍类型",

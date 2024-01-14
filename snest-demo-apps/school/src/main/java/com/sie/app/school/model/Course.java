@@ -21,6 +21,7 @@ public class Course extends BaseModel<Course> {
 
     @Property(displayName = "课程编号")
     @Validate.Unique
+    @Validate.NotBlank
     private String CourseCode;
 
     @Property(displayName = "课程开始日期")

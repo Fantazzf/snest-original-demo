@@ -37,9 +37,11 @@ public class ClassInf extends BaseModel<ClassInf> {
     private Teacher teacher;
 
     @Property(displayName = "上课时间",dataType = DataType.DATE_TIME,dateFormat = "yyyy-MM-dd HH:mm:ss")
+    @Validate.NotBlank
     private Timestamp ClassStartTime;
 
     @Property(displayName = "下课时间",dataType = DataType.DATE_TIME,dateFormat = "yyyy-MM-dd HH:mm:ss")
+    @Validate.NotBlank
     private Timestamp ClassEndTime;
 
     @Property(displayName = "考试时间",dataType = DataType.DATE_TIME,dateFormat = "yyyy-MM-dd HH:mm:ss")
