@@ -1,6 +1,7 @@
 package com.sie.app.school.model;
 
 import com.sie.snest.engine.model.Bool;
+import com.sie.snest.engine.rule.Filter;
 import com.sie.snest.sdk.BaseModel;
 import com.sie.snest.sdk.annotation.Dict;
 import com.sie.snest.sdk.annotation.meta.MethodService;
@@ -8,9 +9,11 @@ import com.sie.snest.sdk.annotation.meta.Model;
 import com.sie.snest.sdk.annotation.meta.Property;
 import com.sie.snest.sdk.annotation.orm.Option;
 import com.sie.snest.sdk.annotation.orm.Selection;
+import org.apache.commons.collections.CollectionUtils;
 import org.checkerframework.checker.units.qual.A;
 
 import java.util.Date;
+import java.util.List;
 
 @Model(name = "book", description = "图书", isAutoLog = Bool.True)
 public class Book extends BaseModel<Book> {
@@ -21,7 +24,7 @@ public class Book extends BaseModel<Book> {
     private String bookName;
 
     @Property(displayName = "图书类型")
-    @Dict(typeCode = "book_type")
+    @Dict(typeCode = "bookType")
     private String bookType;
 
     @Property(displayName = "作者")
@@ -91,5 +94,14 @@ public class Book extends BaseModel<Book> {
         return getStr("bookStatus");
     }
 
+    @MethodService(name = "queryInLibrary",description = "查询书籍",auth = "cyh")
+    public Book queryInLibrary(String bookName){
+        List<Book> books=search(Filter.equal("bookName",bookName),getAllProperties(),1,0,null);
+        if(CollectionUtils.isEmpty(books)){
+            return null;
+        }else{
+            Book book=books.get(0);
+            return book;
+        }
+    }
 }
-
