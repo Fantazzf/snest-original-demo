@@ -128,10 +128,6 @@
             "name": "birth_date"
           },
           {
-            "displayName": "年龄",
-            "name": "age"
-          },
-          {
             "displayName": "籍贯",
             "name": "native_place"
           },
@@ -142,10 +138,6 @@
           {
             "displayName": "入职日期",
             "name": "joined_date"
-          },
-          {
-            "displayName": "工龄",
-            "name": "JoinAge"
           }
         ],
         "tabs": [],
