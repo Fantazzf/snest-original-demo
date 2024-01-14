@@ -12,20 +12,19 @@
             "name": "ClassLocation"
           },
           {
-            "displayName": "上课日期",
-            "name": "ClassDate"
-          },
-          {
             "displayName": "上课时间",
-            "name": "ClassStartTime"
+            "name": "ClassStartTime",
+            "widget": "datetime"
           },
           {
             "displayName": "下课时间",
-            "name": "ClassEndTime"
+            "name": "ClassEndTime",
+            "widget": "datetime"
           },
           {
             "displayName": "考试时间",
-            "name": "ExamTime"
+            "name": "ExamTime",
+            "widget": "datetime"
           },
           {
             "displayName": "课程信息",
@@ -68,20 +67,19 @@
             "name": "ClassLocation"
           },
           {
-            "displayName": "上课日期",
-            "name": "ClassDate"
-          },
-          {
             "displayName": "上课时间",
-            "name": "ClassStartTime"
+            "name": "ClassStartTime",
+            "widget": "datetime"
           },
           {
             "displayName": "下课时间",
-            "name": "ClassEndTime"
+            "name": "ClassEndTime",
+            "widget": "datetime"
           },
           {
             "displayName": "考试时间",
-            "name": "ExamTime"
+            "name": "ExamTime",
+            "widget": "datetime"
           },
           {
             "displayName": "课程信息",
@@ -123,21 +121,19 @@
             "name": "ClassLocation"
           },
           {
-            "displayName": "上课日期",
-            "name": "ClassDate",
-            "widget": "daterange"
-          },
-          {
             "displayName": "上课时间",
-            "name": "ClassStartTime"
+            "name": "ClassStartTime",
+            "widget": "datetime"
           },
           {
             "displayName": "下课时间",
-            "name": "ClassEndTime"
+            "name": "ClassEndTime",
+            "widget": "datetime"
           },
           {
             "displayName": "考试时间",
-            "name": "ExamTime"
+            "name": "ExamTime",
+            "widget": "datetime"
           },
           {
             "displayName": "课程信息",

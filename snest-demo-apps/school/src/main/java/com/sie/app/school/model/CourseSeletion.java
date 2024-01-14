@@ -23,12 +23,12 @@ public class CourseSeletion extends BaseModel<CourseSeletion> {
     @Validate.NotBlank
     private ClassInf classInf;
 
-    @Property(displayName = "学生姓名")
-    @Validate.NotBlank
+    @Property(displayName = "学生姓名",related ="student.StudentName" )
     private String StudentName;
 
     @ManyToOne(displayName = "学号")
     @JoinColumn
+    @Validate.NotBlank
     private Student student;
 
     @Property(displayName = "成绩")

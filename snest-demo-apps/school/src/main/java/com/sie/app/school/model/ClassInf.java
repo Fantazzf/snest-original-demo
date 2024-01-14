@@ -1,8 +1,10 @@
 package com.sie.app.school.model;
 
+import cn.hutool.core.date.DateRange;
 import cn.hutool.core.date.DateTime;
 import com.sie.snest.engine.model.Bool;
 import com.sie.snest.sdk.BaseModel;
+import com.sie.snest.sdk.DataType;
 import com.sie.snest.sdk.annotation.meta.Model;
 import com.sie.snest.sdk.annotation.meta.Property;
 import com.sie.snest.sdk.annotation.orm.JoinColumn;
@@ -34,17 +36,16 @@ public class ClassInf extends BaseModel<ClassInf> {
     @JoinColumn
     private Teacher teacher;
 
-    @Property(displayName = "上课日期")
-    private Date ClassDate;
+    @Property(displayName = "上课时间",dataType = DataType.DATE_TIME,dateFormat = "yyyy-MM-dd HH:mm:ss")
+    @Validate.NotBlank
+    private Timestamp ClassStartTime;
 
-    @Property(displayName = "上课时间")
-    private Calendar ClassStartTime;
+    @Property(displayName = "下课时间",dataType = DataType.DATE_TIME,dateFormat = "yyyy-MM-dd HH:mm:ss")
+    @Validate.NotBlank
+    private Timestamp ClassEndTime;
 
-    @Property(displayName = "下课时间")
-    private Calendar ClassEndTime;
-
-    @Property(displayName = "考试时间")
-    private Time ExamTime;
+    @Property(displayName = "考试时间",dataType = DataType.DATE_TIME,dateFormat = "yyyy-MM-dd HH:mm:ss")
+    private Timestamp ExamTime;
 
 
 
