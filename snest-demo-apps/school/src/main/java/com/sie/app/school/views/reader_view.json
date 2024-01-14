@@ -60,7 +60,9 @@
           },
           {
             "displayName": "读者类型",
-            "name": "readerType"
+            "name": "readerType",
+            "sortable": true,
+            "width": "80px"
           }
         ],
         "tbar": [
