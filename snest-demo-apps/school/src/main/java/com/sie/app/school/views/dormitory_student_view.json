@@ -8,7 +8,7 @@
             "name": "dormitory"
           },
           {
-            "displayName": "学生",
+            "displayName": "学号",
             "name": "student"
           }
         ],
@@ -40,8 +40,10 @@
             "name": "dormitory"
           },
           {
-            "displayName": "学生",
-            "name": "student"
+            "displayName": "学号",
+            "name": "student",
+            "sortable": true,
+            "width": "80px"
           }
         ],
         "tbar": [
@@ -71,7 +73,7 @@
             "name": "dormitory"
           },
           {
-            "displayName": "学生",
+            "displayName": "学号",
             "name": "student"
           }
         ],

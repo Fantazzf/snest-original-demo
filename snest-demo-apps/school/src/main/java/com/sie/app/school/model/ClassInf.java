@@ -30,8 +30,9 @@ public class ClassInf extends BaseModel<ClassInf> {
     @Property(displayName = "上课地点")
     private String ClassLocation;
 
-    @Property(displayName = "上课老师")
-    private String TeacherName;
+    @ManyToOne(displayName = "上课老师")
+    @JoinColumn
+    private Teacher teacher;
 
     @Property(displayName = "上课日期")
     private Date ClassDate;

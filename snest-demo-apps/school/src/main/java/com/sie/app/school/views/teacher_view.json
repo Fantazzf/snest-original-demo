@@ -25,7 +25,7 @@
             "name": "native_place"
           },
           {
-            "displayName": "所在学院",
+            "displayName": "学院",
             "name": "college"
           },
           {
@@ -66,7 +66,9 @@
           },
           {
             "displayName": "性别",
-            "name": "sex"
+            "name": "sex",
+            "sortable": true,
+            "width": "80px"
           },
           {
             "displayName": "出生日期",
@@ -81,7 +83,7 @@
             "name": "native_place"
           },
           {
-            "displayName": "所在学院",
+            "displayName": "学院",
             "name": "college"
           },
           {
@@ -136,7 +138,7 @@
             "name": "native_place"
           },
           {
-            "displayName": "所在学院",
+            "displayName": "学院",
             "name": "college"
           },
           {

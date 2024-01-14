@@ -8,10 +8,6 @@
             "name": "StudentName"
           },
           {
-            "displayName": "学号",
-            "name": "StudentNo"
-          },
-          {
             "displayName": "成绩",
             "name": "mark"
           },
@@ -20,8 +16,12 @@
             "name": "course"
           },
           {
-            "displayName": "上课信息",
+            "displayName": "上课编号",
             "name": "classInf"
+          },
+          {
+            "displayName": "学号",
+            "name": "student"
           }
         ],
         "type": "search"
@@ -51,20 +51,22 @@
             "name": "StudentName"
           },
           {
-            "displayName": "学号",
-            "name": "StudentNo"
-          },
-          {
             "displayName": "成绩",
-            "name": "mark"
+            "name": "mark",
+            "sortable": true,
+            "width": "80px"
           },
           {
             "displayName": "课程信息",
             "name": "course"
           },
           {
-            "displayName": "上课信息",
+            "displayName": "上课编号",
             "name": "classInf"
+          },
+          {
+            "displayName": "学号",
+            "name": "student"
           }
         ],
         "tbar": [
@@ -94,10 +96,6 @@
             "name": "StudentName"
           },
           {
-            "displayName": "学号",
-            "name": "StudentNo"
-          },
-          {
             "displayName": "成绩",
             "name": "mark"
           },
@@ -106,8 +104,12 @@
             "name": "course"
           },
           {
-            "displayName": "上课信息",
+            "displayName": "上课编号",
             "name": "classInf"
+          },
+          {
+            "displayName": "学号",
+            "name": "student"
           }
         ],
         "tabs": [],

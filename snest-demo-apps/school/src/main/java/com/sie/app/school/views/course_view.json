@@ -50,7 +50,9 @@
           },
           {
             "displayName": "课程编号",
-            "name": "CourseCode"
+            "name": "CourseCode",
+            "sortable": true,
+            "width": "80px"
           },
           {
             "displayName": "课程开始日期",
@@ -120,10 +122,6 @@
                   "name": "ClassLocation"
                 },
                 {
-                  "displayName": "上课老师",
-                  "name": "TeacherName"
-                },
-                {
                   "displayName": "上课日期",
                   "name": "ClassDate"
                 },
@@ -138,6 +136,10 @@
                 {
                   "displayName": "考试时间",
                   "name": "ExamTime"
+                },
+                {
+                  "displayName": "上课老师",
+                  "name": "teacher"
                 }
               ],
               "edit": {
@@ -149,10 +151,6 @@
                   {
                     "displayName": "上课地点",
                     "name": "ClassLocation"
-                  },
-                  {
-                    "displayName": "上课老师",
-                    "name": "TeacherName"
                   },
                   {
                     "displayName": "上课日期",
@@ -169,6 +167,10 @@
                   {
                     "displayName": "考试时间",
                     "name": "ExamTime"
+                  },
+                  {
+                    "displayName": "上课老师",
+                    "name": "teacher"
                   }
                 ],
                 "type": "form"
@@ -205,16 +207,16 @@
                   "name": "StudentName"
                 },
                 {
-                  "displayName": "学号",
-                  "name": "StudentNo"
-                },
-                {
                   "displayName": "成绩",
                   "name": "mark"
                 },
                 {
-                  "displayName": "上课信息",
+                  "displayName": "上课编号",
                   "name": "classInf"
+                },
+                {
+                  "displayName": "学号",
+                  "name": "student"
                 }
               ],
               "edit": {
@@ -224,16 +226,16 @@
                     "name": "StudentName"
                   },
                   {
-                    "displayName": "学号",
-                    "name": "StudentNo"
-                  },
-                  {
                     "displayName": "成绩",
                     "name": "mark"
                   },
                   {
-                    "displayName": "上课信息",
+                    "displayName": "上课编号",
                     "name": "classInf"
+                  },
+                  {
+                    "displayName": "学号",
+                    "name": "student"
                   }
                 ],
                 "type": "form"

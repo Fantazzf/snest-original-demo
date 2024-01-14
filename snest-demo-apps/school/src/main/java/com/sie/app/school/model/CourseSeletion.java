@@ -9,6 +9,8 @@ import com.sie.snest.sdk.annotation.orm.ManyToOne;
 import com.sie.snest.sdk.annotation.validate.Validate;
 import groovy.transform.PackageScope;
 
+import java.util.List;
+
 @Model(name = "course_selection",displayName = "选课明细",isAutoLog = Bool.True)
 public class CourseSeletion extends BaseModel<CourseSeletion> {
 
@@ -25,10 +27,59 @@ public class CourseSeletion extends BaseModel<CourseSeletion> {
     @Validate.NotBlank
     private String StudentName;
 
-    @Property(displayName = "学号")
-    @Validate.NotBlank
-    private String StudentNo;
+    @ManyToOne(displayName = "学号")
+    @JoinColumn
+    private Student student;
 
     @Property(displayName = "成绩")
     private Integer mark;
+
+    public CourseSeletion setCourse(Course course) {
+        this.set("course", course);
+        return this;
+    }
+
+    public Course getCourse() {
+        return (Course) this.get("course");
+    }
+
+    public CourseSeletion setClassInf(ClassInf classInf) {
+        this.set("classInf", classInf);
+        return this;
+    }
+
+    public ClassInf getClassInf() {
+        return (ClassInf) this.get("classInf");
+    }
+
+    public CourseSeletion setStudentName(String studentName) {
+        set("StudentName", studentName);
+        return this;
+    }
+
+    public String getStudentName() {
+        return getStr("StudentName");
+    }
+
+    public CourseSeletion setStudent(Student student) {
+        this.set("student", student);
+        return this;
+    }
+
+    public Student getStudent() {
+        return (Student) this.get("student");
+    }
+
+    public CourseSeletion setMark(Integer mark) {
+        this.set("mark", mark);
+        return this;
+    }
+
+    public Integer getMark() {
+        return getInt("mark");
+    }
+
+
+
+
 }

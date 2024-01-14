@@ -12,10 +12,6 @@
             "name": "ClassLocation"
           },
           {
-            "displayName": "上课老师",
-            "name": "TeacherName"
-          },
-          {
             "displayName": "上课日期",
             "name": "ClassDate"
           },
@@ -34,6 +30,10 @@
           {
             "displayName": "课程信息",
             "name": "course"
+          },
+          {
+            "displayName": "上课老师",
+            "name": "teacher"
           }
         ],
         "tabs": [],
@@ -65,11 +65,9 @@
           },
           {
             "displayName": "上课地点",
-            "name": "ClassLocation"
-          },
-          {
-            "displayName": "上课老师",
-            "name": "TeacherName"
+            "name": "ClassLocation",
+            "sortable": true,
+            "width": "80px"
           },
           {
             "displayName": "上课日期",
@@ -90,6 +88,10 @@
           {
             "displayName": "课程信息",
             "name": "course"
+          },
+          {
+            "displayName": "上课老师",
+            "name": "teacher"
           }
         ],
         "tbar": [
@@ -123,10 +125,6 @@
             "name": "ClassLocation"
           },
           {
-            "displayName": "上课老师",
-            "name": "TeacherName"
-          },
-          {
             "displayName": "上课日期",
             "name": "ClassDate",
             "widget": "daterange"
@@ -146,6 +144,10 @@
           {
             "displayName": "课程信息",
             "name": "course"
+          },
+          {
+            "displayName": "上课老师",
+            "name": "teacher"
           }
         ],
         "type": "search"

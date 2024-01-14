@@ -21,7 +21,9 @@
           },
           {
             "displayName": "学生姓名",
-            "name": "StuedentName"
+            "name": "StuedentName",
+            "sortable": true,
+            "width": "80px"
           },
           {
             "displayName": "性别",
@@ -87,8 +89,8 @@
             "name": "birth_date"
           },
           {
-            "displayName": "出生天数",
-            "name": "days"
+            "displayName": "年龄",
+            "name": "age"
           },
           {
             "displayName": "籍贯",
@@ -132,8 +134,8 @@
             "widget": "daterange"
           },
           {
-            "displayName": "出生天数",
-            "name": "days"
+            "displayName": "年龄",
+            "name": "age"
           },
           {
             "displayName": "籍贯",
