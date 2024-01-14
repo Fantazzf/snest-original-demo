@@ -8,6 +8,10 @@
             "name": "TeacherName"
           },
           {
+            "displayName": "学院",
+            "name": "college"
+          },
+          {
             "displayName": "性别",
             "name": "sex"
           },
@@ -23,10 +27,6 @@
           {
             "displayName": "籍贯",
             "name": "native_place"
-          },
-          {
-            "displayName": "学院",
-            "name": "college"
           },
           {
             "displayName": "入职日期",

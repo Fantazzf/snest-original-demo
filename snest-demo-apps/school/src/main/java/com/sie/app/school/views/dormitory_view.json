@@ -102,16 +102,16 @@
             "name": "DormitoryBulid"
           },
           {
+            "displayName": "宿舍性质",
+            "name": "DormitorySex"
+          },
+          {
             "displayName": "宿舍号",
             "name": "DormitoryNo"
           },
           {
             "displayName": "宿舍人数",
             "name": "DormitoryMan"
-          },
-          {
-            "displayName": "宿舍性质",
-            "name": "DormitorySex"
           }
         ],
         "type": "search"

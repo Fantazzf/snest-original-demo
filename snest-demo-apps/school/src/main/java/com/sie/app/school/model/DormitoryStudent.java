@@ -6,6 +6,7 @@ import com.sie.snest.sdk.annotation.meta.Model;
 import com.sie.snest.sdk.annotation.meta.Property;
 import com.sie.snest.sdk.annotation.orm.JoinColumn;
 import com.sie.snest.sdk.annotation.orm.ManyToOne;
+import com.sie.snest.sdk.annotation.validate.Validate;
 
 @Model(name = "dormitoryStudent",displayName = "dormitoryStudent",isAutoLog = Bool.True)
 public class DormitoryStudent extends BaseModel<DormitoryStudent> {
@@ -15,7 +16,10 @@ public class DormitoryStudent extends BaseModel<DormitoryStudent> {
 
     @ManyToOne(displayName = "学号")
     @JoinColumn
+    @Validate.NotBlank
     private  Student student;
+
+
 
 
 
