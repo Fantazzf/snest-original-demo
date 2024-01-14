@@ -1,0 +1,86 @@
+{
+  "views": {
+    "reader_search": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "读者名称",
+            "name": "readerName"
+          },
+          {
+            "displayName": "读者类型",
+            "name": "readerType"
+          }
+        ],
+        "type": "search"
+      },
+      "mode": "primary",
+      "model": "reader",
+      "name": "reader-搜索",
+      "type": "search"
+    },
+    "reader_form": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "读者名称",
+            "name": "readerName"
+          },
+          {
+            "displayName": "读者类型",
+            "name": "readerType"
+          }
+        ],
+        "tabs": [],
+        "type": "form"
+      },
+      "mode": "primary",
+      "model": "reader",
+      "name": "reader-表单",
+      "type": "form"
+    },
+    "reader_grid": {
+      "body": {
+        "buttons": [
+          {
+            "action": "preview",
+            "auth": "read",
+            "name": "详情"
+          },
+          {
+            "action": "edit",
+            "auth": "update",
+            "name": "编辑"
+          }
+        ],
+        "columns": [
+          {
+            "displayName": "读者名称",
+            "name": "readerName"
+          },
+          {
+            "displayName": "读者类型",
+            "name": "readerType"
+          }
+        ],
+        "tbar": [
+          {
+            "action": "create",
+            "auth": "create",
+            "name": "新增"
+          },
+          {
+            "action": "delete",
+            "auth": "delete",
+            "name": "删除"
+          }
+        ],
+        "type": "grid"
+      },
+      "mode": "primary",
+      "model": "reader",
+      "name": "reader-表格",
+      "type": "grid"
+    }
+  }
+}
