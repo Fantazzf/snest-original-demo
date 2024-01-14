@@ -61,7 +61,7 @@
       "name": "reader_menu",
       "display_name": "读者",
       "model": "reader",
-      "view": "reader_form, reader_search, reader_grid",
+      "view": "reader_search, reader_form, reader_grid",
       "sequence": 1,
       "active": true,
       "parent_ids": {
