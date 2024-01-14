@@ -1,5 +1,6 @@
 package com.sie.app.school.model;
 
+import com.sie.snest.engine.api.jsonrpc.JsonRpcServiceResponse;
 import com.sie.snest.engine.model.Bool;
 import com.sie.snest.engine.rule.Filter;
 import com.sie.snest.sdk.BaseModel;
@@ -12,20 +13,11 @@ import org.apache.commons.collections.CollectionUtils;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 @Model(name = "borrow_record",displayName = "借书记录",isAutoLog = Bool.True)
 public class BorrowRecord extends BaseModel<BorrowRecord> {
-    public BorrowRecord(Reader reader, Book borrowBook, Date borrowDate) {
-        if(borrowBook.queryInLibrary()!=null&&borrowBook.getBookStatus()=="在馆"){
-            this.reader = reader;
-            this.borrowDate = borrowDate;
-            this.borrowBook = borrowBook;
-            borrowBook.setBookStatus("出借中");
-            System.out.println(borrowBook.getBookStatus());
-        }else{
-            throw new RuntimeException("书籍状态异常！");
-        }
-    }
+
     @ManyToOne(displayName = "读者")
     @JoinColumn
     private Reader reader;
@@ -62,6 +54,21 @@ public class BorrowRecord extends BaseModel<BorrowRecord> {
 
     public Book getBorrowBook() {
         return (Book) this.get("borrowBook");
+    }
+
+    @MethodService(name = "borrowBook",auth = "borrowBook",description = "借书")
+    public void borrowBook(String bookName){
+        Book curBook=(new Book()).queryInLibrary(bookName);
+        if(curBook!=null){
+            if(Objects.equals(curBook.getBookStatus(),"在馆")){
+                curBook.setBookStatus("出借中");
+                System.out.println(curBook.getBookStatus());
+            }else{
+                System.out.println("书籍已被借走！");
+            }
+        }else{
+            System.out.println("图书馆尚未典藏该书籍！");
+        }
     }
 
 }

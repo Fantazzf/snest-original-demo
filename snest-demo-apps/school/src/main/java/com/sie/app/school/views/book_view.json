@@ -4,10 +4,6 @@
       "body": {
         "columns": [
           {
-            "displayName": "图书编码",
-            "name": "bookID"
-          },
-          {
             "displayName": "图书名称",
             "name": "bookName"
           },
@@ -52,10 +48,6 @@
         ],
         "columns": [
           {
-            "displayName": "图书编码",
-            "name": "bookID"
-          },
-          {
             "displayName": "图书名称",
             "name": "bookName"
           },
@@ -98,10 +90,6 @@
     "book_search": {
       "body": {
         "columns": [
-          {
-            "displayName": "图书编码",
-            "name": "bookID"
-          },
           {
             "displayName": "图书名称",
             "name": "bookName"

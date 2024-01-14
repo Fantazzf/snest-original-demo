@@ -69,9 +69,7 @@
           },
           {
             "displayName": "借书日期",
-            "name": "borrowDate",
-            "sortable": true,
-            "width": "80px"
+            "name": "borrowDate"
           },
           {
             "displayName": "所借图书信息",
@@ -82,6 +80,7 @@
           {
             "action": "create",
             "auth": "create",
+            "service": "borrowBook",
             "name": "借阅"
           },
           {
