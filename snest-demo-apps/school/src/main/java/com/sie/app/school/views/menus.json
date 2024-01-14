@@ -50,9 +50,9 @@
       "name": "book_menu",
       "display_name": "图书",
       "model": "book",
-      "view": "book",
-      "sequence": 1,
+      "view": "book_form,book_search,book_grid",
       "active": true,
+      "sequence": 1,
       "parent_ids": {
         "@ref": "lib_root_menu"
       }
@@ -61,7 +61,7 @@
       "name": "reader_menu",
       "display_name": "读者",
       "model": "reader",
-      "view": "reader",
+      "view": "reader_form, reader_search, reader_grid",
       "sequence": 1,
       "active": true,
       "parent_ids": {
