@@ -23,7 +23,7 @@ public class BorrowRecord extends BaseModel<BorrowRecord> {
     private Date borrowDate;
 
     @Property(displayName = "所借图书信息")
-    private List<String> borrowBookList;
+    private Book borrowBook;
 
     public BorrowRecord setReader(Reader reader) {
         this.set("reader", reader);
@@ -43,13 +43,13 @@ public class BorrowRecord extends BaseModel<BorrowRecord> {
         return getDate("borrowDate");
     }
 
-    public BorrowRecord setBorrowBookList(List<String> borrowBookList) {
-        this.set("borrowBookList", borrowBookList);
+    public BorrowRecord setBorrowBook(Book borrowBook) {
+        this.set("borrowBook", borrowBook);
         return this;
     }
 
-    public List<String> getBorrowBookList() {
-        return (List<String>) this.get("borrowBookList");
+    public Book getBorrowBook() {
+        return (Book) this.get("borrowBook");
     }
 
     @MethodService(name = "queryBorrowRecord",auth = "cyh",description = "查询借书记录")
