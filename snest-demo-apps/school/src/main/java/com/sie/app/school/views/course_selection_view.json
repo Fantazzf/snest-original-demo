@@ -1,0 +1,122 @@
+{
+  "views": {
+    "course_selection_search": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "学生姓名",
+            "name": "StudentName"
+          },
+          {
+            "displayName": "学号",
+            "name": "StudentNo"
+          },
+          {
+            "displayName": "成绩",
+            "name": "mark"
+          },
+          {
+            "displayName": "课程信息",
+            "name": "course"
+          },
+          {
+            "displayName": "上课信息",
+            "name": "classInf"
+          }
+        ],
+        "type": "search"
+      },
+      "mode": "primary",
+      "model": "course_selection",
+      "name": "选课明细-搜索",
+      "type": "search"
+    },
+    "course_selection_grid": {
+      "body": {
+        "buttons": [
+          {
+            "action": "preview",
+            "auth": "read",
+            "name": "详情"
+          },
+          {
+            "action": "edit",
+            "auth": "update",
+            "name": "编辑"
+          }
+        ],
+        "columns": [
+          {
+            "displayName": "学生姓名",
+            "name": "StudentName"
+          },
+          {
+            "displayName": "学号",
+            "name": "StudentNo"
+          },
+          {
+            "displayName": "成绩",
+            "name": "mark"
+          },
+          {
+            "displayName": "课程信息",
+            "name": "course"
+          },
+          {
+            "displayName": "上课信息",
+            "name": "classInf"
+          }
+        ],
+        "tbar": [
+          {
+            "action": "create",
+            "auth": "create",
+            "name": "新增"
+          },
+          {
+            "action": "delete",
+            "auth": "delete",
+            "name": "删除"
+          }
+        ],
+        "type": "grid"
+      },
+      "mode": "primary",
+      "model": "course_selection",
+      "name": "选课明细-表格",
+      "type": "grid"
+    },
+    "course_selection_form": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "学生姓名",
+            "name": "StudentName"
+          },
+          {
+            "displayName": "学号",
+            "name": "StudentNo"
+          },
+          {
+            "displayName": "成绩",
+            "name": "mark"
+          },
+          {
+            "displayName": "课程信息",
+            "name": "course"
+          },
+          {
+            "displayName": "上课信息",
+            "name": "classInf"
+          }
+        ],
+        "tabs": [],
+        "type": "form"
+      },
+      "mode": "primary",
+      "model": "course_selection",
+      "name": "选课明细-表单",
+      "type": "form"
+    }
+  }
+}

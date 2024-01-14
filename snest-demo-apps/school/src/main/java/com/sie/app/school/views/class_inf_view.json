@@ -1,0 +1,159 @@
+{
+  "views": {
+    "class_inf_form": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "上课编号",
+            "name": "ClassCode"
+          },
+          {
+            "displayName": "上课地点",
+            "name": "ClassLocation"
+          },
+          {
+            "displayName": "上课老师",
+            "name": "TeacherName"
+          },
+          {
+            "displayName": "上课日期",
+            "name": "ClassDate"
+          },
+          {
+            "displayName": "上课时间",
+            "name": "ClassStartTime"
+          },
+          {
+            "displayName": "下课时间",
+            "name": "ClassEndTime"
+          },
+          {
+            "displayName": "考试时间",
+            "name": "ExamTime"
+          },
+          {
+            "displayName": "课程信息",
+            "name": "course"
+          }
+        ],
+        "tabs": [],
+        "type": "form"
+      },
+      "mode": "primary",
+      "model": "class_inf",
+      "name": "上课信息-表单",
+      "type": "form"
+    },
+    "class_inf_grid": {
+      "body": {
+        "buttons": [
+          {
+            "action": "preview",
+            "auth": "read",
+            "name": "详情"
+          },
+          {
+            "action": "edit",
+            "auth": "update",
+            "name": "编辑"
+          }
+        ],
+        "columns": [
+          {
+            "displayName": "上课编号",
+            "name": "ClassCode"
+          },
+          {
+            "displayName": "上课地点",
+            "name": "ClassLocation"
+          },
+          {
+            "displayName": "上课老师",
+            "name": "TeacherName"
+          },
+          {
+            "displayName": "上课日期",
+            "name": "ClassDate"
+          },
+          {
+            "displayName": "上课时间",
+            "name": "ClassStartTime"
+          },
+          {
+            "displayName": "下课时间",
+            "name": "ClassEndTime"
+          },
+          {
+            "displayName": "考试时间",
+            "name": "ExamTime"
+          },
+          {
+            "displayName": "课程信息",
+            "name": "course"
+          }
+        ],
+        "tbar": [
+          {
+            "action": "create",
+            "auth": "create",
+            "name": "新增"
+          },
+          {
+            "action": "delete",
+            "auth": "delete",
+            "name": "删除"
+          }
+        ],
+        "type": "grid"
+      },
+      "mode": "primary",
+      "model": "class_inf",
+      "name": "上课信息-表格",
+      "type": "grid"
+    },
+    "class_inf_search": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "上课编号",
+            "name": "ClassCode"
+          },
+          {
+            "displayName": "上课地点",
+            "name": "ClassLocation"
+          },
+          {
+            "displayName": "上课老师",
+            "name": "TeacherName"
+          },
+          {
+            "displayName": "上课日期",
+            "name": "ClassDate",
+            "widget": "daterange"
+          },
+          {
+            "displayName": "上课时间",
+            "name": "ClassStartTime"
+          },
+          {
+            "displayName": "下课时间",
+            "name": "ClassEndTime"
+          },
+          {
+            "displayName": "考试时间",
+            "name": "ExamTime"
+          },
+          {
+            "displayName": "课程信息",
+            "name": "course"
+          }
+        ],
+        "type": "search"
+      },
+      "mode": "primary",
+      "model": "class_inf",
+      "name": "上课信息-搜索",
+      "type": "search"
+    }
+  }
+}
