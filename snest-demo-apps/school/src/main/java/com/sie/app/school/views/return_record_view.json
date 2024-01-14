@@ -9,12 +9,12 @@
           },
           {
             "displayName": "还书日期",
-            "name": "date",
+            "name": "returnDate",
             "widget": "daterange"
           },
           {
             "displayName": "所借图书信息",
-            "name": "date"
+            "name": "returnBook"
           },
           {
             "displayName": "关联借书记录",
@@ -37,11 +37,11 @@
           },
           {
             "displayName": "还书日期",
-            "name": "date"
+            "name": "returnDate"
           },
           {
             "displayName": "所借图书信息",
-            "name": "date"
+            "name": "returnBook"
           },
           {
             "displayName": "关联借书记录",
@@ -77,11 +77,11 @@
           },
           {
             "displayName": "还书日期",
-            "name": "date"
+            "name": "returnDate"
           },
           {
             "displayName": "所借图书信息",
-            "name": "date"
+            "name": "returnBook"
           },
           {
             "displayName": "关联借书记录",

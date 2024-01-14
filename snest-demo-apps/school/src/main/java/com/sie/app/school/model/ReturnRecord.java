@@ -5,6 +5,7 @@ import com.sie.snest.sdk.BaseModel;
 import com.sie.snest.sdk.annotation.meta.Model;
 import com.sie.snest.sdk.annotation.meta.Property;
 import com.sie.snest.sdk.annotation.orm.JoinColumn;
+import com.sie.snest.sdk.annotation.orm.ManyToMany;
 import com.sie.snest.sdk.annotation.orm.ManyToOne;
 import com.sie.snest.sdk.annotation.orm.OneToOne;
 import com.sie.snest.sdk.annotation.validate.Validate;
@@ -21,6 +22,8 @@ public class ReturnRecord extends BaseModel<ReturnRecord> {
             this.returnBook = book;
             this.borrowRecord = borrowRecord;
             book.setBookStatus("在馆");
+        }else{
+            throw new RuntimeException("归还记录不能早于借出的日期");
         }
     }
 
@@ -35,7 +38,8 @@ public class ReturnRecord extends BaseModel<ReturnRecord> {
     @JoinColumn
     private Book returnBook;
 
-    @Property(displayName = "关联借书记录")
+    @ManyToOne(displayName = "关联借书记录")
+    @JoinColumn
     @Validate.NotBlank
     private BorrowRecord borrowRecord;
 
