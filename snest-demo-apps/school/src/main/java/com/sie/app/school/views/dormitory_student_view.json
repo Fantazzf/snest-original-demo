@@ -4,6 +4,18 @@
       "body": {
         "columns": [
           {
+            "displayName": "学号",
+            "name": "StudentNo"
+          },
+          {
+            "displayName": "学院",
+            "name": "college"
+          },
+          {
+            "displayName": "学号",
+            "name": "age"
+          },
+          {
             "displayName": "宿舍",
             "name": "dormitory"
           },
@@ -17,7 +29,7 @@
       },
       "mode": "primary",
       "model": "dormitoryStudent",
-      "name": "dormitoryStudent-表单",
+      "name": "入住学生-表单",
       "type": "form"
     },
     "dormitorystudent_grid": {
@@ -35,6 +47,18 @@
           }
         ],
         "columns": [
+          {
+            "displayName": "学号",
+            "name": "StudentNo"
+          },
+          {
+            "displayName": "学院",
+            "name": "college"
+          },
+          {
+            "displayName": "学号",
+            "name": "age"
+          },
           {
             "displayName": "宿舍",
             "name": "dormitory"
@@ -60,12 +84,24 @@
       },
       "mode": "primary",
       "model": "dormitoryStudent",
-      "name": "dormitoryStudent-表格",
+      "name": "入住学生-表格",
       "type": "grid"
     },
     "dormitorystudent_search": {
       "body": {
         "columns": [
+          {
+            "displayName": "学号",
+            "name": "StudentNo"
+          },
+          {
+            "displayName": "学院",
+            "name": "college"
+          },
+          {
+            "displayName": "学号",
+            "name": "age"
+          },
           {
             "displayName": "宿舍",
             "name": "dormitory"
@@ -79,7 +115,7 @@
       },
       "mode": "primary",
       "model": "dormitoryStudent",
-      "name": "dormitoryStudent-搜索",
+      "name": "入住学生-搜索",
       "type": "search"
     }
   }

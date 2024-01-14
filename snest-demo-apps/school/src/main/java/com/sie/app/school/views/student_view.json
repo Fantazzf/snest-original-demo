@@ -87,10 +87,6 @@
             "name": "birth_date"
           },
           {
-            "displayName": "年龄",
-            "name": "age"
-          },
-          {
             "displayName": "籍贯",
             "name": "native_place"
           },
@@ -115,12 +111,16 @@
       "body": {
         "columns": [
           {
-            "displayName": "学号",
-            "name": "StudentNo"
-          },
-          {
             "displayName": "学生姓名",
             "name": "StuedentName"
+          },
+          {
+            "displayName": "学院",
+            "name": "college"
+          },
+          {
+            "displayName": "学号",
+            "name": "StudentNo"
           },
           {
             "displayName": "性别",
@@ -132,10 +132,6 @@
             "widget": "daterange"
           },
           {
-            "displayName": "年龄",
-            "name": "age"
-          },
-          {
             "displayName": "籍贯",
             "name": "native_place"
           },
@@ -143,10 +139,6 @@
             "displayName": "入学日期",
             "name": "come_date",
             "widget": "daterange"
-          },
-          {
-            "displayName": "学院",
-            "name": "college"
           }
         ],
         "type": "search"

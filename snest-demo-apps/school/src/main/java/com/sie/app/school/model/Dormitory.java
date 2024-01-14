@@ -37,14 +37,23 @@ public class Dormitory extends BaseModel<Dormitory> {
             @Option(label = "302", value = "6"),
     })
     @Property(displayName = "宿舍号")
-    @Validate.Unique
+    @Validate.NotBlank
     private String DormitoryNo;
 
     @Property(displayName = "宿舍人数")
     private  Integer DormitoryMan;
 
+    @Selection(values = {
+            @Option(label = "男寝", value = "1"),
+            @Option(label = "女寝", value = "2")
+    })
+    @Property(displayName = "宿舍性质")
+    @Validate.NotBlank
+    private  String DormitorySex;
+
     @OneToMany
     private List<DormitoryStudent> dormitoryStudentList;
+
 
 
 }
