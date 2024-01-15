@@ -23,9 +23,8 @@ public class ReturnRecord extends BaseModel<ReturnRecord> {
     @Property(displayName = "还书日期")
     private Date returnDate;
 
-    @ManyToOne(displayName = "所借图书信息")
-    @JoinColumn
-    private Book returnBook;
+    @Property(displayName = "所借图书名称")
+    private String returnBook;
 
     @ManyToOne(displayName = "关联借书记录")
     @JoinColumn

@@ -45,12 +45,6 @@ public class Book extends BaseModel<Book> {
     @Property(displayName = "图书状态")
     private String bookStatus;
 
-    @Property(displayName = "借书记录")
-    private BorrowRecord borrowRecord;
-
-    @Property(displayName = "归还记录")
-    private ReturnRecord returnRecord;
-
     public Book setBookID(Integer bookID) {
         this.set("bookID", bookID);
         return this;
@@ -105,24 +99,25 @@ public class Book extends BaseModel<Book> {
     }
 
     public List<Book> search(Filter filter, List<String> properties, Integer limit, Integer offset, String order){
-//        @SuppressWarnings("unchecked")
-        List<Book> result = (List<Book>) getMeta().get("Book")
-                .callSuper(Book.class, "search", filter, properties,limit,offset,order);
-        return result;
-//        List<Book> books = result.stream().map(r -> {
-//            Book book = new Book();
-//            book.putAll(r);
-//            List<BorrowRecord> borrowRecords =(new BorrowRecord()).search(Filter.equal("book", book.getBookName()),getAllProperties(),0,0,null);
-//
-//            if (!borrowRecords.isEmpty()) {
-//                book.setBookStatus("出借中");
-//            } else {
-//                book.setBookStatus("在馆");
-//            }
-//
-//            return book;
-//        }).collect(Collectors.toList());
-//        return books;
+        @SuppressWarnings("unchecked")
+        List<Map<String,Object>> result = (List<Map<String,Object>>) getMeta().get("book").callSuper(Book.class, "search", filter, properties,limit,offset,order);
+        List<Book> books = result.stream().map(r -> {
+            Book book = new Book();
+            book.putAll(r);
+            @SuppressWarnings("unchecked")
+            List<BorrowRecord> borrowRecords = (List<BorrowRecord>) getMeta().get("borrow_record").callSuper(BorrowRecord.class,"search",Filter.equal("borrowBook",book.getBookName()),getAllProperties(),0,0,null);
+            @SuppressWarnings("unchecked")
+            List<ReturnRecord> returnRecords = (List<ReturnRecord>) getMeta().get("return_record").callSuper(ReturnRecord.class,"search",Filter.equal("returnBook",book.getBookName()),getAllProperties(),0,0,null);
+
+            if (!borrowRecords.isEmpty()&&returnRecords.isEmpty()) {
+                book.setBookStatus("出借中");
+            } else {
+                book.setBookStatus("在馆");
+            }
+            System.out.println(book.getBookStatus());
+            return book;
+        }).collect(Collectors.toList());
+        return books;
     }
 
 //    @MethodService(name = "queryInLibrary",description = "查询书籍",auth = "queryInLibrary")
