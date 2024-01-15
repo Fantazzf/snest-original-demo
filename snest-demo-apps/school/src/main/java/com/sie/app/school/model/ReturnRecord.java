@@ -3,6 +3,7 @@ package com.sie.app.school.model;
 import com.sie.snest.engine.api.jsonrpc.JsonRpcServiceResponse;
 import com.sie.snest.engine.model.Bool;
 import com.sie.snest.engine.rule.Filter;
+import com.sie.snest.engine.utils.Check;
 import com.sie.snest.sdk.BaseModel;
 import com.sie.snest.sdk.annotation.meta.Model;
 import com.sie.snest.sdk.annotation.meta.Property;
@@ -73,4 +74,26 @@ public class ReturnRecord extends BaseModel<ReturnRecord> {
         return getDate("returnDate");
     }
 
+    public List<ReturnRecord> search(Filter filter, List<String> properties, Integer limit, Integer offset, String order){
+        List<Map<String,Object>> result = (List<Map<String,Object>>) getMeta().get("return_record").callSuper(ReturnRecord.class, "search", filter, properties,limit,offset,order);
+        List<ReturnRecord> returnRecords = result.stream().map(r -> {
+            ReturnRecord returnRecord=new ReturnRecord();
+            returnRecord.putAll(r);
+            @SuppressWarnings("unchecked")
+            List<BorrowRecord> borrowRecords = (List<BorrowRecord>) getMeta().get("borrow_record").callSuper(BorrowRecord.class,"search",Filter.AND(Filter.less("borrowDate",returnRecord.getReturnDate()),Filter.equal("borrowBook",returnRecord.getReturnBook())),getAllProperties(),0,0,null);
+
+            if (borrowRecords.isEmpty()) {
+                throw new IllegalArgumentException("归还记录不能早于借出的日期！");
+            }
+            return returnRecord;
+        }).collect(Collectors.toList());
+        return returnRecords;
+    }
+//    public JsonRpcServiceResponse CheckDate(){
+//        if(this.returnDate.compareTo(this.borrowRecord.getBorrowDate())<0){
+//            return JsonRpcServiceResponse.message("归还记录不能早于借出的日期！");
+//        }else{
+//            return null;
+//        }
+//    }
 }
