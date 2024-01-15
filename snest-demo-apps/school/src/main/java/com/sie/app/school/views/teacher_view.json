@@ -132,20 +132,12 @@
             "name": "BirthDate"
           },
           {
-            "displayName": "年龄",
-            "name": "Age"
-          },
-          {
             "displayName": "籍贯",
             "name": "NativePlace"
           },
           {
             "displayName": "入职日期",
             "name": "JoinedDate"
-          },
-          {
-            "displayName": "工龄",
-            "name": "JoinedAge"
           }
         ],
         "tabs": [],
