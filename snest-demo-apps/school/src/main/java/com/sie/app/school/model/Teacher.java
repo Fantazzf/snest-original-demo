@@ -46,15 +46,15 @@ public class Teacher extends BaseModel<Teacher> {
     private  Long Age;
 
     @MethodService(name="calAge",description = "计算年龄",auth = "calAge")
-    public Long calAge(Map<String, Object> value){
+    public int calAge(Map<String, Object> value){
         //如果没有查询日期这个属性，不计算年龄
         if(!value.containsKey("BirthDate")){
-            return 0L;
+            return 0;
         }
         //获取当前模型实例数据的日期
         Date date= TypeKit.toDate(value.get("BirthDate"));
-        //计算出生日期到当前日期的年份
-        return DateUtil.betweenYear(date,new Date(),true);
+        //计算年龄
+        return  DateUtil.age(date,new Date());
     }
 
     @Property(displayName = "籍贯")
@@ -68,14 +68,14 @@ public class Teacher extends BaseModel<Teacher> {
     private  Long JoinedAge;
 
     @MethodService(name="calJoinedAge",description = "计算工龄",auth = "calJoinedAge")
-    public Long calJoinedAge(Map<String, Object> value){
-        //如果没有查询日期这个属性，不计算年龄
-        if(!value.containsKey("birth_date")){
-            return 0L;
+    public int calJoinedAge(Map<String, Object> value){
+        //如果没有查询日期这个属性，不计算工龄
+        if(!value.containsKey("JoinedDate")){
+            return 0;
         }
         //获取当前模型实例数据的日期
-        Date date= TypeKit.toDate(value.get("joined_date"));
-        //计算出生日期到当前日期的年份
-        return DateUtil.betweenYear(date,new Date(),true);
+        Date date= TypeKit.toDate(value.get("JoinedDate"));
+        //计算工龄
+        return DateUtil.age(date,new Date());
     }
 }

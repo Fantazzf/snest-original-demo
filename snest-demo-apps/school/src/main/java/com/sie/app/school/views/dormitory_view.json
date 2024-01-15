@@ -199,9 +199,7 @@
           },
           {
             "displayName": "宿舍号",
-            "name": "DormitoryNo",
-            "sortable": true,
-            "width": "80px"
+            "name": "DormitoryNo"
           },
           {
             "displayName": "宿舍类型",

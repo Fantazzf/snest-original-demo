@@ -91,10 +91,6 @@
             "name": "BirthDate"
           },
           {
-            "displayName": "年龄",
-            "name": "Age"
-          },
-          {
             "displayName": "籍贯",
             "name": "NativePlace"
           },
