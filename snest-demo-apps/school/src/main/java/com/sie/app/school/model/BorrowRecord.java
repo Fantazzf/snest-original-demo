@@ -47,13 +47,12 @@ public class BorrowRecord extends BaseModel<BorrowRecord> {
         return getDate("borrowDate");
     }
 
-    public BorrowRecord setBorrowBook(Book borrowBook) {
+    public BorrowRecord setBorrowBook(String borrowBook) {
         this.set("borrowBook", borrowBook);
         return this;
     }
 
-    public Book getBorrowBook() {
-        return (Book) this.get("borrowBook");
+    public String getBorrowBook() {
+        return getStr("borrowBook");
     }
-
 }
