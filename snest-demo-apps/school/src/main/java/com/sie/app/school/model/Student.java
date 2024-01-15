@@ -50,15 +50,15 @@ public class Student extends BaseModel<Student> {
     private  Long Age;
 
     @MethodService(name="calAge",description = "计算年龄",auth = "calAge")
-    public Long calAge(Map<String, Object>value){
+    public int calAge(Map<String, Object>value){
         //如果没有查询日期这个属性，不计算年龄
         if(!value.containsKey("BirthDate")){
-            return 0L;
+            return 0;
         }
         //获取当前模型实例数据的日期
         Date date= TypeKit.toDate(value.get("BirthDate"));
         //计算出生日期到当前日期的年份
-        return DateUtil.betweenYear(date,new Date(),true);
+        return DateUtil.age(date,new Date());
     }
 
     @Property(displayName = "籍贯")

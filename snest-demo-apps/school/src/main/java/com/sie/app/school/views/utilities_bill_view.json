@@ -1,0 +1,125 @@
+{
+  "views": {
+    "utilities_bill_search": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "年-月",
+            "name": "yearmonth",
+            "widget": "daterange"
+          },
+          {
+            "displayName": "类型",
+            "name": "type"
+          },
+          {
+            "displayName": "数额",
+            "name": "money"
+          },
+          {
+            "displayName": "单位",
+            "name": "unit"
+          },
+          {
+            "displayName": "宿舍",
+            "name": "dormitory"
+          }
+        ],
+        "type": "search"
+      },
+      "mode": "primary",
+      "model": "utilities_bill",
+      "name": "水电费-搜索",
+      "type": "search"
+    },
+    "utilities_bill_form": {
+      "body": {
+        "columns": [
+          {
+            "displayName": "年-月",
+            "name": "yearmonth"
+          },
+          {
+            "displayName": "类型",
+            "name": "type"
+          },
+          {
+            "displayName": "数额",
+            "name": "money"
+          },
+          {
+            "displayName": "单位",
+            "name": "unit"
+          },
+          {
+            "displayName": "宿舍",
+            "name": "dormitory"
+          }
+        ],
+        "tabs": [],
+        "type": "form"
+      },
+      "mode": "primary",
+      "model": "utilities_bill",
+      "name": "水电费-表单",
+      "type": "form"
+    },
+    "utilities_bill_grid": {
+      "body": {
+        "buttons": [
+          {
+            "action": "preview",
+            "auth": "read",
+            "name": "详情"
+          },
+          {
+            "action": "edit",
+            "auth": "update",
+            "name": "编辑"
+          }
+        ],
+        "columns": [
+          {
+            "displayName": "年-月",
+            "name": "yearmonth"
+          },
+          {
+            "displayName": "类型",
+            "name": "type",
+            "sortable": true,
+            "width": "80px"
+          },
+          {
+            "displayName": "数额",
+            "name": "money"
+          },
+          {
+            "displayName": "单位",
+            "name": "unit"
+          },
+          {
+            "displayName": "宿舍",
+            "name": "dormitory"
+          }
+        ],
+        "tbar": [
+          {
+            "action": "create",
+            "auth": "create",
+            "name": "新增"
+          },
+          {
+            "action": "delete",
+            "auth": "delete",
+            "name": "删除"
+          }
+        ],
+        "type": "grid"
+      },
+      "mode": "primary",
+      "model": "utilities_bill",
+      "name": "水电费-表格",
+      "type": "grid"
+    }
+  }
+}

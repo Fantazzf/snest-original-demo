@@ -58,4 +58,7 @@ public class Dormitory extends BaseModel<Dormitory> {
     @OneToMany
     private List<DormitoryStudent> dormitoryStudentList;
 
+    @OneToMany
+    private List<UtilitiesBill> utilitiesBillList;
+
 }
