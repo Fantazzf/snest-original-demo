@@ -92,13 +92,7 @@
           {
             "action": "create",
             "auth": "create",
-            "args": {
-              "returnDate": "",
-              "borrowRecord": "",
-              "returnBook": ""
-            },
-            "service": "returnBook",
-            "name": "归还"
+            "name": "新增"
           },
           {
             "action": "delete",

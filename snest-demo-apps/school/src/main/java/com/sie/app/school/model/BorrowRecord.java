@@ -13,6 +13,7 @@ import org.apache.commons.collections.CollectionUtils;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 @Model(name = "borrow_record",displayName = "借书记录",isAutoLog = Bool.True)
