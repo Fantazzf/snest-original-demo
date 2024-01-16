@@ -53,9 +53,7 @@
           },
           {
             "displayName": "图书类型",
-            "name": "bookType",
-            "sortable": true,
-            "width": "80px"
+            "name": "bookType"
           },
           {
             "displayName": "作者",
