@@ -80,9 +80,8 @@ public class ReturnRecord extends BaseModel<ReturnRecord> {
             ReturnRecord returnRecord=new ReturnRecord();
             returnRecord.putAll(r);
             @SuppressWarnings("unchecked")
-            List<BorrowRecord> borrowRecords = (List<BorrowRecord>) getMeta().get("borrow_record").callSuper(BorrowRecord.class,"search",Filter.AND(Filter.less("borrowDate",returnRecord.getReturnDate()),Filter.equal("borrowBook",returnRecord.getReturnBook())),getAllProperties(),0,0,null);
-
-            if (borrowRecords.isEmpty()) {
+            List<BorrowRecord> borrowRecords = (List<BorrowRecord>) getMeta().get("borrow_record").callSuper(BorrowRecord.class,"search",Filter.AND(Filter.equal("borrowBook",returnRecord.getReturnBook()),Filter.less("borrowDate",returnRecord.getReturnDate())),getAllProperties(),0,0,null);
+            if (returnRecord!=null&&borrowRecords.isEmpty()) {
                 throw new IllegalArgumentException("归还记录不能早于借出的日期！");
             }
             return returnRecord;

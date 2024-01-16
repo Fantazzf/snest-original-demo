@@ -53,7 +53,9 @@
           },
           {
             "displayName": "图书类型",
-            "name": "bookType"
+            "name": "bookType",
+            "sortable": true,
+            "width": "80px"
           },
           {
             "displayName": "作者",
@@ -65,8 +67,7 @@
           },
           {
             "displayName": "图书状态",
-            "name": "bookStatus",
-            "type": "String"
+            "name": "bookStatus"
           }
         ],
         "tbar": [
