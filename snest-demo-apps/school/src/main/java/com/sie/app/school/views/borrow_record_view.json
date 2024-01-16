@@ -80,11 +80,7 @@
           {
             "action": "create",
             "auth": "create",
-            "args": {
-              "borrowBook": "${borrowBook}"
-            },
-            "service":"borrowBook",
-            "name": "借阅"
+            "name": "新增"
           },
           {
             "action": "delete",

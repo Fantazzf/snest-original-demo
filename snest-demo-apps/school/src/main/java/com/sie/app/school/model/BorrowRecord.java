@@ -13,6 +13,7 @@ import org.apache.commons.collections.CollectionUtils;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 @Model(name = "borrow_record",displayName = "借书记录",isAutoLog = Bool.True)
@@ -25,9 +26,8 @@ public class BorrowRecord extends BaseModel<BorrowRecord> {
     @Property(displayName = "借书日期",displayForModel = true)
     private Date borrowDate;
 
-    @ManyToOne(displayName = "所借图书信息")
-    @JoinColumn
-    private Book borrowBook;
+    @Property(displayName = "所借图书名称")
+    private String borrowBook;
 
     public BorrowRecord setReader(Reader reader) {
         this.set("reader", reader);
@@ -47,13 +47,12 @@ public class BorrowRecord extends BaseModel<BorrowRecord> {
         return getDate("borrowDate");
     }
 
-    public BorrowRecord setBorrowBook(Book borrowBook) {
+    public BorrowRecord setBorrowBook(String borrowBook) {
         this.set("borrowBook", borrowBook);
         return this;
     }
 
-    public Book getBorrowBook() {
-        return (Book) this.get("borrowBook");
+    public String getBorrowBook() {
+        return getStr("borrowBook");
     }
-
 }
