@@ -88,11 +88,5 @@ public class ReturnRecord extends BaseModel<ReturnRecord> {
         }).collect(Collectors.toList());
         return returnRecords;
     }
-//    public JsonRpcServiceResponse CheckDate(){
-//        if(this.returnDate.compareTo(this.borrowRecord.getBorrowDate())<0){
-//            return JsonRpcServiceResponse.message("归还记录不能早于借出的日期！");
-//        }else{
-//            return null;
-//        }
-//    }
+
 }

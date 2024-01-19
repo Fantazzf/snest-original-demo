@@ -25,5 +25,39 @@ public class DormitoryStudent extends BaseModel<DormitoryStudent> {
     @Property(displayName = "籍贯",related = "student.NativePlace",store=false)
     private  String NativePlace;
 
+    public DormitoryStudent setDormitory(Dormitory dormitory) {
+        this.set("dormitory", dormitory);
+        return this;
+    }
 
+    public Dormitory getDormitory() {
+        return (Dormitory) this.get("dormitory");
+    }
+
+    public DormitoryStudent setStudent(Student student) {
+        this.set("student", student);
+        return this;
+    }
+
+    public Student getStudent() {
+        return (Student) this.get("student");
+    }
+
+    public DormitoryStudent setStudentName(String studentName) {
+        set("StudentName", studentName);
+        return this;
+    }
+
+    public String getStudentName() {
+        return getStr("StudentName");
+    }
+
+    public DormitoryStudent setNativePlace(String nativePlace) {
+        set("NativePlace", nativePlace);
+        return this;
+    }
+
+    public String getNativePlace() {
+        return getStr("NativePlace");
+    }
 }
