@@ -40,6 +40,14 @@
             "name": "Age"
           },
           {
+            "displayName": "宿舍楼栋",
+            "name": "DormitoryBulid"
+          },
+          {
+            "displayName": "宿舍号",
+            "name": "DormitoryNo"
+          },
+          {
             "displayName": "籍贯",
             "name": "NativePlace"
           },
@@ -91,6 +99,14 @@
             "name": "BirthDate"
           },
           {
+            "displayName": "宿舍楼栋",
+            "name": "DormitoryBulid"
+          },
+          {
+            "displayName": "宿舍号",
+            "name": "DormitoryNo"
+          },
+          {
             "displayName": "籍贯",
             "name": "NativePlace"
           },
@@ -134,6 +150,14 @@
           {
             "displayName": "年龄",
             "name": "Age"
+          },
+          {
+            "displayName": "宿舍楼栋",
+            "name": "DormitoryBulid"
+          },
+          {
+            "displayName": "宿舍号",
+            "name": "DormitoryNo"
           },
           {
             "displayName": "籍贯",

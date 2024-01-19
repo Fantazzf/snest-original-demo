@@ -61,10 +61,36 @@ public class Student extends BaseModel<Student> {
         return DateUtil.age(date,new Date());
     }
 
+    @Selection(values = {
+            @Option(label = "A栋", value = "1"),
+            @Option(label = "B栋", value = "2"),
+            @Option(label = "C栋", value = "3"),
+            @Option(label = "D栋", value = "4"),
+            @Option(label = "E栋", value = "5"),
+            @Option(label = "F栋", value = "6"),
+            @Option(label = "G栋", value = "7"),
+    })
+    @Property(displayName = "宿舍楼栋")
+    private String DormitoryBulid;
+
+    @Selection(values = {
+            @Option(label = "100", value = "1"),
+            @Option(label = "101", value = "2"),
+            @Option(label = "200", value = "3"),
+            @Option(label = "201", value = "4"),
+            @Option(label = "300", value = "5"),
+            @Option(label = "301", value = "6"),
+            @Option(label = "302", value = "7"),
+    })
+    @Property(displayName = "宿舍号")
+    private String DormitoryNo;
+
     @Property(displayName = "籍贯")
     private String NativePlace;
 
     @Property(displayName = "入学日期")
     @Validate.NotBlank
     private Date ComeDate;
+
+
 }
