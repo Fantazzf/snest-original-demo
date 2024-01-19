@@ -38,10 +38,10 @@ public class Book extends BaseModel<Book> {
     @Property(displayName = "出版日期")
     private Date publishDate;
 
-    @Selection(values = {
-            @Option(label = "出借中", value = "2"),
-            @Option(label = "在馆", value = "1")
-    })
+//    @Selection(values = {
+//            @Option(label = "出借中", value = "2"),
+//            @Option(label = "在馆", value = "1")
+//    })
     @Property(displayName = "图书状态")
     private String bookStatus;
 

@@ -65,8 +65,7 @@
           },
           {
             "displayName": "图书状态",
-            "name": "bookStatus",
-            "type": "String"
+            "name": "bookStatus"
           }
         ],
         "tbar": [
